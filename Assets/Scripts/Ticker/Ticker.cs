@@ -28,6 +28,7 @@ public class Ticker : MonoBehaviour {
     if (tickPaused) {
       yield return new WaitUntil(() => !tickPaused);
       StartCoroutine(Tick());
+      tickPaused = false;
     }
   }
 }

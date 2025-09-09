@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SquareBulletEmitter : BulletEmitter {
 
+  [Header("Unique Settings")]
   public float squareSize = 2f;
 
   [ContextMenu("Emit")]

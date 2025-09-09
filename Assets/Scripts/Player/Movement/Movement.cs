@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,7 +16,6 @@ public class Movement : MonoBehaviour {
 
   private void Awake() {
     _rb = GetComponent<Rigidbody>();
-    _rb.constraints = RigidbodyConstraints.FreezeRotation;
   }
 
   private void FixedUpdate() {
@@ -46,5 +46,9 @@ public class Movement : MonoBehaviour {
       _dashTime = dashDuration;
       _lastDash = Time.time;
     }
+  }
+
+  public void OnShoot(InputAction.CallbackContext context) {
+    throw new NotImplementedException();
   }
 }
