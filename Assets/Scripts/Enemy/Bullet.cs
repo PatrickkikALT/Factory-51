@@ -14,7 +14,6 @@ public class Bullet : MonoBehaviour {
     speed *= 1.001f;
     rb.AddForce(direction * speed);
   }
-
   // private void OnCollisionEnter(Collision other) {
   //   Destroy(gameObject);
   // } 

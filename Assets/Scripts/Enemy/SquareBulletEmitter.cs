@@ -14,7 +14,7 @@ public class SquareBulletEmitter : BulletEmitter {
     corners[2] = new Vector3(halfSize, 0f, halfSize);
     corners[3] = new Vector3(-halfSize, 0f, halfSize);
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < corners.Length; i++) {
       Vector3 start = corners[i];
       Vector3 end = corners[(i + 1) % 4];
 
