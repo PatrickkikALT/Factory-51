@@ -1,84 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
 public class Movement : MonoBehaviour {
-  public float speed;
-  private Vector2 _input;
+  public float moveSpeed = 5f;
+  public float dashSpeed = 15f;
+  public float dashDuration = 0.2f;
+  public float dashCooldown = 1f;
+
   private Rigidbody _rb;
-  [HideInInspector] public bool canMove = true;
-  private Transform _camera;
+  private Vector3 _moveInput;
+  private bool _isDashing = false;
+  private float _dashTime = 0f;
+  private float _lastDash = -Mathf.Infinity;
 
-  [Header("Walking Sound")] [SerializeField]
-  private AudioClip[] clips;
-
-  [SerializeField] private AudioSource source;
-
-  public void OnMove(InputAction.CallbackContext ctx) {
-    _input = ctx.ReadValue<Vector2>();
-  }
-
-  public void OnJump(InputAction.CallbackContext ctx) {
-    if (!ctx.performed || !canMove) return;
-    if (onGround)
-    {
-      jumping = true;
-      _rb.linearVelocity = new Vector3(0, jumpStrength, 0);
-    }
-  }
-
-  private void Start() {
+  private void Awake() {
     _rb = GetComponent<Rigidbody>();
-    _camera = Camera.main.transform;
-    // StartCoroutine(WalkSoundLoop());
+    _rb.constraints = RigidbodyConstraints.FreezeRotation;
   }
 
-  private void Update() {
-    if (!canMove) return;
-    Vector3 dir = transform.TransformDirection(new Vector3(_input.x, 0, _input.y));
-    _rb.linearVelocity = new Vector3(dir.x * speed, _rb.linearVelocity.y, dir.z * speed);
-    if (jumping)
-    {
-      UpdateJumpMomentum();
+  private void FixedUpdate() {
+    if (_isDashing) {
+      _rb.linearVelocity = _moveInput * dashSpeed;
+      _dashTime -= Time.fixedDeltaTime;
+      if (_dashTime <= 0)
+        _isDashing = false;
+    }
+    else {
+      _rb.linearVelocity = _moveInput * moveSpeed;
+    }
+
+    if (_moveInput != Vector3.zero && !_isDashing) {
+      Quaternion targetRotation = Quaternion.LookRotation(_moveInput);
+      transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.2f);
     }
   }
 
-  [Header("Jumping")] [SerializeField] private bool jumping;
-  [SerializeField] private float fallVel;
-  [SerializeField] private float jumpStrength;
-  [SerializeField] private Transform groundCheckTransform;
-  [SerializeField] private LayerMask groundLayers;
-  [SerializeField] private float overlapSphereSize;
-
-  public bool onGround =>
-    Physics.OverlapSphereNonAlloc(groundCheckTransform.position, overlapSphereSize, new Collider[10], groundLayers) > 0;
-
-
-  private void UpdateJumpMomentum() {
-    if (_rb.linearVelocity.y < 0.5)
-    {
-      _rb.linearVelocity -= new Vector3(0, fallVel * Time.deltaTime, 0);
-
-      if (onGround)
-      {
-        jumping = false;
-      }
-    }
+  public void OnMove(InputAction.CallbackContext context) {
+    Vector2 input = context.ReadValue<Vector2>();
+    _moveInput = new Vector3(input.x, 0, input.y).normalized;
   }
 
-  // private IEnumerator WalkSoundLoop() {
-  //     while (true) {
-  //         if (_input.magnitude <= 0) {
-  //             yield return new WaitUntil(() => _input.magnitude > 0);
-  //         }
-  //         yield return null;
-  //         var clip = clips[Random.Range(0, clips.Length - 1)];
-  //         source.clip = clip;
-  //         source.Play();
-  //         yield return new WaitForSeconds(clip.length * 3.5f);
-  //     }
-  // }
+  public void OnDash(InputAction.CallbackContext context) {
+    if (context.performed && Time.time >= _lastDash + dashCooldown) {
+      _isDashing = true;
+      _dashTime = dashDuration;
+      _lastDash = Time.time;
+    }
+  }
 }

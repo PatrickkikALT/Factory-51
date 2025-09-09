@@ -1,4 +1,5 @@
 using System;
+using System.Security;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -16,6 +17,7 @@ public class Enemy : MonoBehaviour {
 
   private int _ticks = 0;
   private void Start() {
+    player = GameManager.Instance.player;
     Ticker.Instance.OnTickEvent += UpdateGoal;
   }
   
@@ -24,6 +26,10 @@ public class Enemy : MonoBehaviour {
     if (distance <= maxDistance) {
       agent.isStopped = true;
       _isAttacking = true;
+    }
+    else {
+      agent.isStopped = false;
+      _isAttacking = false;
     }
 
     if (_isAttacking) {
@@ -41,7 +47,7 @@ public class Enemy : MonoBehaviour {
 
   private void Shoot() {
     Vector3 pos = transform.position + transform.forward;
-    Instantiate(bullet, pos, transform.rotation);
-    bullet.GetComponent<Bullet>().direction = Vector3.RotateTowards(transform.forward, player.position, 0.0f, 0.0f);
+    Bullet b = Instantiate(bullet, pos, transform.rotation).GetComponent<Bullet>();
+    b.direction = Vector3.RotateTowards(transform.forward, player.position, 0.0f, 0.0f);
   }
 }

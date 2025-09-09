@@ -8,7 +8,7 @@ public class CircleBulletEmitter : BulletEmitter {
   }
 
   [ContextMenu("Emit")]
-  public override void EmitBullets() {
+  public override void EmitBullets(float startingAngle) {
     //amount is defined in our base class BulletEmitter
     float angleStep = 360f / amount;
     float angle = 0f;
@@ -21,12 +21,11 @@ public class CircleBulletEmitter : BulletEmitter {
       bullet.GetComponent<Bullet>().direction = dirForward;
       angle += angleStep;
     }
-    
-    Destroy(gameObject);
   }
 
   public IEnumerator TimeUntilExplode() {
     yield return new WaitForSeconds(timeToExplode);
-    EmitBullets();
+    EmitBullets(0);
+    Destroy(gameObject);
   }
 }

@@ -8,13 +8,14 @@ public class Bullet : MonoBehaviour {
   public Vector3 direction;
   private void Start() {
     rb = GetComponent<Rigidbody>();
+    Destroy(gameObject, 10f);
   }
 
   public void Update() {
     speed *= 1.001f;
     rb.AddForce(direction * speed);
   }
-  // private void OnCollisionEnter(Collision other) {
-  //   Destroy(gameObject);
-  // } 
+  private void OnTriggerEnter(Collider other) {
+    Destroy(gameObject);
+  } 
 }

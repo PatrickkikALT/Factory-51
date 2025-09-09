@@ -6,6 +6,6 @@ public abstract class BulletEmitter : MonoBehaviour {
   public int damage;
   public GameObject bullet;
   public int timeToExplode;
-  public abstract void EmitBullets();
+  public abstract void EmitBullets(float startingAngle);
   
 }

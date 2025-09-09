@@ -5,7 +5,7 @@ public class SquareBulletEmitter : BulletEmitter {
   public float squareSize = 2f;
 
   [ContextMenu("Emit")]
-  public override void EmitBullets() {
+  public override void EmitBullets(float startingAngle) {
     Vector3[] corners = new Vector3[4];
     float halfSize = squareSize * 0.5f;
     
