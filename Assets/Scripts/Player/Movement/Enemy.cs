@@ -49,5 +49,11 @@ public class Enemy : MonoBehaviour {
     Vector3 pos = transform.position + transform.forward;
     Bullet b = Instantiate(bullet, pos, transform.rotation).GetComponent<Bullet>();
     b.direction = Vector3.RotateTowards(transform.forward, player.position, 0.0f, 0.0f);
+    b.gameObject.layer = gameObject.layer;
+    b.type = BulletType.ENEMY;
+  }
+
+  public void OnDestroy() {
+    Ticker.Instance.OnTickEvent -= UpdateGoal;
   }
 }

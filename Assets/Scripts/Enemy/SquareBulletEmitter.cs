@@ -23,9 +23,9 @@ public class SquareBulletEmitter : BulletEmitter {
         float t = j / (float)(amount - 1);
         Vector3 offset = Vector3.Lerp(start, end, t);
 
-        GameObject bullet = Instantiate(base.bullet, transform.position + offset, Quaternion.identity);
-
-        bullet.GetComponent<Bullet>().direction = offset;
+        Bullet b = Instantiate(base.bullet, transform.position + offset, Quaternion.identity).GetComponent<Bullet>();
+        b.direction = offset;
+        b.gameObject.layer = gameObject.layer;
       }
     }
 

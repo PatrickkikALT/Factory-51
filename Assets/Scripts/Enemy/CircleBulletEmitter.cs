@@ -3,9 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 public class CircleBulletEmitter : BulletEmitter {
-  private void Start() {
-    StartCoroutine(TimeUntilExplode());
-  }
+
 
   [ContextMenu("Emit")]
   public override void EmitBullets(float startingAngle) {
@@ -15,17 +13,14 @@ public class CircleBulletEmitter : BulletEmitter {
     
     for (int i = 0; i < amount; i++) {
       Quaternion rot = Quaternion.Euler(0f, 0f, angle);
-      GameObject bullet = Instantiate(base.bullet, transform.position, rot);
+      Bullet b = Instantiate(bullet, transform.position, rot).GetComponent<Bullet>();
       float rad = angle * Mathf.Deg2Rad;
       Vector3 dirForward = new Vector3(Mathf.Cos(rad), 0f, Mathf.Sin(rad));
-      bullet.GetComponent<Bullet>().direction = dirForward;
+      b.direction = dirForward;
+      b.gameObject.layer = gameObject.layer;
       angle += angleStep;
     }
   }
 
-  public IEnumerator TimeUntilExplode() {
-    yield return new WaitForSeconds(timeToExplode);
-    EmitBullets(0);
-    Destroy(gameObject);
-  }
+
 }
