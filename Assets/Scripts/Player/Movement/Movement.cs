@@ -38,7 +38,6 @@ public class Movement : MonoBehaviour {
   public void OnMove(InputAction.CallbackContext context) {
     Vector2 input = context.ReadValue<Vector2>();
     _moveInput = new Vector3(input.x, 0f, input.y);
-    //prevent sliding with no input
   }
 
   public void OnDash(InputAction.CallbackContext context) {

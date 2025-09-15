@@ -15,20 +15,11 @@ public class Weapon : MonoBehaviour {
   private bool _canShoot;
   public int delay;
   public float currentDamageMultiplier;
-
   
-  private LineRenderer _line;
-  public float lineLength;
   private void Start() {
-    _line = GetComponent<LineRenderer>();
     StartCoroutine(ShootDelay());
   }
-
-  void Update() {
-    Vector3 target = transform.position + transform.forward * lineLength;
-    _line.SetPosition(0, transform.position);
-    _line.SetPosition(1, transform.position);
-  }
+  
   
   public void Shoot(InputAction.CallbackContext context) {
     if (!_canShoot) return;
