@@ -19,14 +19,22 @@ public class Bullet : MonoBehaviour {
   }
 
   public void Update() {
-    speed *= 1.001f;
     rb.AddForce(direction * speed);
   }
 
   private void OnTriggerEnter(Collider other) {
+    //return early if hit collider is a bullet so they dont collide with each other
+    if (other.TryGetComponent(out Bullet b)) {
+      return;
+    }
     if (other.TryGetComponent(out BaseHealth health)) {                     
-      health.TakeDamage(Mathf.RoundToInt(damage * GameManager.Instance.playerWeapon.currentDamageMultiplier));                                            
-    }                                                                       
+      health.TakeDamage(Mathf.RoundToInt(damage * GameManager.Instance.playerWeapon.currentDamageMultiplier));
+      Destroy(gameObject);
+      return;
+    }
+    if (TryGetComponent(out BulletEmitter em)) {
+      em.EmitBullets(0);
+    }
     Destroy(gameObject);                                                    
   }
 }
