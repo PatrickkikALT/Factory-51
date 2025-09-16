@@ -38,6 +38,11 @@ public class Movement : MonoBehaviour {
   public void OnMove(InputAction.CallbackContext context) {
     Vector2 input = context.ReadValue<Vector2>();
     _moveInput = new Vector3(input.x, 0f, input.y);
+    
+    if (_moveInput != Vector3.zero && !_isDashing) {
+      Quaternion targetRotation = Quaternion.LookRotation(_moveInput);
+      transform.parent.GetChild(0).rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.4f);
+    }
   }
 
   public void OnDash(InputAction.CallbackContext context) {
@@ -47,7 +52,7 @@ public class Movement : MonoBehaviour {
       _lastDash = Time.time;
     }
   }
-
+  
   public void OnLook(InputAction.CallbackContext context) {
     if (context.performed) {
       Vector2 input = context.ReadValue<Vector2>();

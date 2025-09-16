@@ -3,8 +3,6 @@ using System.Collections;
 using UnityEngine;
 
 public class CircleBulletEmitter : BulletEmitter {
-
-
   [ContextMenu("Emit")]
   public override void EmitBullets(float startingAngle) {
     //amount is defined in our base class BulletEmitter
@@ -21,6 +19,4 @@ public class CircleBulletEmitter : BulletEmitter {
       angle += angleStep;
     }
   }
-
-
 }

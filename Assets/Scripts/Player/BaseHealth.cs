@@ -10,5 +10,6 @@ public class BaseHealth : MonoBehaviour {
 
   public virtual void Heal(int amount) {
     health += amount;
+    health = Mathf.Clamp(health, 0, MaxHealth);
   }
 }

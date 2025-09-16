@@ -16,8 +16,16 @@ public class Weapon : MonoBehaviour {
   public int delay;
   public float currentDamageMultiplier;
   
+  private LineRenderer _line;
+  
   private void Start() {
+    _line = GetComponent<LineRenderer>();
     StartCoroutine(ShootDelay());
+  }
+
+  void Update() {
+    _line.SetPosition(0, transform.position);
+    _line.SetPosition(1, transform.position + transform.forward * 10);
   }
   
   
