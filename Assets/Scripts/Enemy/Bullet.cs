@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public enum BulletType {
@@ -24,17 +23,14 @@ public class Bullet : MonoBehaviour {
 
   private void OnTriggerEnter(Collider other) {
     //return early if hit collider is a bullet so they dont collide with each other
-    if (other.TryGetComponent(out Bullet b)) {
-      return;
-    }
-    if (other.TryGetComponent(out BaseHealth health)) {                     
+    if (other.TryGetComponent(out Bullet b)) return;
+    if (other.TryGetComponent(out BaseHealth health)) {
       health.TakeDamage(Mathf.RoundToInt(damage * GameManager.Instance.playerWeapon.currentDamageMultiplier));
       Destroy(gameObject);
       return;
     }
-    if (TryGetComponent(out BulletEmitter em)) {
-      em.EmitBullets(0);
-    }
-    Destroy(gameObject);                                                    
+
+    if (TryGetComponent(out BulletEmitter em)) em.EmitBullets(0);
+    Destroy(gameObject);
   }
 }

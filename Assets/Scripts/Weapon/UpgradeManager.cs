@@ -1,19 +1,19 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour {
+  public static UpgradeManager Instance;
   public List<Upgrade> equippedUpgrades = new();
   public Weapon playersWeapon;
   public Upgrade defaultUpgrade;
-  public static UpgradeManager Instance;
 
 
   private void Awake() {
-    if (Instance is null) Instance = this; 
+    if (Instance is null) Instance = this;
     else Destroy(this);
   }
+
   public void Start() {
     playersWeapon = GameManager.Instance.playerWeapon;
     AddUpgrade(defaultUpgrade);
@@ -27,6 +27,7 @@ public class UpgradeManager : MonoBehaviour {
           equippedUpgrades.Remove(upg);
           playersWeapon.ShootEvent -= upg.Shoot;
         }
+
         break;
       case UpgradeType.ADDITIVE:
         break;
@@ -34,6 +35,7 @@ public class UpgradeManager : MonoBehaviour {
         Debug.LogError($"No upgrade type found for upgrade {upgrade.name}");
         return false;
     }
+
     equippedUpgrades.Add(upgrade);
     playersWeapon.AddUpgrade(upgrade);
     playersWeapon.currentDamageMultiplier = upgrade.damageMultiplier;

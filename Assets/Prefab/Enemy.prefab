@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2311152475821180851}
   - component: {fileID: 6378430902705477708}
   - component: {fileID: 2477282753817453546}
-  - component: {fileID: 7524547428277175677}
   - component: {fileID: 4962375755629031415}
+  - component: {fileID: 5402308457246287519}
   - component: {fileID: 3505828883766885903}
+  - component: {fileID: 90248917905031496}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1892200935371990051}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100.07538, y: 3.1, z: -319.31}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -112,27 +113,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7524547428277175677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892200935371990051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2cbe88afbbe8fdf3a28519b288c2122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  agent: {fileID: 4962375755629031415}
-  player: {fileID: 0}
-  maxDistance: 25
-  bullet: {fileID: 9009432622370760229, guid: 0f0833470a3fd5511ba7b0f5b8280629, type: 3}
-  shootSpeed: 3
 --- !u!195 &4962375755629031415
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -142,7 +126,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1892200935371990051}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.45
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -155,6 +139,24 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5402308457246287519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892200935371990051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b00c0f0f467b216598ac0e1fcc17460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
+  agent: {fileID: 4962375755629031415}
+  player: {fileID: 0}
+  maxDistance: 10
+  bullet: {fileID: 7121479710745853557, guid: 550745e622c2ae6569e0f43f27eb9eeb, type: 3}
+  shootSpeed: 2
+  walkSpeed: 2
 --- !u!54 &3505828883766885903
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -182,3 +184,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &90248917905031496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892200935371990051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e82658815baf036939576a6f4e11d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  health: 50

@@ -129,7 +129,7 @@ MonoBehaviour:
   amount: 24
   damage: 0
   bullet: {fileID: 7121479710745853557, guid: 550745e622c2ae6569e0f43f27eb9eeb, type: 3}
-  timeToExplode: 1
+  timeToExplode: 0
 --- !u!54 &8297657410017239865
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -172,3 +172,5 @@ MonoBehaviour:
   rb: {fileID: 8297657410017239865}
   speed: 5
   direction: {x: 0, y: 0, z: 1}
+  damage: 0
+  type: 0

@@ -1,11 +1,10 @@
 using UnityEngine;
 
 public class PlayerHealth : BaseHealth {
+#if UNITY_EDITOR
+  [Header("Dev")] public bool immortal;
+#endif
 
-  #if UNITY_EDITOR
-  [Header("Dev")] public bool immortal = false;
-  #endif
-  
   public override void TakeDamage(int amount) {
     if (immortal) return;
     base.TakeDamage(amount);
@@ -17,8 +16,6 @@ public class PlayerHealth : BaseHealth {
 
   public override void Heal(int amount) {
     base.Heal(amount);
-    if (health >= MaxHealth) {
-      health = MaxHealth;
-    }
+    if (health >= MaxHealth) health = MaxHealth;
   }
 }

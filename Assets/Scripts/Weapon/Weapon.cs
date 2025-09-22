@@ -10,31 +10,32 @@ public enum UpgradeType {
 
 public class Weapon : MonoBehaviour {
   public delegate void OnShoot();
-  public event OnShoot ShootEvent;
 
-  private bool _canShoot;
   public int delay;
   public float currentDamageMultiplier;
-  
+
+  private bool _canShoot;
   private LineRenderer _line;
-  
+
   private void Start() {
-    _line = GetComponent<LineRenderer>();
+    // _line = GetComponent<LineRenderer>();
     StartCoroutine(ShootDelay());
   }
 
-  void Update() {
-    _line.SetPosition(0, transform.position);
-    _line.SetPosition(1, transform.position + transform.forward * 10);
-  }
-  
-  
+  // private void Update() {
+  //   _line.SetPosition(0, transform.position);
+  //   _line.SetPosition(1, transform.position + transform.forward * 10);
+  // }
+
+  public event OnShoot ShootEvent;
+
+
   public void Shoot(InputAction.CallbackContext context) {
     if (!_canShoot) return;
     ShootEvent?.Invoke();
     _canShoot = false;
   }
-  
+
   public void AddUpgrade(Upgrade upgrade) {
     ShootEvent += upgrade.Shoot;
   }

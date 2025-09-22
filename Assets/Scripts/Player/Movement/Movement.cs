@@ -3,47 +3,78 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour {
-  [Header("Movement")]
+  [Header("Movement")] 
   public float moveSpeed = 5f;
   public float dashSpeed = 15f;
   public float dashDuration = 0.2f;
   public float dashCooldown = 1f;
 
-  [Header("Mouse Movement")]
+  [Header("Mouse Movement")] 
   public float mouseSensitivity = 10f;
-  
-  private Rigidbody _rb;
-  private Vector3 _moveInput;
-  private bool _isDashing = false;
-  private float _dashTime = 0f;
+
+  public Vector3 moveInput;
+  private Vector3 _targetInput;
+  private float _dashTime;
+  private bool _isDashing;
   private float _lastDash = -Mathf.Infinity;
+
+  private Rigidbody _rb;
+
+  [Header("Bones")] 
+  public Transform bodyBone;
+  public Transform trackBone;
   
+  [Header("Animation")]
+  public Animator animator;
+  private static int Moving = Animator.StringToHash("Moving");
+  private static int Dead = Animator.StringToHash("Dies");
+
+  
+  [Header("Cached Materials")]
+  public Material trackMaterial;
+  public float trackDashSpeed;
+
   private void Awake() {
-    _rb = transform.parent.GetComponent<Rigidbody>();
+    _rb = transform.GetComponent<Rigidbody>();
+  }
+
+  private void Start() {
+    trackMaterial = transform.GetChild(1).GetComponent<Renderer>().materials[1];
   }
 
   private void FixedUpdate() {
     if (_isDashing) {
-      _rb.linearVelocity = _moveInput * dashSpeed;
+      _rb.linearVelocity = moveInput * dashSpeed;
       _dashTime -= Time.fixedDeltaTime;
       if (_dashTime <= 0)
         _isDashing = false;
     }
     else {
-      _rb.linearVelocity = _moveInput * moveSpeed;
+      _rb.linearVelocity = moveInput * moveSpeed;
     }
+    
   }
   
-
   public void OnMove(InputAction.CallbackContext context) {
-    Vector2 input = context.ReadValue<Vector2>();
-    _moveInput = new Vector3(input.x, 0f, input.y);
-    
-    if (_moveInput != Vector3.zero && !_isDashing) {
-      Quaternion targetRotation = Quaternion.LookRotation(_moveInput);
-      transform.parent.GetChild(0).rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.4f);
+    var input = context.ReadValue<Vector2>();
+    if (input == Vector2.zero) {
+      _targetInput = Vector3.zero;
+      animator.SetBool(Moving, false);
+      return;
     }
+    animator.SetBool(Moving, true);
+    _targetInput = new Vector3(input.x, 0f, input.y);
   }
+
+  private void Update() {
+    moveInput = Vector3.Slerp(moveInput, _targetInput, Time.deltaTime * moveSpeed);
+
+    if (moveInput != Vector3.zero && !_isDashing) {
+      var targetRotation = Quaternion.LookRotation(moveInput);
+      trackBone.rotation = targetRotation;
+    } 
+  }
+
 
   public void OnDash(InputAction.CallbackContext context) {
     if (context.performed && Time.time >= _lastDash + dashCooldown) {
@@ -52,11 +83,11 @@ public class Movement : MonoBehaviour {
       _lastDash = Time.time;
     }
   }
-  
+
   public void OnLook(InputAction.CallbackContext context) {
     if (context.performed) {
-      Vector2 input = context.ReadValue<Vector2>();
-      transform.Rotate(0, input.x * Time.deltaTime * mouseSensitivity, 0, Space.Self);
+      var input = context.ReadValue<Vector2>();
+      bodyBone.Rotate(0, input.x * Time.deltaTime * mouseSensitivity, 0, Space.Self);
     }
   }
 }
