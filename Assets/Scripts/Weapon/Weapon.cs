@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour {
   public int delay;
   public float currentDamageMultiplier;
 
+  public Transform shootPos;
   private bool _canShoot;
   private LineRenderer _line;
 

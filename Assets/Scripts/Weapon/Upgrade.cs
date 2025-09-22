@@ -6,11 +6,14 @@ public abstract class Upgrade : MonoBehaviour {
   public float damageMultiplier;
 
   protected Transform Player;
+  protected Weapon WeaponS;
   protected Transform Weapon;
 
   private void Start() {
     Player = GameManager.Instance.player;
-    Weapon = Player.FindWeapon().transform;
+    WeaponS = Player.FindWeapon();
+    Weapon = WeaponS.transform;
+    
   }
 
   public abstract void Shoot();

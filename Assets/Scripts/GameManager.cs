@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour {
   public static GameManager Instance;
   public Transform player;
   public Weapon playerWeapon;
-
+  public Transform bodyBone;
   public List<Enemy> enemies = new();
 
   private void Awake() {
