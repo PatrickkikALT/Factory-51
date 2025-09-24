@@ -5,6 +5,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 [Serializable]
+
 public struct WaveGroups {
   public string GroupName;
   public int WavePointCost;
@@ -24,7 +25,7 @@ public class WaveManager : MonoBehaviour {
   public List<WaveGroups> availableGroups;
   public List<WaveGroups> currentWaveGroups;
 
-  public Transform enemySpawnPos;
+  public Transform[] enemySpawnPos;
 
   [Header("Wave Points")] private int _wavePoints;
 
@@ -33,7 +34,8 @@ public class WaveManager : MonoBehaviour {
   }
 
   [ContextMenu("StartNewWave")]
-  public void StartNewWave() {
+  public void StartNewWave(Transform[] spawnPos) {
+    enemySpawnPos = spawnPos;
     wave++;
     _wavePoints = 0;
     var middleMan = startingWavePoints * wavePointsModifier;
@@ -48,6 +50,9 @@ public class WaveManager : MonoBehaviour {
     var maxTries = 10 * wave;
     while ((_wavePoints > 0) & (maxTries >= 0)) {
       maxTries++;
+      if (availableGroups.Count == 0) {
+        break;
+      }
       currentWaveGroups.Add(SelectGroup());
       SelectAvailableGroups();
     }
@@ -57,7 +62,7 @@ public class WaveManager : MonoBehaviour {
   }
 
   public WaveGroups SelectGroup() {
-    var selectedGroup = availableGroups[Random.Range(0, availableGroups.Count)];
+    var selectedGroup = availableGroups.Random();
     print(_wavePoints);
     print(selectedGroup.WavePointCost);
     _wavePoints -= selectedGroup.WavePointCost;
@@ -76,7 +81,8 @@ public class WaveManager : MonoBehaviour {
     foreach (var groups in currentWaveGroups) {
       print(groups.GroupName);
       foreach (var enemy in groups.EnemyGo) {
-        GameManager.Instance.enemies.Add(Instantiate(enemy, enemySpawnPos.position, enemySpawnPos.rotation)
+        Transform pos = enemySpawnPos.Random();
+        GameManager.Instance.enemies.Add(Instantiate(enemy, pos.position, pos.rotation)
           .GetComponent<Enemy>());
         yield return new WaitForSeconds(groups.TimeBetweenEnemy);
       }

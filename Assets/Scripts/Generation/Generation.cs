@@ -57,10 +57,10 @@ public class Generation : MonoBehaviour {
     colCell.collapsed = true;
     var sTile = blankTile;
     try {
-      sTile = colCell.tiles[Random.Range(0, colCell.tiles.Length)];
+      sTile = colCell.tiles[Random.Range(0, colCell.tiles.Length - 1)];
     }
     catch {
-      throw new ArrayTypeMismatchException();
+      throw new ArgumentOutOfRangeException();
     }
 
     colCell.tiles = new[] { sTile };
@@ -88,11 +88,7 @@ public class Generation : MonoBehaviour {
         if (y > 0) {
           var up = gridList[x + (y - 1) * maxXZ];
           List<Tile> validOptions = new();
-          foreach (var possible in up.tiles) {
-            var valOp = Array.FindIndex(tileObjects, obj => obj == possible);
-            var valid = tileObjects[valOp].up;
-            validOptions = validOptions.Concat(valid).ToList();
-          }
+          validOptions = up.tiles.Select(possible => Array.FindIndex(tileObjects, obj => obj == possible)).Select(valOp => tileObjects[valOp].up).Aggregate(validOptions, (current, valid) => current.Concat(valid).ToList());
 
           CheckValidity(options, validOptions);
         }
@@ -100,11 +96,7 @@ public class Generation : MonoBehaviour {
         if (x < maxXZ - 1) {
           var right = gridList[x + 1 + y * maxXZ];
           List<Tile> validOptions = new();
-          foreach (var possible in right.tiles) {
-            var valOp = Array.FindIndex(tileObjects, obj => obj == possible);
-            var valid = tileObjects[valOp].right;
-            validOptions = validOptions.Concat(valid).ToList();
-          }
+          validOptions = right.tiles.Select(possible => Array.FindIndex(tileObjects, obj => obj == possible)).Select(valOp => tileObjects[valOp].right).Aggregate(validOptions, (current, valid) => current.Concat(valid).ToList());
 
           CheckValidity(options, validOptions);
         }
@@ -112,11 +104,7 @@ public class Generation : MonoBehaviour {
         if (y < maxXZ - 1) {
           var down = gridList[x + (y + 1) * maxXZ];
           List<Tile> validOptions = new();
-          foreach (var possible in down.tiles) {
-            var valOp = Array.FindIndex(tileObjects, obj => obj == possible);
-            var valid = tileObjects[valOp].down;
-            validOptions = validOptions.Concat(valid).ToList();
-          }
+          validOptions = down.tiles.Select(possible => Array.FindIndex(tileObjects, obj => obj == possible)).Select(valOp => tileObjects[valOp].down).Aggregate(validOptions, (current, valid) => current.Concat(valid).ToList());
 
           CheckValidity(options, validOptions);
         }
@@ -124,11 +112,7 @@ public class Generation : MonoBehaviour {
         if (x > 0) {
           var left = gridList[x - 1 + y * maxXZ];
           List<Tile> validOptions = new();
-          foreach (var possible in left.tiles) {
-            var valOp = Array.FindIndex(tileObjects, obj => obj == possible);
-            var valid = tileObjects[valOp].left;
-            validOptions = validOptions.Concat(valid).ToList();
-          }
+          validOptions = left.tiles.Select(possible => Array.FindIndex(tileObjects, obj => obj == possible)).Select(valOp => tileObjects[valOp].left).Aggregate(validOptions, (current, valid) => current.Concat(valid).ToList());
 
           CheckValidity(options, validOptions);
         }

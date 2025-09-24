@@ -2,39 +2,56 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class TopDownCamera : MonoBehaviour {
+  [Header("References")]
   public Transform player;
-  public Vector3 offset;
-  public float minZoom, maxZoom;
 
-  public bool collision;
+  [Header("Settings")]
+  public float distance = 10f;
+  private float _defaultDistance;
+  private float _defaultHeight;
+  public float height = 5f;
+  public float rotationSpeed = 100f;
+  public float minPitch = 10f;
+  public float maxPitch = 80f;
+  public bool rotateCameraEnabled;
+
+  private float _yaw = 0f;
+  private float _pitch = 45f;
+  
+  private Vector2 _lookInput;
 
   private void Start() {
+    _defaultHeight = height;
+    _defaultDistance = distance;
     Cursor.lockState = CursorLockMode.Locked;
   }
 
   private void Update() {
-    if (!collision) {
-      transform.position = player.position + offset;
-    }
-    else {
-      var pos = player.position + offset;
-      var coll = new Collider[4];
-      var boxSize = new Vector3(1, 1, 1);
-      var hitCount = Physics.OverlapBoxNonAlloc(pos, boxSize / 2, coll);
-      if (hitCount == 0) collision = false;
-    }
+    _yaw += _lookInput.x * rotationSpeed * Time.deltaTime;
+    Quaternion rotation = Quaternion.Euler(_pitch, _yaw, 0);
+    Vector3 offset = rotation * new Vector3(0, 0, -distance);
+    
+    offset.y += height;
+
+    transform.position = player.position + offset;
+    transform.LookAt(player.position);
   }
 
-  private void OnCollisionEnter(Collision col) {
-    collision = true;
+  public void OnZoom(InputAction.CallbackContext context) {
+    height += context.ReadValue<float>() / 2;
+    distance += context.ReadValue<float>() / 2;
   }
-  
-  public void OnZoom(InputAction.CallbackContext ctx) {
-    offset.x -= ctx.ReadValue<float>();
-    offset.y -= ctx.ReadValue<float>();
-    offset.z += ctx.ReadValue<float>();
-    offset.x = Mathf.Clamp(offset.x, minZoom, maxZoom);
-    offset.y = Mathf.Clamp(offset.y, minZoom, maxZoom);
-    offset.z = Mathf.Clamp(offset.z, +minZoom, -maxZoom);
+
+  public void ResetZoom() {
+    height = _defaultHeight;
+    distance = _defaultDistance;
+  }
+
+  public void OnRotate(InputAction.CallbackContext context) {
+    if (rotateCameraEnabled) {
+      _lookInput.x = context.ReadValue<float>();
+    }
+  }
+  private void OnCollisionEnter(Collision col) {
   }
 }

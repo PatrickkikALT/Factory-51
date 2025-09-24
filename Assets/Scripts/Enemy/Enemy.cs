@@ -6,7 +6,7 @@ public abstract class Enemy : MonoBehaviour {
   protected NavMeshAgent agent;
 
   public Transform player;
-
+  public Transform shootPos;
   [Header("Attack variables")] [SerializeField]
   protected float maxDistance;
 
@@ -25,16 +25,20 @@ public abstract class Enemy : MonoBehaviour {
     Ticker.Instance.OnTickEvent += UpdateGoal;
   }
 
+  protected void Update() {
+    Quaternion directionToPlayer = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), 2 * Time.deltaTime);
+    transform.rotation = directionToPlayer;
+  }
   public void OnDestroy() {
     Ticker.Instance.OnTickEvent -= UpdateGoal;
   }
 
   protected virtual void UpdateGoal() {
     var distance = Vector3.Distance(player.position, transform.position);
-    agent.destination = player.position + -player.forward * maxDistance;
+    agent.destination = player.position + player.forward * maxDistance;
+
     ticks++;
     if (ticks == shootSpeed) {
-      transform.LookAt(player.position);
       Shoot();
       ticks = 0;
     }
@@ -46,7 +50,7 @@ public abstract class Enemy : MonoBehaviour {
 
 
   protected void Shoot() {
-    var pos = transform.position + transform.forward;
+    var pos = shootPos.position + transform.forward;
     var b = Instantiate(bullet, pos, transform.rotation).GetComponent<Bullet>();
     b.direction = Vector3.RotateTowards(transform.forward, player.position, 0.0f, 0.0f);
     b.gameObject.layer = gameObject.layer;

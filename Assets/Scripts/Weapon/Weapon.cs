@@ -11,41 +11,58 @@ public enum UpgradeType {
 public class Weapon : MonoBehaviour {
   public delegate void OnShoot();
 
-  public int delay;
+  public float delay;
   public float currentDamageMultiplier;
 
   public Transform shootPos;
-  private bool _canShoot;
+  private bool _canShoot = true;
   private LineRenderer _line;
 
+  public Animator animator;
+  private bool _isFiring;
+  public AnimationClip shootClip;
+  
   private void Start() {
-    // _line = GetComponent<LineRenderer>();
-    StartCoroutine(ShootDelay());
+    _line = GetComponent<LineRenderer>();
+    animator = GetComponent<Animator>();
   }
 
-  // private void Update() {
-  //   _line.SetPosition(0, transform.position);
-  //   _line.SetPosition(1, transform.position + transform.forward * 10);
-  // }
+  private void Update() {
+    _line.SetPosition(0, shootPos.position);
+    _line.SetPosition(1, shootPos.position + transform.forward * 6);
+  }
 
   public event OnShoot ShootEvent;
 
 
   public void Shoot(InputAction.CallbackContext context) {
-    if (!_canShoot) return;
-    ShootEvent?.Invoke();
-    _canShoot = false;
+    if (context.performed || context.started) {
+      _isFiring = true;
+      StartCoroutine(AutoFire());
+    } else if (context.canceled) {
+      animator.SetTrigger("StopShooting");
+      _isFiring = false;
+    }
   }
 
+  private IEnumerator AutoFire() {
+    while (_isFiring) {
+      if (_canShoot) {
+        animator.speed = (shootClip.length / delay);
+        animator.Play("Shooting", 0, 0f);
+        ShootEvent?.Invoke();
+        _canShoot = false;
+        yield return new WaitForSeconds(delay);
+        animator.speed = 1;
+        _canShoot = true;
+      } else {
+        yield return null;
+      }
+    }
+  }
+  
   public void AddUpgrade(Upgrade upgrade) {
     ShootEvent += upgrade.Shoot;
   }
-
-  private IEnumerator ShootDelay() {
-    while (Application.isPlaying) {
-      yield return new WaitUntil(() => !_canShoot);
-      yield return new WaitForSeconds(delay);
-      _canShoot = true;
-    }
-  }
+  
 }
