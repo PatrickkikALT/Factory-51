@@ -1,6 +1,10 @@
 using System;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class Movement : MonoBehaviour {
   [Header("Movement")] 
@@ -11,7 +15,7 @@ public class Movement : MonoBehaviour {
 
   [Header("Mouse Movement")] 
   public float mouseSensitivity = 10f;
-
+  
   public Vector3 moveInput;
   private Vector3 _targetInput;
   private float _dashTime;
@@ -29,6 +33,7 @@ public class Movement : MonoBehaviour {
   private static int Moving = Animator.StringToHash("Moving");
   private static int Dead = Animator.StringToHash("Dies");
 
+  private float _currentTrackSpeed;
   
   [Header("Cached Materials")]
   public Material trackMaterial;
@@ -62,17 +67,18 @@ public class Movement : MonoBehaviour {
       animator.SetBool(Moving, false);
       return;
     }
+    
     animator.SetBool(Moving, true);
     _targetInput = new Vector3(input.x, 0f, input.y);
   }
 
   private void Update() {
     moveInput = Vector3.Slerp(moveInput, _targetInput, Time.deltaTime * moveSpeed);
-
+    
     if (moveInput != Vector3.zero && !_isDashing) {
       var targetRotation = Quaternion.LookRotation(moveInput);
       trackBone.rotation = targetRotation;
-    } 
+    }
   }
 
 

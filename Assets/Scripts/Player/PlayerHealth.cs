@@ -9,8 +9,8 @@ public class PlayerHealth : BaseHealth {
     if (immortal) return;
     base.TakeDamage(amount);
     if (health <= 0) {
-      //dead
-      //todo: functionality for death player
+      
+      GameManager.Instance.player.GetComponent<Animator>().SetTrigger("Die");
     }
   }
 
