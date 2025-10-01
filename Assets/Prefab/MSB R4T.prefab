@@ -273,6 +273,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 67c8876e-8532-4194-a520-551d9b918938
     m_ActionName: 'Player/Zoom[/Mouse/scroll/down,/Mouse/scroll/up]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3e524a69-ed49-4d76-8a3a-e01e8c508e6c
+    m_ActionName: 'Player/Rotate[/Keyboard/q,/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
