@@ -82,8 +82,7 @@ public class Generation : MonoBehaviour {
         newCells[index] = gridList[index];
       }
       else {
-        List<Tile> options = new();
-        foreach (var v in tileObjects) options.Add(v);
+        List<Tile> options = tileObjects.ToList();
 
         if (y > 0) {
           var up = gridList[x + (y - 1) * maxXZ];

@@ -27,6 +27,8 @@ public class Movement : MonoBehaviour {
   [Header("Bones")] 
   public Transform bodyBone;
   public Transform trackBone;
+  public GameObject mesh;
+  public Transform[] trackGears;
   
   [Header("Animation")]
   public Animator animator;
@@ -44,7 +46,7 @@ public class Movement : MonoBehaviour {
   }
 
   private void Start() {
-    trackMaterial = transform.GetChild(1).GetComponent<Renderer>().materials[1];
+    trackMaterial = mesh.GetComponent<Renderer>().materials[1];
   }
 
   private void FixedUpdate() {
@@ -63,11 +65,13 @@ public class Movement : MonoBehaviour {
   public void OnMove(InputAction.CallbackContext context) {
     var input = context.ReadValue<Vector2>();
     if (input == Vector2.zero) {
+      trackMaterial.SetFloat("_ScrollSpeed", 0);
       _targetInput = Vector3.zero;
       animator.SetBool(Moving, false);
       return;
     }
-    
+
+    trackMaterial.SetFloat("_ScrollSpeed", _isDashing ? trackDashSpeed : 0.5f);
     animator.SetBool(Moving, true);
     _targetInput = new Vector3(input.x, 0f, input.y);
   }
@@ -75,13 +79,19 @@ public class Movement : MonoBehaviour {
   private void Update() {
     moveInput = Vector3.Slerp(moveInput, _targetInput, Time.deltaTime * moveSpeed);
     
-    if (moveInput != Vector3.zero && !_isDashing) {
+    if (moveInput != Vector3.zero && _targetInput != Vector3.zero && !_isDashing) {
+      RotateGears();
       var targetRotation = Quaternion.LookRotation(moveInput);
       trackBone.rotation = targetRotation;
     }
   }
 
-
+  public void RotateGears() {
+    foreach (Transform t in trackGears) {
+      t.Rotate(moveSpeed * 50 * Time.deltaTime, 0, 0);
+    }
+  }
+  
   public void OnDash(InputAction.CallbackContext context) {
     if (context.performed && Time.time >= _lastDash + dashCooldown) {
       _isDashing = true;

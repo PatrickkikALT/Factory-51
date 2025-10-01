@@ -11,8 +11,6 @@ public class TopDownCamera : MonoBehaviour {
   private float _defaultHeight;
   public float height = 5f;
   public float rotationSpeed = 100f;
-  public float minPitch = 10f;
-  public float maxPitch = 80f;
   public bool rotateCameraEnabled;
 
   private float _yaw = 0f;
@@ -33,8 +31,9 @@ public class TopDownCamera : MonoBehaviour {
     
     offset.y += height;
 
-    transform.position = player.position + offset;
-    transform.LookAt(player.position);
+    var position = player.position;
+    transform.position = position + offset;
+    transform.LookAt(position);
   }
 
   public void OnZoom(InputAction.CallbackContext context) {

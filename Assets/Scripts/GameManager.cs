@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,4 +13,8 @@ public class GameManager : MonoBehaviour {
     if (Instance is null) Instance = this;
     else Destroy(this);
   }
+
+  // private void Start() {
+  //   Application.targetFrameRate = 60;
+  // }
 }

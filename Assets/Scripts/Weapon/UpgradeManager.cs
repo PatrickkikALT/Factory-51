@@ -35,7 +35,7 @@ public class UpgradeManager : MonoBehaviour {
         Debug.LogError($"No upgrade type found for upgrade {upgrade.name}");
         return false;
     }
-
+    
     equippedUpgrades.Add(upgrade);
     playersWeapon.AddUpgrade(upgrade);
     playersWeapon.currentDamageMultiplier = upgrade.damageMultiplier;
