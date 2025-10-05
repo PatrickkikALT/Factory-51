@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -8,7 +9,8 @@ public class GameManager : MonoBehaviour {
   public Weapon playerWeapon;
   public Transform bodyBone;
   public List<Enemy> enemies = new();
-
+  public bool playerPressedE;
+  public TMP_Text playerText;
   private void Awake() {
     if (Instance is null) Instance = this;
     else Destroy(this);

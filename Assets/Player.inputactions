@@ -37,7 +37,7 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "a0c58e54-2c48-487d-a33b-cce8e53f4b6b",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold",
                     "initialStateCheck": false
@@ -539,7 +539,7 @@
                 {
                     "name": "Negative",
                     "id": "01782b0c-bc29-425c-bcdc-f9b086300a2a",
-                    "path": "<Keyboard>/q",
+                    "path": "<Mouse>/delta/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -550,7 +550,7 @@
                 {
                     "name": "Positive",
                     "id": "f5f22538-5750-4774-b10e-b4deae7a968c",
-                    "path": "<Keyboard>/e",
+                    "path": "<Mouse>/delta/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

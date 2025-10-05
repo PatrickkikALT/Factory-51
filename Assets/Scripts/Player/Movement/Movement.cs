@@ -7,6 +7,9 @@ using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
 public class Movement : MonoBehaviour {
+  [Header("References")] 
+  public Transform cameraTransform;
+  
   [Header("Movement")] 
   public float moveSpeed = 5f;
   public float dashSpeed = 15f;
@@ -73,7 +76,16 @@ public class Movement : MonoBehaviour {
 
     trackMaterial.SetFloat("_ScrollSpeed", _isDashing ? trackDashSpeed : 0.5f);
     animator.SetBool(Moving, true);
-    _targetInput = new Vector3(input.x, 0f, input.y);
+    Vector3 camForward = cameraTransform.forward;
+    Vector3 camRight = cameraTransform.right;
+    
+    camForward.y = 0;
+    camRight.y = 0;
+    camForward.Normalize();
+    camRight.Normalize();
+    
+    _targetInput = camForward * input.y + camRight * input.x;
+
   }
 
   private void Update() {
@@ -104,6 +116,11 @@ public class Movement : MonoBehaviour {
     if (context.performed) {
       var input = context.ReadValue<Vector2>();
       bodyBone.Rotate(0, input.x * Time.deltaTime * mouseSensitivity, 0, Space.Self);
+      
     }
+  }
+
+  public void OnInteract(InputAction.CallbackContext context) {
+    GameManager.Instance.playerPressedE = !context.canceled;
   }
 }

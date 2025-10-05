@@ -10,7 +10,7 @@ public class TopDownCamera : MonoBehaviour {
   private float _defaultDistance;
   private float _defaultHeight;
   public float height = 5f;
-  public float rotationSpeed = 100f;
+  public float rotationSpeed = 10f;
   public bool rotateCameraEnabled;
 
   private float _yaw = 0f;
@@ -25,7 +25,7 @@ public class TopDownCamera : MonoBehaviour {
   }
 
   private void Update() {
-    _yaw += _lookInput.x * rotationSpeed * Time.deltaTime;
+    _yaw += _lookInput.x * Time.deltaTime * rotationSpeed;
     Quaternion rotation = Quaternion.Euler(_pitch, _yaw, 0);
     Vector3 offset = rotation * new Vector3(0, 0, -distance);
     
@@ -47,9 +47,7 @@ public class TopDownCamera : MonoBehaviour {
   }
 
   public void OnRotate(InputAction.CallbackContext context) {
-    if (rotateCameraEnabled) {
-      _lookInput.x = context.ReadValue<float>();
-    }
+    _lookInput.x = context.ReadValue<float>();
   }
   private void OnCollisionEnter(Collision col) {
   }

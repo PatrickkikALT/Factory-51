@@ -9,7 +9,7 @@ public struct Loot {
   public Rarity rarity;
 }
 
-[CreateAssetMenu(menuName = "Scriptable Objects", fileName = "Loot Table")]
+[CreateAssetMenu(menuName = "Loot Table", fileName = "New Loot Table")]
 public class LootTable : ScriptableObject {
   public Loot[] loot;
 }
