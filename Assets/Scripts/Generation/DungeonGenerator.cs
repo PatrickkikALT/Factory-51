@@ -98,7 +98,9 @@ public class DungeonGenerator : MonoBehaviour {
           };
 
           //ewwww
-          List<int> aroundPositionsIndex = directions.Select(dir => _positions[i] + dir * roomSize).Select(target => _positions.IndexOf(target)).Where(index => index != -1).ToList();
+          List<int> aroundPositionsIndex = directions.Select(dir => _positions[i] + dir * roomSize).
+            Select(target => _positions.IndexOf(target)).
+            Where(index => index != -1).ToList();
 
           int lastPositionIndex = aroundPositionsIndex.Max();
           while (lastPositionIndex > i)
@@ -130,8 +132,7 @@ public class DungeonGenerator : MonoBehaviour {
     }
   }
 
-  private void OpenDoors(Room newRoom, Room lastRoom, Vector3 dir)
-  {
+  private void OpenDoors(Room newRoom, Room lastRoom, Vector3 dir) {
     switch (dir) {
       case var _ when dir == Vector3.right * roomSize:
         newRoom.doors[2].SetActive(false);
@@ -153,7 +154,6 @@ public class DungeonGenerator : MonoBehaviour {
         lastRoom.doors[4].SetActive(false);
         break;
     }
-
   }
 
   private void ClearPositions() {

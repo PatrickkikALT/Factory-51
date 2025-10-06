@@ -19,13 +19,13 @@ public abstract class Upgrade : MonoBehaviour {
   //holy this is so ugly i need to rewrite this upgrade manager
   public bool AddUpgradeAndMoveToManager() {
     var gameManager = GameManager.Instance.gameObject;
-    var up = gameManager.AddComponent<Upgrade>();
-    up.type = type;
-    up.bulletPrefab = bulletPrefab;
-    up.damageMultiplier = damageMultiplier;
-    var success = UpgradeManager.Instance.AddUpgrade(up);
+    var upg = gameManager.AddComponent<Upgrade>();
+    upg.type = type;
+    upg.bulletPrefab = bulletPrefab;
+    upg.damageMultiplier = damageMultiplier;
+    var success = UpgradeManager.Instance.AddUpgrade(upg);
     Destroy(this);
-    return true;
+    return success;
   }
 
   public abstract void Shoot();

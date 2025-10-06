@@ -18,7 +18,7 @@ public class LootBox : MonoBehaviour {
     _animator.SetTrigger("OpenChest");
     var info = _animator.GetCurrentAnimatorStateInfo(0);
     //get length of state so animation plays before the loot gets spawned
-    yield return new WaitForSeconds(info.length / 2);
+    yield return new WaitForSeconds(info.length * 2);
     var loot = LootManager.Instance.GetLoot(lootTable);
     var g = Instantiate(loot.prefab, lootPosition);
     g.GetComponent<Animator>().SetTrigger("Open");

@@ -17,14 +17,15 @@ public static class Extensions {
   public static T RandomEnum<T>(this Enum _) where T : Enum => ((T[])Enum.GetValues(typeof(T))).Random();
 
   public static Loot Random(this LootTable loot) => loot.loot.Random();
-  public static Vector3 GetRandomPosition(this BoxCollider bounds) {
+  public static Vector3 Random(this BoxCollider bounds) {
     var center = bounds.center - bounds.gameObject.transform.position;
 
-    var minX = center.x - bounds.size.x / 2f;
-    var maxX = center.x + bounds.size.x / 2f;
+    var size = bounds.size;
+    var minX = center.x - size.x / 2f;
+    var maxX = center.x + size.x / 2f;
 
-    var minZ = center.z - bounds.size.z / 2f;
-    var maxZ = center.z + bounds.size.z / 2f;
+    var minZ = center.z - size.z / 2f;
+    var maxZ = center.z + size.z / 2f;
 
     var randomX = UnityEngine.Random.Range(minX, maxX);
     var randomZ = UnityEngine.Random.Range(minZ, maxZ);
