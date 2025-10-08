@@ -6,27 +6,30 @@ public class ChestPopUp : MonoBehaviour {
   [Header("References")]
   private TMP_Text _popUpText;
   public LootBox chest;
+  private bool _hasOpened;
 
   private void Start() {
     _popUpText = GameManager.Instance.playerText;
   }
 
-  private void OnCollisionEnter(Collision other) {
-    if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
+  private void OnTriggerEnter(Collider other) {
+    if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.TryGetComponent(out PlayerReference _)) {
       _popUpText.text = "Press E to Open Chest";
     }
   }
 
-  private void OnCollisionStay(Collision other) {
-    if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
+  private void OnTriggerStay(Collider other) {
+    if (_hasOpened) return;
+    if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.TryGetComponent(out PlayerReference _)) {
       if (GameManager.Instance.playerPressedE) {
+        _hasOpened = true;
         chest.OpenChest();
       }
     }
   }
 
-  private void OnCollisionExit(Collision other) {
-    if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
+  private void OnTriggerExit(Collider other) {
+    if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.TryGetComponent(out PlayerReference _)) {
       _popUpText.text = "";
     }
   }

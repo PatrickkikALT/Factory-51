@@ -6,14 +6,15 @@ public class DungeonGenerator : MonoBehaviour {
   public GameObject roomPrefab;
   public int dungeonSize;
   public int roomSize;
-  
+
   private List<Vector3> _positions = new();
   private List<GameObject> _roomsInstance = new();
   private List<Vector3> _worms = new();
 
-  [Header("Chests")]
+  [Header("Chests")] 
   public GameObject chestPrefab;
   public int roomsUntilChest = 5;
+
   private void Start() {
     GenerateDungeon();
   }
@@ -44,14 +45,13 @@ public class DungeonGenerator : MonoBehaviour {
           newPosition.Remove(t);
         }
 
-        if (newPosition.Count < 1)
-        {
+        if (newPosition.Count < 1) {
           newPosition.Clear();
           repeatPosition.Clear();
 
           for (int y = 2; y < dungeonSize; y++) {
             lastPosition = _positions[i - y];
-            
+
             newPosition.Add(new Vector3(lastPosition.x + roomSize, 0, lastPosition.z));
             newPosition.Add(new Vector3(lastPosition.x - roomSize, 0, lastPosition.z));
             newPosition.Add(new Vector3(lastPosition.x, 0, lastPosition.z + roomSize));
@@ -69,6 +69,7 @@ public class DungeonGenerator : MonoBehaviour {
               _worms.Add(finalPosition);
               break;
             }
+
             newPosition.Clear();
           }
         }
@@ -84,27 +85,26 @@ public class DungeonGenerator : MonoBehaviour {
     for (int i = 0; i < _positions.Count; i++) {
       GameObject newRoom = Instantiate(roomPrefab, _positions[i], Quaternion.identity);
       _roomsInstance.Add(newRoom);
-
+      if (i < 1) {
+        var room = newRoom.GetComponent<Room>();
+        room.disabled = true;
+      }
       if (i > 0) {
         Room newRoomScript, lastRoomScript;
-
-        if (_worms.Contains(_positions[i]))
-        {
+        if (_worms.Contains(_positions[i])) {
           Vector3[] directions = {
-            Vector3.right, 
-            Vector3.left, 
-            Vector3.forward, 
+            Vector3.right,
+            Vector3.left,
+            Vector3.forward,
             Vector3.back
           };
 
           //ewwww
-          List<int> aroundPositionsIndex = directions.Select(dir => _positions[i] + dir * roomSize).
-            Select(target => _positions.IndexOf(target)).
-            Where(index => index != -1).ToList();
+          List<int> aroundPositionsIndex = directions.Select(dir => _positions[i] + dir * roomSize)
+            .Select(target => _positions.IndexOf(target)).Where(index => index != -1).ToList();
 
           int lastPositionIndex = aroundPositionsIndex.Max();
-          while (lastPositionIndex > i)
-          {
+          while (lastPositionIndex > i) {
             aroundPositionsIndex.Remove(lastPositionIndex);
             lastPositionIndex = aroundPositionsIndex.Max();
           }
@@ -133,26 +133,16 @@ public class DungeonGenerator : MonoBehaviour {
   }
 
   private void OpenDoors(Room newRoom, Room lastRoom, Vector3 dir) {
-    switch (dir) {
-      case var _ when dir == Vector3.right * roomSize:
-        newRoom.doors[2].SetActive(false);
-        lastRoom.doors[1].SetActive(false);
-        break;
+    var doorMap = new Dictionary<Vector3, (int newDoor, int lastDoor)> {
+      { Vector3.right * roomSize, (2, 1) },
+      { Vector3.left * roomSize, (1, 2) },
+      { Vector3.forward * roomSize, (4, 3) },
+      { Vector3.back * roomSize, (3, 4) }
+    };
 
-      case var _ when dir == Vector3.left * roomSize:
-        newRoom.doors[1].SetActive(false);
-        lastRoom.doors[2].SetActive(false);
-        break;
-
-      case var _ when dir == Vector3.forward * roomSize:
-        newRoom.doors[4].SetActive(false);
-        lastRoom.doors[3].SetActive(false);
-        break;
-
-      case var _ when dir == Vector3.back * roomSize:
-        newRoom.doors[3].SetActive(false);
-        lastRoom.doors[4].SetActive(false);
-        break;
+    if (doorMap.TryGetValue(dir, out var doors)) {
+      newRoom.doors[doors.newDoor].SetActive(false);
+      lastRoom.doors[doors.lastDoor].SetActive(false);
     }
   }
 

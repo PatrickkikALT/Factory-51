@@ -22,8 +22,10 @@ public class Bullet : MonoBehaviour {
   }
 
   private void OnTriggerEnter(Collider other) {
+    //return early if hitting room collider
+    if (other.TryGetComponent(out Room _) || other.TryGetComponent(out OcclusionCulling _)) return;
     //return early if hit collider is a bullet so they dont collide with each other
-    if (other.TryGetComponent(out Bullet b)) return;
+    if (other.TryGetComponent(out Bullet _)) return;
     if (other.TryGetComponent(out BaseHealth health)) {
       health.TakeDamage(Mathf.RoundToInt(damage * GameManager.Instance.playerWeapon.currentDamageMultiplier));
       Destroy(gameObject);

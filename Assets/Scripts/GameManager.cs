@@ -11,9 +11,16 @@ public class GameManager : MonoBehaviour {
   public List<Enemy> enemies = new();
   public bool playerPressedE;
   public TMP_Text playerText;
+  public Room currentRoom;
   private void Awake() {
     if (Instance is null) Instance = this;
     else Destroy(this);
+  }
+
+  public void SetRoom(Room room) {
+    if (currentRoom == room) return;
+    currentRoom = room;
+    WaveManager.instance.StartNewWave(room.enemySpawnLocations);
   }
 
   // private void Start() {

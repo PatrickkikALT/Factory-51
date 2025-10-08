@@ -12,11 +12,12 @@ public static class Extensions {
 
   public static int Random(this int i, int max) => UnityEngine.Random.Range(0, max);
 
-  public static float Lerp(this float f, float to, float speed) =>  f * (1 - speed) + to * (1 - speed);
+  public static float Lerp(this float f, float to, float speed) => f * (1 - speed) + to * (1 - speed);
 
   public static T RandomEnum<T>(this Enum _) where T : Enum => ((T[])Enum.GetValues(typeof(T))).Random();
 
   public static Loot Random(this LootTable loot) => loot.loot.Random();
+
   public static Vector3 Random(this BoxCollider bounds) {
     var center = bounds.center - bounds.gameObject.transform.position;
 
@@ -33,5 +34,16 @@ public static class Extensions {
     var randomPosition = new Vector3(randomX, 1, randomZ);
 
     return randomPosition;
+  }
+
+  public static bool HasLineOfSight(Transform transform, Vector3 target) {
+    Vector3 eyeLevel = transform.position + Vector3.up * 1.5f;
+    Vector3 dir = (target - eyeLevel).normalized;
+
+    if (Physics.Raycast(eyeLevel, dir, out RaycastHit hit)) {
+      return Vector3.Distance(hit.point, target) < 0.5f;
+    }
+
+    return false;
   }
 }

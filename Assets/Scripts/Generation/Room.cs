@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,16 +9,14 @@ public class Room : MonoBehaviour
     public GameObject[] doors;
 
     public Transform[] chestLocations;
+    public Transform[] enemySpawnLocations;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
+    public bool disabled;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter(Collider other) {
+      if (disabled) return;
+      if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.TryGetComponent(out PlayerReference _)) {
+        GameManager.Instance.SetRoom(this);
+      }
     }
 }

@@ -79,7 +79,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LootBox
   lootTable: {fileID: 11400000, guid: 064d7bb2adf1c9b47a7d456e9dbdfffc, type: 2}
   lootPosition: {fileID: 6293566856254207116}
+  speed: 1000
 --- !u!4 &6536999868661471018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4f3b14ebac4e49846bead735f2fd9db3, type: 3}

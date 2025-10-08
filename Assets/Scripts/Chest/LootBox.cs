@@ -10,24 +10,28 @@ public class LootBox : MonoBehaviour {
   public Transform lootPosition;
   private Animator _animator;
 
+  public float speed;
+
   public void Start() {
     _animator = GetComponent<Animator>();
   }
   
   public IEnumerator Open() {
     _animator.SetTrigger("OpenChest");
-    var info = _animator.GetCurrentAnimatorStateInfo(0);
-    //get length of state so animation plays before the loot gets spawned
-    yield return new WaitForSeconds(info.length * 2);
     var loot = LootManager.Instance.GetLoot(lootTable);
     var g = Instantiate(loot.prefab, lootPosition);
-    g.GetComponent<Animator>().SetTrigger("Open");
+    yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
+    var target = g.transform.position;
+    target.y += 1;
+    while (Vector3.Distance(g.transform.position, target) > 0.1f) {
+      var vec3 = new Vector3(0, 0.1f, 0);
+      g.transform.position += vec3 * (speed * Time.deltaTime);
+      yield return null;
+    }
   }
   //wrapper method cuz you cant start coroutines with contextmenu :(((
-  #if UNITY_EDITOR
   [ContextMenu("Open")]
   public void OpenChest() {
     StartCoroutine(Open());
   }
-  #endif
 }

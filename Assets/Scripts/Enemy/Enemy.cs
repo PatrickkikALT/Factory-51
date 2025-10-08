@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
-
+using static Extensions;
 public abstract class Enemy : MonoBehaviour {
   [Header("AI Navigation")] [SerializeField]
   protected NavMeshAgent agent;
@@ -34,8 +34,9 @@ public abstract class Enemy : MonoBehaviour {
   }
 
   protected virtual void UpdateGoal() {
-    var distance = Vector3.Distance(player.position, transform.position);
-    agent.destination = player.position + player.forward * maxDistance;
+    var position = player.position;
+    var distance = Vector3.Distance(position, transform.position);
+    agent.destination = position + player.forward * maxDistance;
 
     ticks++;
     if (ticks == shootSpeed) {
@@ -48,6 +49,7 @@ public abstract class Enemy : MonoBehaviour {
     // }
   }
 
+  
 
   protected void Shoot() {
     var pos = shootPos.position + transform.forward;

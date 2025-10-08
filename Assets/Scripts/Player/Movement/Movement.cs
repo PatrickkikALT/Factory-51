@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour {
   public float dashSpeed = 15f;
   public float dashDuration = 0.2f;
   public float dashCooldown = 1f;
+  public float rotateSpeed = 100f;
 
   [Header("Mouse Movement")] 
   public float mouseSensitivity = 10f;
@@ -73,7 +74,6 @@ public class Movement : MonoBehaviour {
       animator.SetBool(Moving, false);
       return;
     }
-
     trackMaterial.SetFloat("_ScrollSpeed", _isDashing ? trackDashSpeed : 0.5f);
     animator.SetBool(Moving, true);
     Vector3 camForward = cameraTransform.forward;
@@ -81,15 +81,12 @@ public class Movement : MonoBehaviour {
     
     camForward.y = 0;
     camRight.y = 0;
-    camForward.Normalize();
-    camRight.Normalize();
-    
-    _targetInput = camForward * input.y + camRight * input.x;
 
+    _targetInput = camForward * input.y + camRight * input.x;
   }
 
   private void Update() {
-    moveInput = Vector3.Slerp(moveInput, _targetInput, Time.deltaTime * moveSpeed);
+    moveInput = Vector3.Lerp(moveInput, _targetInput, Time.deltaTime * rotateSpeed);
     
     if (moveInput != Vector3.zero && _targetInput != Vector3.zero && !_isDashing) {
       RotateGears();
