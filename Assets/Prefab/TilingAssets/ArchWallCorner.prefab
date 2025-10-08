@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3338117707553625877}
   - component: {fileID: 8667146472996738157}
   - component: {fileID: 5090417552935823477}
+  - component: {fileID: 3766991677293057125}
+  - component: {fileID: 2716738932953919888}
   m_Layer: 0
   m_Name: ArchWallCorner
   m_TagString: Untagged
@@ -89,3 +91,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3766991677293057125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704000291095094490}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16474907, y: 4.0999966, z: 2.0708795}
+  m_Center: {x: 0.0013312064, y: 1.9499986, z: 0.96456075}
+--- !u!65 &2716738932953919888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704000291095094490}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9156327, y: 4.0999966, z: 0.16609447}
+  m_Center: {x: 1.0421841, y: 1.9499986, z: 0.0017247163}
