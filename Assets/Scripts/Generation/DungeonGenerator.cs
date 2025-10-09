@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DungeonGenerator : MonoBehaviour {
   public GameObject roomPrefab;
+  public GameObject hallwayPrefab;
+  [Tooltip("This includes both the room and the hallway!")]
   public int dungeonSize;
   public int roomSize;
 
@@ -113,13 +115,24 @@ public class DungeonGenerator : MonoBehaviour {
           lastRoomScript = _roomsInstance[lastPositionIndex].GetComponent<Room>();
           Vector3 direction = _positions[i] - _positions[lastPositionIndex];
 
+          Vector3 midpoint = (_positions[i] + _positions[lastPositionIndex]) / 2f;
+          Quaternion rotation = Quaternion.identity;
+          if (Mathf.Abs(direction.x) > 0) rotation = Quaternion.Euler(0, 90, 0);
+          InstantiateHallwayBetween(_positions[i], _positions[lastPositionIndex]);
+
           OpenDoors(newRoomScript, lastRoomScript, direction);
+          
         }
         else {
           newRoomScript = _roomsInstance[i].GetComponent<Room>();
           lastRoomScript = _roomsInstance[i - 1].GetComponent<Room>();
 
           Vector3 direction = _positions[i] - _positions[i - 1];
+
+          Vector3 midpoint = (_positions[i] + _positions[i - 1]) / 2f;
+          Quaternion rotation = Quaternion.identity;
+          if (Mathf.Abs(direction.x) > 0) rotation = Quaternion.Euler(0, 90, 0);
+          InstantiateHallwayBetween(_positions[i], _positions[i - 1]);
 
           OpenDoors(newRoomScript, lastRoomScript, direction);
         }
@@ -156,4 +169,29 @@ public class DungeonGenerator : MonoBehaviour {
 
     _roomsInstance.Clear();
   }
+  
+  private void InstantiateHallwayBetween(Vector3 a, Vector3 b) {
+    Vector3 midpoint = (a + b) / 2f;
+    Vector3 dir = b - a;
+    Quaternion rotation = Quaternion.identity;
+    
+    if (Mathf.Abs(dir.x) > Mathf.Abs(dir.z)) rotation = Quaternion.Euler(0, 90, 0);
+    GameObject hallway = Instantiate(hallwayPrefab, midpoint, rotation);
+    
+    Renderer[] rends = hallway.GetComponentsInChildren<Renderer>();
+    if (rends.Length > 0) {
+      Bounds combined = rends[0].bounds;
+      for (int i = 1; i < rends.Length; i++) combined.Encapsulate(rends[i].bounds);
+
+      Vector3 correction = midpoint - combined.center;
+      hallway.transform.position += correction;
+    }
+
+    //yucky solution but we dont need multiple floors rn so y can always be set to 0
+    Vector3 pos = hallway.transform.position;
+    pos.y = 0;
+    hallway.transform.position = pos;
+  }
+
+  
 }
