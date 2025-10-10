@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
   public void SetRoom(Room room) {
     if (currentRoom == room) return;
     currentRoom = room;
-    WaveManager.instance.StartNewWave(room.enemySpawnLocations);
+    WaveManager.instance.StartNewWave(room.enemySpawnLocations, room);
   }
 
   // private void Start() {

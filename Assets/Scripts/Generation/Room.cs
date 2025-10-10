@@ -9,7 +9,7 @@ public class Room : MonoBehaviour
     public GameObject[] doors;
 
     public Transform[] chestLocations;
-    public Transform[] enemySpawnLocations;
+    public SpawnBox enemySpawnLocations;
 
     public bool disabled;
 
@@ -18,5 +18,10 @@ public class Room : MonoBehaviour
       if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.TryGetComponent(out PlayerReference _)) {
         GameManager.Instance.SetRoom(this);
       }
+    }
+
+    private void OnDrawGizmos() {
+      Gizmos.color = enemySpawnLocations.GizmoColor;
+      Gizmos.DrawWireCube(enemySpawnLocations.BoxPos + transform.position, enemySpawnLocations.BoxSize);
     }
 }

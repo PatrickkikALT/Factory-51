@@ -25,7 +25,8 @@ public class WaveManager : MonoBehaviour {
   public List<WaveGroups> availableGroups;
   public List<WaveGroups> currentWaveGroups;
 
-  public Transform[] enemySpawnPos;
+  public SpawnBox enemySpawnPos;
+  public Room currentRoom;
 
   [Header("Wave Points")] private int _wavePoints;
 
@@ -34,8 +35,9 @@ public class WaveManager : MonoBehaviour {
   }
 
   [ContextMenu("StartNewWave")]
-  public void StartNewWave(Transform[] spawnPos) {
+  public void StartNewWave(SpawnBox spawnPos, Room room) {
     enemySpawnPos = spawnPos;
+    currentRoom = room;
     wave++;
     _wavePoints = 0;
     var middleMan = startingWavePoints * wavePointsModifier;
@@ -81,8 +83,8 @@ public class WaveManager : MonoBehaviour {
     foreach (var groups in currentWaveGroups) {
       print(groups.GroupName);
       foreach (var enemy in groups.EnemyGo) {
-        Transform pos = enemySpawnPos.Random();
-        GameManager.Instance.enemies.Add(Instantiate(enemy, pos.position, pos.rotation)
+        Vector3 pos = enemySpawnPos.GetRandomPosition(currentRoom.transform.position);
+        GameManager.Instance.enemies.Add(Instantiate(enemy, pos, Quaternion.identity)
           .GetComponent<Enemy>());
         yield return new WaitForSeconds(groups.TimeBetweenEnemy);
       }
