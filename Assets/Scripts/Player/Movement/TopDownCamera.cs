@@ -5,6 +5,7 @@ public class TopDownCamera : MonoBehaviour {
   [Header("References")]
   public Transform player;
 
+  private Movement _playerMovement;
   [Header("Settings")]
   public float distance = 10f;
   private float _defaultDistance;
@@ -12,21 +13,17 @@ public class TopDownCamera : MonoBehaviour {
   public float height = 5f;
   public float rotationSpeed = 10f;
   public bool rotateCameraEnabled;
-
-  private float _yaw = 0f;
-  private float _pitch = 45f;
   
-  private Vector2 _lookInput;
-
   private void Start() {
     _defaultHeight = height;
     _defaultDistance = distance;
     Cursor.lockState = CursorLockMode.Locked;
+    player = GameManager.Instance.player;
+    _playerMovement = player.GetComponent<Movement>();
   }
 
   private void Update() {
-    _yaw += _lookInput.x * Time.deltaTime * rotationSpeed;
-    Quaternion rotation = Quaternion.Euler(_pitch, _yaw, 0);
+    Quaternion rotation = _playerMovement.bodyBone.rotation;
     Vector3 offset = rotation * new Vector3(0, 0, -distance);
     
     offset.y += height;
@@ -45,10 +42,7 @@ public class TopDownCamera : MonoBehaviour {
     height = _defaultHeight;
     distance = _defaultDistance;
   }
-
-  public void OnRotate(InputAction.CallbackContext context) {
-    _lookInput.x = context.ReadValue<float>();
-  }
+  
   private void OnCollisionEnter(Collision col) {
   }
 }
