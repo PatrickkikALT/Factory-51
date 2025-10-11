@@ -13,9 +13,10 @@ public class DungeonGenerator : MonoBehaviour {
   public GameObject windowHallwayPrefab;
   public GameObject windowToXHallwayPrefab;
   public GameObject xHallwayPrefab;
+  public GameObject bossHallwayPrefab;
 
-  [Header("Dungeon Settings")] public int dungeonSize;
-
+  [Header("Dungeon Settings")] 
+  public int dungeonSize;
   [Tooltip("This includes both the room and the hallway!")]
   public int roomSize;
 
@@ -90,8 +91,28 @@ public class DungeonGenerator : MonoBehaviour {
     Vector3 lastRoomPos = _positions[_positions.Count - 1];
     Vector3 secondLastPos = _positions[_positions.Count - 2];
     Vector3 dir = (lastRoomPos - secondLastPos).normalized;
-    Vector3 bossRoomPos = lastRoomPos + dir * (roomSize * 2 - 4);
+    
+    Vector3 bossRoomPos = Vector3.zero;
+    float distanceMultiplier = 2f;
+    bool foundSpot = false;
+
+    for (int attempt = 0; attempt < 5; attempt++) {
+      bossRoomPos = lastRoomPos + dir * (roomSize * distanceMultiplier - 4);
+
+      if (!_positions.Contains(bossRoomPos)) {
+        foundSpot = true;
+        break;
+      }
+
+      distanceMultiplier += 0.5f;
+    }
+    
+    if (!foundSpot) {
+      bossRoomPos = lastRoomPos + dir * (roomSize * 2);
+    }
+
     _positions.Add(bossRoomPos);
+
   }
 
   private void GenerateRooms() {
@@ -127,7 +148,7 @@ public class DungeonGenerator : MonoBehaviour {
         Vector3 direction = currPos - prevPos;
 
         GameObject hallwayPrefab = isBossRoom
-          ? xHallwayPrefab
+          ? bossHallwayPrefab
           : GetHallwayForTransition(i - 1, i, baseEnd, windowEnd);
 
         InstantiateHallwayBetween(prevPos, currPos, hallwayPrefab);
@@ -199,18 +220,28 @@ public class DungeonGenerator : MonoBehaviour {
     Quaternion rotation = Mathf.Abs(dir.x) > Mathf.Abs(dir.z) ? Quaternion.Euler(0, 90, 0) : Quaternion.identity;
 
     Vector3 midpoint = (a + b) / 2f;
-
+    
+    GameObject temp = Instantiate(hallwayPrefab);
+    Renderer[] rends = temp.GetComponentsInChildren<Renderer>();
+    float hallwayLength = roomSize;
+    if (rends.Length > 0) {
+      Bounds combined = rends[0].bounds;
+      for (int i = 1; i < rends.Length; i++) combined.Encapsulate(rends[i].bounds);
+      hallwayLength = Mathf.Max(combined.size.x, combined.size.z);
+    }
+    DestroyImmediate(temp);
+    
     if (bossConnection) {
-      float offset = (roomSize * 2 - roomSize) / 2f;
+      float offset = hallwayLength / 2f; 
       midpoint -= dir * offset;
     }
 
     GameObject hallway = Instantiate(hallwayPrefab, midpoint, rotation);
-
-    Renderer[] rends = hallway.GetComponentsInChildren<Renderer>();
-    if (rends.Length > 0) {
-      Bounds combined = rends[0].bounds;
-      for (int i = 1; i < rends.Length; i++) combined.Encapsulate(rends[i].bounds);
+    
+    Renderer[] finalRends = hallway.GetComponentsInChildren<Renderer>();
+    if (finalRends.Length > 0) {
+      Bounds combined = finalRends[0].bounds;
+      for (int i = 1; i < finalRends.Length; i++) combined.Encapsulate(finalRends[i].bounds);
       Vector3 correction = midpoint - combined.center;
       hallway.transform.position += correction;
     }
@@ -219,4 +250,5 @@ public class DungeonGenerator : MonoBehaviour {
     pos.y = 0;
     hallway.transform.position = pos;
   }
+
 }

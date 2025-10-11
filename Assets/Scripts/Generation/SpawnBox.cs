@@ -3,7 +3,7 @@ using UnityEngine;
 //nobe script but edited
 [Serializable]
 [Tooltip("A box area in which items can be spawned")]
-public struct SpawnBox
+public class SpawnBox
 {
     [Tooltip("The center position of the box relative to the origin")]
     public Vector3 BoxPos;
