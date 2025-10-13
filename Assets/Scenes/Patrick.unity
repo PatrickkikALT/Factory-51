@@ -1031,20 +1031,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
   wave: 0
-  startingWavePoints: 3
+  startingWavePoints: 5
   wavePointsModifier: 1.2
   enemyGroups:
-  - GroupName: 1 Circle
+  - GroupName: 3 normal
     WavePointCost: 3
     EnemyGo:
-    - {fileID: 3194187654938283596, guid: c0f3bbf27d170b114a92582f09b63eea, type: 3}
-    TimeBetweenEnemy: 0
-    TimeBetweenGroup: 2
-  - GroupName: 1 Basic
-    WavePointCost: 2
-    EnemyGo:
     - {fileID: 1892200935371990051, guid: 6574d56c52de9b798a7bea156b849eaa, type: 3}
-    TimeBetweenEnemy: 0
+    - {fileID: 1892200935371990051, guid: 6574d56c52de9b798a7bea156b849eaa, type: 3}
+    - {fileID: 1892200935371990051, guid: 6574d56c52de9b798a7bea156b849eaa, type: 3}
+    TimeBetweenEnemy: 0.1
+    TimeBetweenGroup: 2
+  - GroupName: 2 Circle
+    WavePointCost: 4
+    EnemyGo:
+    - {fileID: 29372970023425140, guid: 465fbf62981f06b4c96351f60239ec58, type: 3}
+    - {fileID: 29372970023425140, guid: 465fbf62981f06b4c96351f60239ec58, type: 3}
+    TimeBetweenEnemy: 0.1
+    TimeBetweenGroup: 1
+  - GroupName: 1 Circle 2 Normal
+    WavePointCost: 4
+    EnemyGo:
+    - {fileID: 29372970023425140, guid: 465fbf62981f06b4c96351f60239ec58, type: 3}
+    - {fileID: 1892200935371990051, guid: 6574d56c52de9b798a7bea156b849eaa, type: 3}
+    - {fileID: 1892200935371990051, guid: 6574d56c52de9b798a7bea156b849eaa, type: 3}
+    TimeBetweenEnemy: 0.1
     TimeBetweenGroup: 1
   availableGroups: []
   currentWaveGroups: []
@@ -1300,6 +1311,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1266434244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266434246}
+  - component: {fileID: 1266434245}
+  m_Layer: 0
+  m_Name: Rooms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1266434245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266434244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
+--- !u!4 &1266434246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266434244}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.79715, y: 0, z: -1.12951}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316533053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,8 +1693,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   player: {fileID: 772222756017364578}
-  distance: 5
-  height: 2
+  distance: 4
+  height: 4
+  maxHeight: 8
+  maxDistance: 8
+  minHeight: 2
+  minDistance: 2
   rotationSpeed: 10
   rotateCameraEnabled: 1
 --- !u!114 &1648782640
@@ -1784,6 +1863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabe9872a38bb3e47b91e6bd5d5944cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
+  parent: {fileID: 1266434246}
   baseRoomPrefabs:
   - {fileID: 7584287487215775697, guid: 5e825dc43e7c80041b9cca792e32594d, type: 3}
   - {fileID: 6841065379773696299, guid: 7ac8830e170c2704e8e7da4d5d7863ac, type: 3}
@@ -4013,3 +4093,4 @@ SceneRoots:
   - {fileID: 772222756017364578}
   - {fileID: 787006480}
   - {fileID: 615887105}
+  - {fileID: 1266434246}

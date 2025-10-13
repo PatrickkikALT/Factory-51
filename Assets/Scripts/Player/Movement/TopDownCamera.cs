@@ -11,6 +11,14 @@ public class TopDownCamera : MonoBehaviour {
   private float _defaultDistance;
   private float _defaultHeight;
   public float height = 5f;
+  
+  [Header("Zoom")]
+  public float maxHeight;
+  public float maxDistance;
+  public float minHeight;
+  public float minDistance;
+  
+  [Header("Rotate")]
   public float rotationSpeed = 10f;
   public bool rotateCameraEnabled;
   
@@ -34,15 +42,16 @@ public class TopDownCamera : MonoBehaviour {
   }
 
   public void OnZoom(InputAction.CallbackContext context) {
-    height += context.ReadValue<float>() / 2;
-    distance += context.ReadValue<float>() / 2;
+    height += context.ReadValue<float>() / 10;
+    distance += context.ReadValue<float>() / 10;
+    height = Mathf.Clamp(height, minHeight, maxHeight);
+    distance = Mathf.Clamp(distance, minDistance, maxDistance);
   }
 
   public void ResetZoom() {
     height = _defaultHeight;
     distance = _defaultDistance;
   }
-  
-  private void OnCollisionEnter(Collision col) {
-  }
+
+
 }

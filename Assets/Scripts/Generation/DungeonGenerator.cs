@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 public class DungeonGenerator : MonoBehaviour {
+  [SerializeField] private Transform parent;
   [Header("Room Prefabs")] public GameObject[] baseRoomPrefabs;
   public GameObject[] windowRoomPrefabs;
   public GameObject[] xRoomPrefabs;
@@ -27,6 +29,7 @@ public class DungeonGenerator : MonoBehaviour {
   [Header("Chests")] public GameObject chestPrefab;
   public int roomsUntilChest = 5;
 
+  
 
   private void Start() {
     GenerateDungeon();
@@ -96,7 +99,7 @@ public class DungeonGenerator : MonoBehaviour {
     float distanceMultiplier = 2f;
     bool foundSpot = false;
 
-    for (int attempt = 0; attempt < 5; attempt++) {
+    for (int attempt = 0; attempt < 15; attempt++) {
       bossRoomPos = lastRoomPos + dir * (roomSize * distanceMultiplier - 4);
 
       if (!_positions.Contains(bossRoomPos)) {
@@ -121,16 +124,17 @@ public class DungeonGenerator : MonoBehaviour {
 
     for (int i = 0; i < _positions.Count; i++) {
       bool isBossRoom = i == _positions.Count - 1;
-
       GameObject newRoom;
       if (isBossRoom) {
         newRoom = Instantiate(bossRoom, _positions[i], Quaternion.identity);
+        newRoom.transform.parent = parent;
       }
       else {
         GameObject[] currentRoomSet = i < baseEnd ? baseRoomPrefabs :
           i < windowEnd ? windowRoomPrefabs :
           xRoomPrefabs;
         newRoom = Instantiate(currentRoomSet.Random(), _positions[i], Quaternion.identity);
+        newRoom.transform.parent = parent;
       }
 
       _roomsInstance.Add(newRoom);
@@ -151,7 +155,7 @@ public class DungeonGenerator : MonoBehaviour {
           ? bossHallwayPrefab
           : GetHallwayForTransition(i - 1, i, baseEnd, windowEnd);
 
-        InstantiateHallwayBetween(prevPos, currPos, hallwayPrefab);
+        InstantiateHallwayBetween(prevPos, currPos, hallwayPrefab, isBossRoom);
         try {
           OpenDoors(newRoomScript, lastRoomScript, direction);
         }
@@ -165,6 +169,7 @@ public class DungeonGenerator : MonoBehaviour {
         Instantiate(chestPrefab, pos.position, pos.rotation);
       }
     }
+    parent.GetComponent<NavMeshSurface>().BuildNavMesh();
   }
 
   private GameObject GetHallwayForTransition(int lastIndex, int currentIndex, int baseEnd, int windowEnd) {
@@ -220,19 +225,9 @@ public class DungeonGenerator : MonoBehaviour {
     Quaternion rotation = Mathf.Abs(dir.x) > Mathf.Abs(dir.z) ? Quaternion.Euler(0, 90, 0) : Quaternion.identity;
 
     Vector3 midpoint = (a + b) / 2f;
-    
-    GameObject temp = Instantiate(hallwayPrefab);
-    Renderer[] rends = temp.GetComponentsInChildren<Renderer>();
-    float hallwayLength = roomSize;
-    if (rends.Length > 0) {
-      Bounds combined = rends[0].bounds;
-      for (int i = 1; i < rends.Length; i++) combined.Encapsulate(rends[i].bounds);
-      hallwayLength = Mathf.Max(combined.size.x, combined.size.z);
-    }
-    DestroyImmediate(temp);
-    
+
     if (bossConnection) {
-      float offset = hallwayLength / 2f; 
+      float offset = 5f; 
       midpoint -= dir * offset;
     }
 
@@ -245,7 +240,9 @@ public class DungeonGenerator : MonoBehaviour {
       Vector3 correction = midpoint - combined.center;
       hallway.transform.position += correction;
     }
+    hallway.transform.parent = parent;
 
+    //yucky solution but we dont need multiple floors rn so y can always be set to 0
     Vector3 pos = hallway.transform.position;
     pos.y = 0;
     hallway.transform.position = pos;

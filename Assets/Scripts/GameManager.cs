@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour {
   public static GameManager Instance;
@@ -15,6 +16,10 @@ public class GameManager : MonoBehaviour {
   private void Awake() {
     if (Instance is null) Instance = this;
     else Destroy(this);
+  }
+
+  private void Start() {
+    
   }
 
   public void SetRoom(Room room) {

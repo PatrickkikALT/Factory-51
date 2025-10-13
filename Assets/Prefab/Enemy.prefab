@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892200935371990051}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 7615984177786252654, guid: 1d179fc85454bc149bc562135befb850, type: 3}
 --- !u!23 &6378430902705477708
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8ef79717a62897a3b9b122f80fef33f2, type: 2}
+  - {fileID: 2100000, guid: b6e9a542763aa744db843aa859c165e8, type: 2}
+  - {fileID: 2100000, guid: 4bb5d8f0e81e246428e3214f592eaaaf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,7 +139,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 0.78
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
 --- !u!114 &5402308457246287519
 MonoBehaviour:

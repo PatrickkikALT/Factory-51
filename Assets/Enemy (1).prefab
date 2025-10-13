@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4998215410758314303}
@@ -77,7 +77,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3194187654938283596}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1102333694107221547, guid: 5eeded304d4a4f14ab8c3603eb459e3a, type: 3}
 --- !u!23 &5567611541941998044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   shootPos: {fileID: 4998215410758314303}
   maxDistance: 20
   bullet: {fileID: 9009432622370760229, guid: 0f0833470a3fd5511ba7b0f5b8280629, type: 3}
-  shootSpeed: 3
+  shootSpeed: 4
   walkSpeed: 3
   preferredDistance: 5
   panicDistance: 1
