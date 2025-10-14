@@ -21,6 +21,7 @@ public class WaveManager : MonoBehaviour {
   public float wavePointsModifier;
 
   [Header("Wave Enemies")] public List<WaveGroups> enemyGroups;
+  public List<WaveGroups> bossGroups;
 
   public List<WaveGroups> availableGroups;
   public List<WaveGroups> currentWaveGroups;
@@ -44,6 +45,14 @@ public class WaveManager : MonoBehaviour {
     _wavePoints = (int)middleMan;
     wavePointsModifier = 1.2f;
     StartCoroutine(GenerateNewWave());
+  }
+
+  public void StartBossWave(SpawnBox spawnPos, Room room) {
+    enemySpawnPos = spawnPos;
+    currentRoom = room;
+    wave++;
+    _wavePoints = 0;
+    Instantiate(bossGroups.Random().EnemyGo[0], enemySpawnPos.GetRandomPosition(room.transform.position), Quaternion.identity);
   }
 
   public IEnumerator GenerateNewWave() {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Room : MonoBehaviour
 {
@@ -12,7 +9,8 @@ public class Room : MonoBehaviour
     public SpawnBox enemySpawnLocations;
 
     public bool disabled;
-
+    [HideInInspector] public int id;
+    [HideInInspector] public bool bossRoom;
     private void OnTriggerEnter(Collider other) {
       if (disabled) return;
       if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.TryGetComponent(out PlayerReference _)) {

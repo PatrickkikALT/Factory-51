@@ -15,7 +15,7 @@ public abstract class Enemy : MonoBehaviour {
   [Tooltip("Amount of ticks until shot")] [SerializeField]
   protected int shootSpeed;
 
-  [SerializeField] protected int walkSpeed;
+  [SerializeField] protected float walkSpeed;
 
   protected int ticks;
 

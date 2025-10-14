@@ -127,15 +127,17 @@ public class DungeonGenerator : MonoBehaviour {
       GameObject newRoom;
       if (isBossRoom) {
         newRoom = Instantiate(bossRoom, _positions[i], Quaternion.identity);
-        newRoom.transform.parent = parent;
+        newRoom.GetComponent<Room>().bossRoom = true;
       }
       else {
         GameObject[] currentRoomSet = i < baseEnd ? baseRoomPrefabs :
           i < windowEnd ? windowRoomPrefabs :
           xRoomPrefabs;
         newRoom = Instantiate(currentRoomSet.Random(), _positions[i], Quaternion.identity);
-        newRoom.transform.parent = parent;
       }
+
+      newRoom.GetComponent<Room>().id = i;
+      newRoom.transform.parent = parent;
 
       _roomsInstance.Add(newRoom);
 

@@ -25,7 +25,13 @@ public class GameManager : MonoBehaviour {
   public void SetRoom(Room room) {
     if (currentRoom == room) return;
     currentRoom = room;
-    WaveManager.instance.StartNewWave(currentRoom.enemySpawnLocations, currentRoom);
+    if (currentRoom.bossRoom) {
+      WaveManager.instance.StartBossWave(currentRoom.enemySpawnLocations, currentRoom);
+    }
+    else {
+      WaveManager.instance.StartNewWave(currentRoom.enemySpawnLocations, currentRoom);
+    }
+    print($"{currentRoom.id}");
     print($"Spawning Wave in room {currentRoom.name}");
   }
 

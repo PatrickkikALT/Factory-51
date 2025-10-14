@@ -35,7 +35,7 @@ public class CircleEnemy : Enemy {
   }
 
   private Vector3 CalculateDestination() {
-    var destination = player.position + player.forward * preferredDistance;
+    var destination = player.position;
     return destination;
   }
 
