@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour {
   public float dashDuration = 0.2f;
   public float dashCooldown = 1f;
   public float rotateSpeed = 100f;
-
+  public bool canMove = true;
   [Header("Mouse Movement")] 
   public float mouseSensitivity = 10f;
   
@@ -70,6 +70,7 @@ public class Movement : MonoBehaviour {
   }
   
   public void OnMove(InputAction.CallbackContext context) {
+    if (!canMove) return;
     var input = context.ReadValue<Vector2>();
     if (input == Vector2.zero) {
       trackMaterial.SetFloat("_ScrollSpeed", 0);
@@ -105,6 +106,7 @@ public class Movement : MonoBehaviour {
   }
   
   public void OnDash(InputAction.CallbackContext context) {
+    if (!canMove) return;
     if (context.performed && Time.time >= _lastDash + dashCooldown) {
       _isDashing = true;
       _dashTime = dashDuration;
@@ -113,6 +115,7 @@ public class Movement : MonoBehaviour {
   }
 
   public void OnLook(InputAction.CallbackContext context) {
+    if (!canMove) return;
     if (context.performed) {
       var input = context.ReadValue<Vector2>();
       bodyBone.Rotate(0, input.x * Time.deltaTime * mouseSensitivity, 0, Space.Self);

@@ -90,7 +90,6 @@ public class WaveManager : MonoBehaviour {
 
   public IEnumerator SpawnEnemyGroups() {
     foreach (var groups in currentWaveGroups) {
-      print(groups.GroupName);
       foreach (var enemy in groups.EnemyGo) {
         Vector3 pos = enemySpawnPos.GetRandomPosition(currentRoom.transform.position);
         GameManager.Instance.enemies.Add(Instantiate(enemy, pos, Quaternion.identity)

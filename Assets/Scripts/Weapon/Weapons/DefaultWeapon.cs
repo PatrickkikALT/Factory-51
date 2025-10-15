@@ -3,7 +3,7 @@ using UnityEngine;
 public class DefaultWeapon : Upgrade {
   public override void Shoot() {
     GameObject obj;
-    if (PoolManager.TryDequeue(out obj)) {
+    if (PoolManager.TryDequeue(BulletType.PLAYER, out obj)) {
       obj.transform.position = WeaponS.shootPos.position;
       obj.transform.rotation = Player.rotation;
     }

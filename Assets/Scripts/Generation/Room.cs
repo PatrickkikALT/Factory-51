@@ -10,7 +10,7 @@ public class Room : MonoBehaviour
 
     public bool disabled;
     [HideInInspector] public int id;
-    [HideInInspector] public bool bossRoom;
+    public bool bossRoom;
     private void OnTriggerEnter(Collider other) {
       if (disabled) return;
       if (other.TryGetComponent(out PlayerReference _)) {

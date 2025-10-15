@@ -11,8 +11,7 @@ public class Ticker : MonoBehaviour {
   public static Ticker Instance;
 
   private void Awake() {
-    if (Instance is null) Instance = this;
-    else Destroy(this);
+    Instance = this;
   }
 
   private void Start() {

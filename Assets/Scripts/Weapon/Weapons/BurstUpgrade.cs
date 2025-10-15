@@ -12,7 +12,7 @@ public class BurstUpgrade : Upgrade {
   public IEnumerator Burst() {
     for (var i = 0; i < burstAmount; i++) {
       GameObject obj = null;
-      if (PoolManager.TryDequeue(out obj)) {
+      if (PoolManager.TryDequeue(BulletType.PLAYER, out obj)) {
         obj.transform.position = WeaponS.shootPos.position;
         obj.transform.rotation = Player.rotation;
       }
@@ -23,8 +23,7 @@ public class BurstUpgrade : Upgrade {
       var bullet = obj.GetComponent<Bullet>();
       bullet.direction = GameManager.Instance.bodyBone.transform.forward;
       bullet.gameObject.layer = Player.gameObject.layer;
-      bullet.direction = GameManager.Instance.bodyBone.transform.forward;
-      bullet.gameObject.layer = Player.gameObject.layer;
+      bullet.type = BulletType.PLAYER;
       yield return new WaitForSeconds(burstDelay);
     }
   }

@@ -44,4 +44,21 @@ public class CircleEnemy : Enemy {
     pos += player.forward * preferredDistance;
     return pos;
   }
+
+  protected override void Shoot() {
+    var pos = shootPos.position;
+
+    GameObject obj;
+    if (PoolManager.TryDequeue(BulletType.CIRCLE ,out obj)) {
+      obj.SetActive(true);
+      obj.transform.position = pos;
+    }
+    else {
+      obj = Instantiate(bullet, pos, transform.rotation);
+    }
+    var b = obj.GetComponent<Bullet>();
+    b.direction = Vector3.RotateTowards(transform.forward, player.position, 0.0f, 0.0f);
+    b.gameObject.layer = gameObject.layer;
+    b.type = BulletType.CIRCLE;
+  }
 }

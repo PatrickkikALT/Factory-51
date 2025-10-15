@@ -14,6 +14,7 @@ public class UpgradeItem : MonoBehaviour {
     if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
       if (GameManager.Instance.playerPressedE) {
         var success = upgrade.AddUpgradeAndMoveToManager();
+        GameManager.Instance.playerText.text = "";
         if (success) Destroy(gameObject);
       }
     }

@@ -23,7 +23,6 @@ public class Weapon : MonoBehaviour {
   public AnimationClip shootClip;
   
   private void Start() {
-    _line = GetComponent<LineRenderer>();
     animator = GetComponent<Animator>();
   }
 

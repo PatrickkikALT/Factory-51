@@ -3,8 +3,11 @@ using System.Collections;
 using UnityEngine;
 
 public enum BulletType {
+  BOSS,
+  CIRCLE,
+  WAVE,
   PLAYER,
-  ENEMY
+  BASIC
 }
 
 public class Bullet : MonoBehaviour {
@@ -20,13 +23,18 @@ public class Bullet : MonoBehaviour {
 
   private void OnTriggerEnter(Collider other) {
     //return early if hitting room collider
-    if (other.TryGetComponent(out Room _) || other.TryGetComponent(out OcclusionCulling _)) return;
+    if (other.TryGetComponent(out Room _)) return;
     //return early if hit collider is a bullet so they dont collide with each other
     if (other.TryGetComponent(out Bullet _)) return;
-    if (other.TryGetComponent(out BaseHealth health)) {
+    if (other.TryGetComponent(out PlayerReference player)) {
+      player.transform.parent.TryGetComponent(out BaseHealth health);
       health.TakeDamage(Mathf.RoundToInt(damage));
       Enqueue();
       return;
+    }
+
+    if (other.TryGetComponent(out BaseHealth bHealth)) {
+      bHealth.TakeDamage(Mathf.RoundToInt(damage));
     }
 
     if (TryGetComponent(out BulletEmitter em)) em.EmitBullets(0);
@@ -50,6 +58,6 @@ public class Bullet : MonoBehaviour {
   }
 
   void Enqueue() {
-    PoolManager.Enqueue(gameObject);
+    PoolManager.Enqueue(gameObject, type);
   }
 }

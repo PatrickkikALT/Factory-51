@@ -49,4 +49,21 @@ public class WaveEnemy : Enemy {
     yield return new WaitUntil(() => !agent.isStopped);
     StartCoroutine(AttackPattern());
   }
+  
+  protected override void Shoot() {
+    var pos = shootPos.position;
+
+    GameObject obj;
+    if (PoolManager.TryDequeue(BulletType.WAVE, out obj)) {
+      obj.SetActive(true);
+      obj.transform.position = pos;
+    }
+    else {
+      obj = Instantiate(bullet, pos, transform.rotation);
+    }
+    var b = obj.GetComponent<Bullet>();
+    b.direction = Vector3.RotateTowards(transform.forward, player.position, 0.0f, 0.0f);
+    b.gameObject.layer = gameObject.layer;
+    b.type = BulletType.WAVE;
+  }
 }

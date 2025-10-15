@@ -25,7 +25,7 @@ public class LootManager : MonoBehaviour {
   };
 
   private void Awake() {
-    if (Instance == null) Instance = this;
+    Instance = this;
   }
   
   public Loot GetLoot(LootTable loot) {
