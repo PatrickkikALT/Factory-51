@@ -1509,7 +1509,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4221297481268283329, guid: 5e825dc43e7c80041b9cca792e32594d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.6
+      value: 85.5
       objectReference: {fileID: 0}
     - target: {fileID: 4221297481268283329, guid: 5e825dc43e7c80041b9cca792e32594d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1709,7 +1709,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4476251794618025165, guid: c8cfb31703b4f5641b32c54816c189d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4476251794618025165, guid: c8cfb31703b4f5641b32c54816c189d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1770,7 +1770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4045386055042409250, guid: 0f9eca8ffe89efb46944215e5d5ac419, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -143
       objectReference: {fileID: 0}
     - target: {fileID: 4045386055042409250, guid: 0f9eca8ffe89efb46944215e5d5ac419, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1945,7 +1945,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2954145262636186272, guid: 7ac8830e170c2704e8e7da4d5d7863ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 2954145262636186272, guid: 7ac8830e170c2704e8e7da4d5d7863ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2069,7 +2069,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 258673280058202741, guid: ee79cc0b6e42b024b8bad99139bbf3dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55
+      value: 31.5
       objectReference: {fileID: 0}
     - target: {fileID: 258673280058202741, guid: ee79cc0b6e42b024b8bad99139bbf3dc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2110,10 +2110,6 @@ PrefabInstance:
     - target: {fileID: 3210444677349528730, guid: ee79cc0b6e42b024b8bad99139bbf3dc, type: 3}
       propertyPath: m_Name
       value: SpawnRoomForGen
-      objectReference: {fileID: 0}
-    - target: {fileID: 6575936357247486900, guid: ee79cc0b6e42b024b8bad99139bbf3dc, type: 3}
-      propertyPath: m_Name
-      value: Lanterns
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
