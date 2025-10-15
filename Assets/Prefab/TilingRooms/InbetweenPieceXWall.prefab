@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6185524930870650709}
   - component: {fileID: 4695559050326615537}
   - component: {fileID: 7970832115396141978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WindowlessWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1424695571463601429}
   - component: {fileID: 8642932536314988207}
   - component: {fileID: 4866734454068449282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorWindow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 826285411097161819}
   - component: {fileID: 4615103636672953762}
   - component: {fileID: 8516339368135516541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WindowBeam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 9089501765576129017}
   - component: {fileID: 6551017911180825354}
   - component: {fileID: 356756790035511743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 9205791507148482049}
   - component: {fileID: 9215905712965370599}
   - component: {fileID: 8335482472111272447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WindowlessWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 3583438412484508136}
   - component: {fileID: 4814905171243736815}
   - component: {fileID: 4720542773423923909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WindowBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +678,7 @@ GameObject:
   - component: {fileID: 8366944158233756625}
   - component: {fileID: 1147042279705740841}
   - component: {fileID: 6264395060290750490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WindowlessWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 3488375558123723222}
   - component: {fileID: 8239183674169639319}
   - component: {fileID: 8330588661292320204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WindowlessWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8807053842814024943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: InbetweenPieceXWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,6 +989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1051,6 +1055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1072,6 +1080,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1134,6 +1146,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1237,6 +1253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1258,6 +1278,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1320,6 +1344,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1423,6 +1451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1485,6 +1517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1546,6 +1582,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

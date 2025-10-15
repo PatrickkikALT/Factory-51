@@ -27,9 +27,8 @@ public class SpawnBox
 
         //Shoots a ray to find any surface that matches the spawnLayer's type
         if (Physics.Raycast(rayPos, Vector3.down, out RaycastHit hit, rayPos.y + 10)) {
-            return randomPos;
+            return origin + randomPos;
         }
-        //Recursion yippeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        return GetRandomPosition(origin);
+        return new Vector3(0, 0, 0);
     }
 }

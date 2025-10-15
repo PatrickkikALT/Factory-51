@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5779494402123102853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 864230397233286702}
   - component: {fileID: 7642689284471367861}
   - component: {fileID: 2376034276710431386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 1269397366760764270}
   - component: {fileID: 208611208219130731}
   - component: {fileID: 2126734363881156991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9108584029339772948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7738954383339291422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lanterns (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 2242226354588901976}
   - component: {fileID: 1935680867962792572}
   - component: {fileID: 1548051055297372270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 7121401617751387998}
   - component: {fileID: 8298305560514663001}
   - component: {fileID: 2656191164264573008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6979793276388208666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6967766781581624829}
   - component: {fileID: 5489392460939559793}
-  m_Layer: 0
+  - component: {fileID: 8662295973280538519}
+  m_Layer: 8
   m_Name: XRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,6 +731,29 @@ MonoBehaviour:
     BoxSize: {x: 20, y: 2, z: 20}
     GizmoColor: {r: 1, g: 0, b: 0, a: 1}
   disabled: 0
+  id: 0
+  bossRoom: 0
+--- !u!65 &8662295973280538519
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4085890980708017195}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 4, z: 20}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &4539609172449010577
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5889494414459381158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2052164076480917536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +834,7 @@ GameObject:
   - component: {fileID: 19132553584335643}
   - component: {fileID: 1879602883218718855}
   - component: {fileID: 150483052958768720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4353974442513976627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +992,7 @@ GameObject:
   - component: {fileID: 7719558630633919344}
   - component: {fileID: 6737487434142448463}
   - component: {fileID: 467189312477150808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7896821889096884992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1276,7 +1300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1829619713167036703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2622857542401504458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoofLights (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1373,7 @@ GameObject:
   - component: {fileID: 3472213092087158850}
   - component: {fileID: 5075359792940619783}
   - component: {fileID: 1394999129493094576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1476,7 +1500,7 @@ GameObject:
   - component: {fileID: 5147175301784141945}
   - component: {fileID: 7945303535069098745}
   - component: {fileID: 3219293620402091609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1601,7 +1625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8637714742895598892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChestLocations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1638,7 +1662,7 @@ GameObject:
   - component: {fileID: 2042388917684278363}
   - component: {fileID: 8318152589241953545}
   - component: {fileID: 101441434189942472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1763,7 +1787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5896128495214649356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1844,6 +1868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1902,9 +1930,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1968,6 +2008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2030,6 +2074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2051,6 +2099,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2154,6 +2206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2175,6 +2231,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2278,6 +2338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2299,6 +2363,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2402,6 +2470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2463,6 +2535,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (97)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2526,6 +2602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2588,6 +2668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2609,6 +2693,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2712,6 +2800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2774,6 +2866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2795,6 +2891,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2857,6 +2957,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2960,6 +3064,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3021,6 +3129,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3084,6 +3196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3145,6 +3261,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3208,6 +3328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3266,9 +3390,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3332,6 +3468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3393,6 +3533,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3456,6 +3600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3514,9 +3662,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3580,6 +3740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3642,6 +3806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3663,6 +3831,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3766,6 +3938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3787,6 +3963,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3890,6 +4070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3951,6 +4135,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4014,6 +4202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4035,6 +4227,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4138,6 +4334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4199,6 +4399,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4262,6 +4466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4324,6 +4532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4345,6 +4557,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4448,6 +4664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4506,9 +4726,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4572,6 +4804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4633,6 +4869,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4696,6 +4936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4758,6 +5002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4779,6 +5027,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4878,9 +5130,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4944,6 +5208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5006,6 +5274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5027,6 +5299,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5130,6 +5406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5191,6 +5471,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5254,6 +5538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5312,9 +5600,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5378,6 +5678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5439,6 +5743,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5502,6 +5810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5563,6 +5875,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5626,6 +5942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5687,6 +6007,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5750,6 +6074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5811,6 +6139,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5874,6 +6206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5895,6 +6231,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5998,6 +6338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6059,6 +6403,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6122,6 +6470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6183,6 +6535,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6246,6 +6602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6304,9 +6664,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6329,6 +6701,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6432,6 +6808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6493,6 +6873,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6556,6 +6940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6617,6 +7005,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (07)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6680,6 +7072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6701,6 +7097,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6804,6 +7204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6865,6 +7269,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6928,6 +7336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6990,6 +7402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7048,9 +7464,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7114,6 +7542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7175,6 +7607,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7238,6 +7674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7259,6 +7699,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7362,6 +7806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7383,6 +7831,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7486,6 +7938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7547,6 +8003,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (87)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7610,6 +8070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7671,6 +8135,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7734,6 +8202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7795,6 +8267,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7858,6 +8334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7919,6 +8399,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7982,6 +8466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8043,6 +8531,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8106,6 +8598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8127,6 +8623,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8230,6 +8730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8251,6 +8755,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8354,6 +8862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (06)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8375,6 +8887,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8478,6 +8994,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8539,6 +9059,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8602,6 +9126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8623,6 +9151,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8726,6 +9258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8747,6 +9283,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8850,6 +9390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8912,6 +9456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8933,6 +9481,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9036,6 +9588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9057,6 +9613,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9160,6 +9720,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9218,9 +9782,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9243,6 +9819,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9346,6 +9926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9408,6 +9992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9429,6 +10017,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9532,6 +10124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9593,6 +10189,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9656,6 +10256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9677,6 +10281,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9739,6 +10347,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9842,6 +10454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9903,6 +10519,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9966,6 +10586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10027,6 +10651,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10090,6 +10718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10111,6 +10743,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10210,9 +10846,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10276,6 +10924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10297,6 +10949,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10359,6 +11015,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10462,6 +11122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10483,6 +11147,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10586,6 +11254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10647,6 +11319,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10710,6 +11386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10771,6 +11451,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10834,6 +11518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10855,6 +11543,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10958,6 +11650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11020,6 +11716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11078,9 +11778,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11144,6 +11856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11165,6 +11881,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11268,6 +11988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (94)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11330,6 +12054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11351,6 +12079,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11450,9 +12182,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11475,6 +12219,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11578,6 +12326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11639,6 +12391,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11702,6 +12458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11763,6 +12523,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11826,6 +12590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11888,6 +12656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11909,6 +12681,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12008,9 +12784,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12070,9 +12858,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12136,6 +12936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12197,6 +13001,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12260,6 +13068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12322,6 +13134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12343,6 +13159,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12446,6 +13266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12507,6 +13331,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12570,6 +13398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12631,6 +13463,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12694,6 +13530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12755,6 +13595,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12818,6 +13662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12879,6 +13727,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12942,6 +13794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13003,6 +13859,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13066,6 +13926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13127,6 +13991,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13190,6 +14058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13211,6 +14083,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13314,6 +14190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13335,6 +14215,10 @@ PrefabInstance:
     - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_Name
       value: XWall (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818006614972362815, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8826098059105730734, guid: e0ec0f75c80a38d4582525d8c6f6caab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13434,9 +14318,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13496,9 +14392,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13562,6 +14470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13623,6 +14535,10 @@ PrefabInstance:
     - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
       propertyPath: m_Name
       value: XFloor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13686,6 +14602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XFloor (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 7766746827705387701, guid: ac25f540d22b0ff448d8051673d01772, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13747,6 +14667,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13810,6 +14734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13872,6 +14800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XBeam (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13933,6 +14865,10 @@ PrefabInstance:
     - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
       propertyPath: m_Name
       value: XBeam (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729445268935873134, guid: 442d755af0fccc34fa9fb72163b0bbe2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

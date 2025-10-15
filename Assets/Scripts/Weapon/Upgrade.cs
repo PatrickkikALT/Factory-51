@@ -17,9 +17,9 @@ public abstract class Upgrade : MonoBehaviour {
 
   }
   //holy this is so ugly i need to rewrite this upgrade manager
-  public bool AddUpgradeAndMoveToManager() {
+  public virtual bool AddUpgradeAndMoveToManager() {
     var gameManager = GameManager.Instance.gameObject;
-    var upg = gameManager.AddComponent<Upgrade>();
+    var upg = (Upgrade)gameManager.AddComponent(GetType());
     upg.type = type;
     upg.bulletPrefab = bulletPrefab;
     upg.damageMultiplier = damageMultiplier;
@@ -29,4 +29,6 @@ public abstract class Upgrade : MonoBehaviour {
   }
 
   public abstract void Shoot();
+
+  public abstract void OnAdd();
 }

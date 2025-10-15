@@ -7,7 +7,9 @@ public class BossEnemy : CircleEnemy {
   private bool _right;
   private bool _backwards;
 
+  public bool dead;
   protected override void UpdateGoal() {
+    if (dead) return;
     base.UpdateGoal();
     UpdateAnimation();
   }

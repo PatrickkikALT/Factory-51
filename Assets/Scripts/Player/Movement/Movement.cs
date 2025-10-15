@@ -45,6 +45,8 @@ public class Movement : MonoBehaviour {
   public Material trackMaterial;
   public float trackDashSpeed;
 
+  [HideInInspector] public bool dead;
+
   private void Awake() {
     _rb = transform.GetComponent<Rigidbody>();
   }
@@ -54,6 +56,7 @@ public class Movement : MonoBehaviour {
   }
 
   private void FixedUpdate() {
+    if (dead) return;
     if (_isDashing) {
       _rb.linearVelocity = moveInput * dashSpeed;
       _dashTime -= Time.fixedDeltaTime;

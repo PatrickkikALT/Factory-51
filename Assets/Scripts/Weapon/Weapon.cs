@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour {
 
   public float delay;
   public float currentDamageMultiplier;
-
+  
   public Transform shootPos;
   private bool _canShoot = true;
   private LineRenderer _line;
@@ -27,10 +27,10 @@ public class Weapon : MonoBehaviour {
     animator = GetComponent<Animator>();
   }
 
-  private void Update() {
-    _line.SetPosition(0, shootPos.position);
-    _line.SetPosition(1, shootPos.position + transform.forward * 6);
-  }
+  // private void Update() {
+  //   _line.SetPosition(0, shootPos.position);
+  //   _line.SetPosition(1, shootPos.position + transform.forward * 6);
+  // }
 
   public event OnShoot ShootEvent;
 

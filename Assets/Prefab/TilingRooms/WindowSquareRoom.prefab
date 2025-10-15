@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8978628949843788748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChestLocations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2896574849050866067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 82585062875450612}
   - component: {fileID: 6126032634571089957}
   - component: {fileID: 8121535797329729865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 3185858118897968308}
   - component: {fileID: 2971185084931383115}
   - component: {fileID: 2515092331472316234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1193684806701542794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lanterns (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 8083650867328890736}
   - component: {fileID: 1086833032960325864}
   - component: {fileID: 2073447788984772632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9208753507764521644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoofLights (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 365619805088149986}
   - component: {fileID: 3018345472458071657}
   - component: {fileID: 995229574934432572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8028971430849891309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 6741785318200538236}
   - component: {fileID: 2181484538000408687}
   - component: {fileID: 4195814035114491661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4967433086011347566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6068275819743646818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +1041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2305565504519019785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 2970861411528045961}
   - component: {fileID: 6409200058782013701}
   - component: {fileID: 229586132473757071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1208,7 @@ GameObject:
   - component: {fileID: 4476251794618025165}
   - component: {fileID: 4323639056748248773}
   - component: {fileID: 7457600041463349974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WindowSquareRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1266,6 +1266,8 @@ MonoBehaviour:
     BoxSize: {x: 20, y: 3, z: 20}
     GizmoColor: {r: 1, g: 0, b: 0, a: 1}
   disabled: 0
+  id: 0
+  bossRoom: 0
 --- !u!65 &7457600041463349974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1296,7 +1298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2396432493843183160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1336,7 +1338,7 @@ GameObject:
   - component: {fileID: 370961694885678220}
   - component: {fileID: 5561693096747251635}
   - component: {fileID: 3426857586709387712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1461,7 +1463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5161295731288237801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1501,7 +1503,7 @@ GameObject:
   - component: {fileID: 5537341654477727246}
   - component: {fileID: 5634594586711052689}
   - component: {fileID: 5919853626375911902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1628,7 +1630,7 @@ GameObject:
   - component: {fileID: 4779381637367150747}
   - component: {fileID: 52959245070099836}
   - component: {fileID: 4703008651721770528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1753,7 +1755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7013074927889187737}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1784,7 +1786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8700949874945538826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1817,6 +1819,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1880,6 +1886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -1941,6 +1951,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2004,6 +2018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -2065,6 +2083,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2168,6 +2190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2189,6 +2215,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2251,6 +2281,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2354,6 +2388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2375,6 +2413,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2478,6 +2520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2499,6 +2545,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2562,6 +2612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -2623,6 +2677,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2686,6 +2744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -2747,6 +2809,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2850,6 +2916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2912,6 +2982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2933,6 +3007,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2996,6 +3074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -3057,6 +3139,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3120,6 +3206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowWall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -3181,6 +3271,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3244,6 +3338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -3306,6 +3404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -3367,6 +3469,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3466,9 +3572,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3491,6 +3609,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3554,6 +3676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -3615,6 +3741,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3718,6 +3848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3779,6 +3913,10 @@ PrefabInstance:
     - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
       propertyPath: m_Name
       value: WindowBeam (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3842,6 +3980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3863,6 +4005,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3966,6 +4112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4028,6 +4178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4049,6 +4203,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4112,6 +4270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -4174,6 +4336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4235,6 +4401,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4338,6 +4508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4400,6 +4574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4421,6 +4599,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4484,6 +4666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -4545,6 +4731,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4648,6 +4838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4669,6 +4863,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4731,6 +4929,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4834,6 +5036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4855,6 +5061,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4917,6 +5127,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5016,9 +5230,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5041,6 +5267,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5144,6 +5374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5206,6 +5440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5227,6 +5465,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5289,6 +5531,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5392,6 +5638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5413,6 +5663,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5475,6 +5729,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5578,6 +5836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5599,6 +5861,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5662,6 +5928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5723,6 +5993,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5786,6 +6060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -5847,6 +6125,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5910,6 +6192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5971,6 +6257,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6034,6 +6324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -6096,6 +6390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -6157,6 +6455,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6260,6 +6562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6281,6 +6587,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6344,6 +6654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -6405,6 +6719,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6468,6 +6786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -6529,6 +6851,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6592,6 +6918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -6653,6 +6983,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6752,9 +7086,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6818,6 +7164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6839,6 +7189,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6902,6 +7256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -6963,6 +7321,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7026,6 +7388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -7087,6 +7453,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7190,6 +7560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7211,6 +7585,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7273,6 +7651,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7376,6 +7758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7397,6 +7783,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7460,6 +7850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -7521,6 +7915,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7584,6 +7982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -7645,6 +8047,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7708,6 +8114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -7770,6 +8180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -7831,6 +8245,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7934,6 +8352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7955,6 +8377,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8018,6 +8444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
@@ -8079,6 +8509,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8142,6 +8576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -8203,6 +8641,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8302,9 +8744,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8327,6 +8781,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8390,6 +8848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -8451,6 +8913,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8554,6 +9020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8612,9 +9082,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8637,6 +9119,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8700,6 +9186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -8761,6 +9251,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8824,6 +9318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -8885,6 +9383,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8984,9 +9486,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9009,6 +9523,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9072,6 +9590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -9133,6 +9655,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9196,6 +9722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -9257,6 +9787,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9360,6 +9894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9422,6 +9960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9443,6 +9985,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9506,6 +10052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
@@ -9568,6 +10118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -9629,6 +10183,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9732,6 +10290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9753,6 +10315,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9815,6 +10381,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9918,6 +10488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9939,6 +10513,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10002,6 +10580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -10063,6 +10645,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10126,6 +10712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -10188,6 +10778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowWall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -10249,6 +10843,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10348,9 +10946,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10373,6 +10983,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10436,6 +11050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -10497,6 +11115,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10600,6 +11222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10621,6 +11247,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10684,6 +11314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -10745,6 +11379,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10808,6 +11446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -10870,6 +11512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -10931,6 +11577,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11034,6 +11684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11055,6 +11709,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11118,6 +11776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -11179,6 +11841,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11242,6 +11908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -11304,6 +11974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -11365,6 +12039,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11468,6 +12146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11489,6 +12171,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11592,6 +12278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11613,6 +12303,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11676,6 +12370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -11738,6 +12436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowWall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8
@@ -11799,6 +12501,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11902,6 +12608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11923,6 +12633,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11985,6 +12699,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12088,6 +12806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12109,6 +12831,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12172,6 +12898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorWindow (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -12233,6 +12963,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12336,6 +13070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12357,6 +13095,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12419,6 +13161,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12522,6 +13268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12584,6 +13334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12605,6 +13359,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12667,6 +13425,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12770,6 +13532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12791,6 +13557,10 @@ PrefabInstance:
     - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_Name
       value: WindowlessWall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12854,6 +13624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -12915,6 +13689,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13018,6 +13796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13039,6 +13821,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13102,6 +13888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowlessWall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3435781465003916810, guid: 04616879d6458b14091f136dbd406e99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6544055570007762477, guid: 04616879d6458b14091f136dbd406e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -13163,6 +13953,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13266,6 +14060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindowBeam (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 2314861115463266711, guid: 4857e1feafc879c4a9cf3d714240f968, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13324,9 +14122,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798631419732702741, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
       propertyPath: m_Name
       value: Lantern (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035410642449268458, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482865107984160184, guid: 351cfae52127bea468d4455fc29b9178, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13349,6 +14159,10 @@ PrefabInstance:
     - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_Name
       value: FloorWindow (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 182210156877439894, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 706088227589962028, guid: 5ed82d00e36192249ab919e113ef8008, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13411,6 +14225,10 @@ PrefabInstance:
     - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_Name
       value: WindowWall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 394689982590938803, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8498363351972510200, guid: e1e87d08af58ade4287cdd75443ed805, type: 3}
       propertyPath: m_LocalPosition.x

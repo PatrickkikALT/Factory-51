@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour {
     
   }
 
+  public void EndGame() {
+    throw new NotImplementedException();
+  }
   public void SetRoom(Room room) {
     if (currentRoom == room) return;
     currentRoom = room;

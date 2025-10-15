@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public enum BulletType {
@@ -12,13 +14,8 @@ public class Bullet : MonoBehaviour {
   public int damage;
   public BulletType type;
 
-  private void Start() {
+  private void Awake() {
     rb = GetComponent<Rigidbody>();
-    Destroy(gameObject, 10f);
-  }
-
-  public void Update() {
-    rb.AddForce(direction * speed);
   }
 
   private void OnTriggerEnter(Collider other) {
@@ -28,11 +25,31 @@ public class Bullet : MonoBehaviour {
     if (other.TryGetComponent(out Bullet _)) return;
     if (other.TryGetComponent(out BaseHealth health)) {
       health.TakeDamage(Mathf.RoundToInt(damage));
-      Destroy(gameObject);
+      Enqueue();
       return;
     }
 
     if (TryGetComponent(out BulletEmitter em)) em.EmitBullets(0);
-    Destroy(gameObject);
+    Enqueue();
+    
+  }
+
+  private void OnEnable() {
+    StartCoroutine(ApplyForceNextFrame());
+    Invoke(nameof(Enqueue), 10f);
+  }
+  //adding force at same frame of activation never adds force for some reason
+  private IEnumerator ApplyForceNextFrame() {
+    yield return null;
+    rb.AddForce(direction * speed, ForceMode.Impulse);
+  }
+
+
+  private void OnDisable() {
+    rb.linearVelocity = Vector3.zero;
+  }
+
+  void Enqueue() {
+    PoolManager.Enqueue(gameObject);
   }
 }

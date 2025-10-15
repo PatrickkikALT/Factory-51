@@ -24,13 +24,12 @@ public class LootBox : MonoBehaviour {
     var target = g.transform.position;
     target.y += 1;
     while (Vector3.Distance(g.transform.position, target) > 0.1f) {
+      if (!g) yield break;
       var vec3 = new Vector3(0, 0.1f, 0);
       g.transform.position += vec3 * (speed * Time.deltaTime);
       yield return null;
     }
   }
-  //wrapper method cuz you cant start coroutines with contextmenu :(((
-  [ContextMenu("Open")]
   public void OpenChest() {
     StartCoroutine(Open());
   }

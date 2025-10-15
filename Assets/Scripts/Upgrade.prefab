@@ -108,11 +108,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 6.3, y: 4, z: 226.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &147426634609188808
 Animator:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BurstUpgrade
   type: 0
-  bulletPrefab: {fileID: 7121479710745853557, guid: 550745e622c2ae6569e0f43f27eb9eeb, type: 3}
+  bulletPrefab: {fileID: 7121479710745853557, guid: c65c698887407844ba731d25b4b19060, type: 3}
   damageMultiplier: 0.75
-  burstDelay: 1
+  burstDelay: 0.1
   burstAmount: 3

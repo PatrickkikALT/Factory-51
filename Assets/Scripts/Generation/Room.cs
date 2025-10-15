@@ -13,7 +13,7 @@ public class Room : MonoBehaviour
     [HideInInspector] public bool bossRoom;
     private void OnTriggerEnter(Collider other) {
       if (disabled) return;
-      if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.TryGetComponent(out PlayerReference _)) {
+      if (other.TryGetComponent(out PlayerReference _)) {
         GameManager.Instance.SetRoom(this);
       }
     }

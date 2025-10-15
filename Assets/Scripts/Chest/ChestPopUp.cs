@@ -24,6 +24,8 @@ public class ChestPopUp : MonoBehaviour {
       if (GameManager.Instance.playerPressedE) {
         _hasOpened = true;
         chest.OpenChest();
+        GameManager.Instance.playerPressedE = false;
+        Destroy(this);
       }
     }
   }

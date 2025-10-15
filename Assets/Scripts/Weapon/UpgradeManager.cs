@@ -39,6 +39,7 @@ public class UpgradeManager : MonoBehaviour {
     equippedUpgrades.Add(upgrade);
     playersWeapon.AddUpgrade(upgrade);
     playersWeapon.currentDamageMultiplier = upgrade.damageMultiplier;
+    upgrade.OnAdd();
     return true;
   }
 }

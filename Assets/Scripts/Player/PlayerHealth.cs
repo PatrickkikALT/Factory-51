@@ -6,10 +6,14 @@ public class PlayerHealth : BaseHealth {
 #endif
 
   public override void TakeDamage(int amount) {
+    #if UNITY_EDITOR
     if (immortal) return;
-    base.TakeDamage(amount);
+    #endif
+    health -= amount;
     if (health <= 0) {
       GameManager.Instance.player.GetComponent<Animator>().SetTrigger("Die");
+      GameManager.Instance.player.GetComponent<Movement>().dead = true;
+      
     }
   }
 
