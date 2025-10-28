@@ -127,9 +127,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1935085448336206961, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: regenTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935085448336206961, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: healAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935085448336206961, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: timeToRegen
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935085448336206961, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: regenEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1957803606498005143, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
       propertyPath: m_Name
       value: game
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165598930519690446, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165598930519690446, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5045826034827094990, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
       propertyPath: m_LocalPosition.x

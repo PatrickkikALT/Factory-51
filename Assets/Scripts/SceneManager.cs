@@ -5,4 +5,7 @@ public class SceneManager : MonoBehaviour {
     UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
   }
 
+  public void QuitApplication() {
+    Application.Quit();
+  }
 }

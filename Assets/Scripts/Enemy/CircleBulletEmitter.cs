@@ -9,11 +9,19 @@ public class CircleBulletEmitter : BulletEmitter {
 
     for (var i = 0; i < amount; i++) {
       var rot = Quaternion.Euler(0f, 0f, angle);
-      var b = Instantiate(bullet, transform.position, rot).GetComponent<Bullet>();
+      Bullet bu;
+      if (PoolManager.TryDequeue(BulletType.CIRCLE, out GameObject b)) {
+        bu = b.GetComponent<Bullet>();
+        bu.transform.position = transform.position;
+        bu.transform.rotation = rot;
+      }
+      else {
+        bu = Instantiate(bullet, transform.position, rot).GetComponent<Bullet>();
+      }
       var rad = angle * Mathf.Deg2Rad;
       var dirForward = new Vector3(Mathf.Cos(rad), 0f, Mathf.Sin(rad));
-      b.direction = dirForward;
-      b.gameObject.layer = gameObject.layer;
+      bu.direction = dirForward;
+      bu.gameObject.layer = gameObject.layer;
       angle += angleStep;
     }
   }

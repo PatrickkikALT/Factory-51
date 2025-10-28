@@ -47,12 +47,15 @@ public class Movement : MonoBehaviour {
 
   [HideInInspector] public bool dead;
 
+  public InputAction inputAction;
+
   private void Awake() {
     _rb = transform.GetComponent<Rigidbody>();
   }
 
   private void Start() {
     trackMaterial = mesh.GetComponent<Renderer>().materials[1];
+    inputAction = GetComponent<PlayerInput>().actions.FindAction("Move");
   }
 
   private void FixedUpdate() {
@@ -69,13 +72,13 @@ public class Movement : MonoBehaviour {
     
   }
   
-  public void OnMove(InputAction.CallbackContext context) {
-    if (!canMove) return;
-    var input = context.ReadValue<Vector2>();
+  private void Update() {
+    var input = inputAction.ReadValue<Vector2>();
     if (input == Vector2.zero) {
       trackMaterial.SetFloat("_ScrollSpeed", 0);
       _targetInput = Vector3.zero;
       animator.SetBool(Moving, false);
+      moveInput = Vector3.zero;
       return;
     }
     trackMaterial.SetFloat("_ScrollSpeed", _isDashing ? trackDashSpeed : 0.5f);
@@ -87,9 +90,6 @@ public class Movement : MonoBehaviour {
     camRight.y = 0;
 
     _targetInput = camForward * input.y + camRight * input.x;
-  }
-
-  private void Update() {
     moveInput = Vector3.Lerp(moveInput, _targetInput, Time.deltaTime * rotateSpeed);
     
     if (moveInput != Vector3.zero && _targetInput != Vector3.zero && !_isDashing) {
@@ -119,7 +119,6 @@ public class Movement : MonoBehaviour {
     if (context.performed) {
       var input = context.ReadValue<Vector2>();
       bodyBone.Rotate(0, input.x * Time.deltaTime * mouseSensitivity, 0, Space.Self);
-      
     }
   }
 

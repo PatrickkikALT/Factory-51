@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
   public GameObject hud;
   public GameObject deathScreen;
   public GameObject winScreen;
-
+  public PlayerHealth playerHealth;
   public GameObject pauseMenu;
   
   public TMP_Text roomText;

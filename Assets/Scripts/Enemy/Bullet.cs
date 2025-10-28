@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour {
     //return early if hitting room collider
     if (other.TryGetComponent(out Room _)) return;
     //return early if hit collider is a bullet so they dont collide with each other
-    if (other.TryGetComponent(out Bullet _)) return;
+    // if (other.TryGetComponent(out Bullet _)) return;
     if (other.TryGetComponent(out PlayerReference player)) {
       player.transform.parent.TryGetComponent(out BaseHealth health);
       health.TakeDamage(Mathf.RoundToInt(damage));

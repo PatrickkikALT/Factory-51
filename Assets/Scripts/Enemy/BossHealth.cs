@@ -5,12 +5,14 @@ using UnityEngine.AI;
 public class BossHealth : BaseHealth {
     public Material eyeMaterial;
     private Animator _animator;
+    public bool isBlocking;
 
     private void Start() {
         _animator = GetComponent<Animator>();
     }
 
     public override void TakeDamage(int damage) {
+        if (isBlocking) return;
         base.TakeDamage(damage);
         if (health <= 0) {
             _animator.SetTrigger("Death");

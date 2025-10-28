@@ -5,21 +5,21 @@ using Object = UnityEngine.Object;
 
 
 public static class PoolManager {
-  private static Queue<GameObject> playerBulletPool = new();
-  private static Queue<GameObject> basicBulletPool = new();
-  private static Queue<GameObject> circleBulletPool = new();
-  private static Queue<GameObject> waveBulletPool = new();
-  private static Queue<GameObject> bossBulletPool = new();
+  private static Queue<GameObject> _playerBulletPool = new();
+  private static Queue<GameObject> _basicBulletPool = new();
+  private static Queue<GameObject> _circleBulletPool = new();
+  private static Queue<GameObject> _waveBulletPool = new();
+  private static Queue<GameObject> _bossBulletPool = new();
 
   private const int PoolSize = 100;
 
   public static void Enqueue(GameObject bullet, BulletType type) {
     Queue<GameObject> bulletPool = type switch {
-      BulletType.PLAYER => playerBulletPool,
-      BulletType.BASIC => basicBulletPool,
-      BulletType.CIRCLE => circleBulletPool,
-      BulletType.WAVE => waveBulletPool,
-      BulletType.BOSS => bossBulletPool,
+      BulletType.PLAYER => _playerBulletPool,
+      BulletType.BASIC => _basicBulletPool,
+      BulletType.CIRCLE => _circleBulletPool,
+      BulletType.WAVE => _waveBulletPool,
+      BulletType.BOSS => _bossBulletPool,
       _ => null
     };
 
@@ -40,11 +40,11 @@ public static class PoolManager {
 
   public static bool TryDequeue(BulletType type, out GameObject bullet) {
     Queue<GameObject> bulletPool = type switch {
-      BulletType.PLAYER => playerBulletPool,
-      BulletType.BASIC => basicBulletPool,
-      BulletType.CIRCLE => circleBulletPool,
-      BulletType.WAVE => waveBulletPool,
-      BulletType.BOSS => bossBulletPool,
+      BulletType.PLAYER => _playerBulletPool,
+      BulletType.BASIC => _basicBulletPool,
+      BulletType.CIRCLE => _circleBulletPool,
+      BulletType.WAVE => _waveBulletPool,
+      BulletType.BOSS => _bossBulletPool,
       _ => null
     };
 

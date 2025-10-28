@@ -1,19 +1,56 @@
+using System;
 using UnityEngine;
 
-public class BossEnemy : CircleEnemy {
+
+public class BossEnemy : Enemy {
   public Animator animator;
   private bool _forward;
   private bool _left;
   private bool _right;
   private bool _backwards;
-
+  public BossState state;
+  private BossHealth _health;
   public bool dead;
+
+  [SerializeField] private int blockingStateHealth;
+
+  private new void Start() {
+    base.Start();
+    _health = GetComponent<BossHealth>();
+    Ticker.Instance.OnTickEvent += CheckState;
+  }
+
   protected override void UpdateGoal() {
     if (dead) return;
-    base.UpdateGoal();
+
+    switch (state) {
+      case BossState.WALKING:
+        agent.destination = player.position;
+        break;
+      case BossState.BLOCKING:
+        _health.isBlocking = true;
+        break;
+      case BossState.SHOOTING:
+      case BossState.RUNNING:
+        break;
+      default:
+        throw new ArgumentOutOfRangeException();
+    }
+    
     UpdateAnimation();
   }
 
+  private void CheckState() {
+    float distance = Vector3.Distance(agent.nextPosition, player.position);
+
+    state = _health.health >= blockingStateHealth ? BossState.BLOCKING :
+      distance < 2f ? BossState.RUNNING :
+      distance < 10f ? BossState.SHOOTING :
+      BossState.WALKING;
+  }
+
+
+  #region Animation
   private void UpdateAnimation() {
     if (!animator || !agent) return;
 
@@ -50,6 +87,7 @@ public class BossEnemy : CircleEnemy {
       animator.SetBool("Backward", false);
     }
   }
+  #endregion
   protected override void Shoot() {
     var pos = shootPos.position;
 

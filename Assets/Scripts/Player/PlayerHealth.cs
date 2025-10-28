@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,8 +7,14 @@ public class PlayerHealth : BaseHealth {
 #if UNITY_EDITOR
   [Header("Dev")] public bool immortal;
 #endif
-
+  
+  [Header("UI")]
   public Slider healthSlider;
+
+  private void Start() {
+    MaxHealth = health;
+  }
+
   public override void TakeDamage(int amount) {
     #if UNITY_EDITOR
     if (immortal) return;
@@ -19,10 +27,10 @@ public class PlayerHealth : BaseHealth {
       GameManager.Instance.EndGame(false);
     }
   }
-
+  
   public override void Heal(int amount) {
     base.Heal(amount);
     healthSlider.value = health;
-    if (health >= MaxHealth) health = MaxHealth;
+    health = Mathf.Clamp(health, 0, MaxHealth);
   }
 }

@@ -107,8 +107,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 10
   direction: {x: 0, y: 0, z: 0}
-  damage: 10
-  type: 0
+  damage: 5
+  type: 4
 --- !u!135 &-714656808764999733
 SphereCollider:
   m_ObjectHideFlags: 0
