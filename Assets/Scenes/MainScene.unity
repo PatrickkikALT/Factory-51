@@ -511,6 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   health: 100
   immortal: 0
+  healthSlider: {fileID: 0}
 --- !u!114 &101898177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +530,7 @@ MonoBehaviour:
   dashDuration: 0.2
   dashCooldown: 1
   rotateSpeed: 10
+  canMove: 1
   mouseSensitivity: 10
   moveInput: {x: 0, y: 0, z: 0}
   bodyBone: {fileID: 81435364}
@@ -548,6 +550,15 @@ MonoBehaviour:
   trackMaterial: {fileID: 0}
   trackDashSpeed: 1
   dead: 0
+  inputAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 87102d36-993a-4097-8c0f-0a3ad6b50e91
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!95 &101898178
 Animator:
   serializedVersion: 7
@@ -2884,6 +2895,14 @@ MonoBehaviour:
   playerPressedE: 0
   playerText: {fileID: 1001144242}
   currentRoom: {fileID: 387156526}
+  hud: {fileID: 0}
+  deathScreen: {fileID: 0}
+  winScreen: {fileID: 0}
+  playerHealth: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  gear: {fileID: 0}
+  roomText: {fileID: 0}
+  generator: {fileID: 0}
 --- !u!1 &1446099186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,6 +3057,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1378664474632014388, guid: 2ffa9c7c9d46a6e4c84f2bf634e7db28, type: 3}
+      propertyPath: spinSpeed
+      value: 2500
+      objectReference: {fileID: 0}
     - target: {fileID: 2649531388185975476, guid: 2ffa9c7c9d46a6e4c84f2bf634e7db28, type: 3}
       propertyPath: m_Name
       value: WaveRobot

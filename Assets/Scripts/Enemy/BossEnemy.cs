@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-
+[RequireComponent(typeof(Animator))]
 public class BossEnemy : Enemy {
   public Animator animator;
   private bool _forward;

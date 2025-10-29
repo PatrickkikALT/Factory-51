@@ -9,10 +9,11 @@ public class PlayerHealth : BaseHealth {
 #endif
   
   [Header("UI")]
-  public Slider healthSlider;
+  public HealthSliderHelper healthSlider;
 
   private void Start() {
     MaxHealth = health;
+    healthSlider.SetValue(health);
   }
 
   public override void TakeDamage(int amount) {
@@ -20,7 +21,7 @@ public class PlayerHealth : BaseHealth {
     if (immortal) return;
     #endif
     health -= amount;
-    healthSlider.value = health;
+    healthSlider.SetValue(health);
     if (health <= 0) {
       GameManager.Instance.player.GetComponent<Animator>().SetTrigger("Die");
       GameManager.Instance.player.GetComponent<Movement>().dead = true;
@@ -30,7 +31,7 @@ public class PlayerHealth : BaseHealth {
   
   public override void Heal(int amount) {
     base.Heal(amount);
-    healthSlider.value = health;
+    healthSlider.SetValue(health);
     health = Mathf.Clamp(health, 0, MaxHealth);
   }
 }

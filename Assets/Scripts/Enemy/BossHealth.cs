@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
-
+[RequireComponent(typeof(Animator))]
 public class BossHealth : BaseHealth {
     public Material eyeMaterial;
     private Animator _animator;

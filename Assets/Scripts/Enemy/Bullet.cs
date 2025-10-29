@@ -55,6 +55,7 @@ public class Bullet : MonoBehaviour {
 
   private void OnDisable() {
     rb.linearVelocity = Vector3.zero;
+    CancelInvoke(nameof(Enqueue));
   }
 
   void Enqueue() {

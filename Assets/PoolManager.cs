@@ -24,7 +24,6 @@ public static class PoolManager {
     };
 
     if (bulletPool == null) {
-      Debug.LogWarning($"Unknown bullet type: {type}");
       Object.Destroy(bullet);
       return;
     }

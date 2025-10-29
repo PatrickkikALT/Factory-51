@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using static Extensions;
+[RequireComponent(typeof(NavMeshAgent))]
 public abstract class Enemy : MonoBehaviour {
   [Header("AI Navigation")] [SerializeField]
   protected NavMeshAgent agent;

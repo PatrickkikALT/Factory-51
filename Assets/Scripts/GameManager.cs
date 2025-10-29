@@ -1,9 +1,11 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
   public static GameManager Instance;
@@ -20,6 +22,8 @@ public class GameManager : MonoBehaviour {
   public GameObject winScreen;
   public PlayerHealth playerHealth;
   public GameObject pauseMenu;
+
+  public Image gear;
   
   public TMP_Text roomText;
   public DungeonGenerator generator;
@@ -49,11 +53,19 @@ public class GameManager : MonoBehaviour {
     if (currentRoom == room) return;
     currentRoom = room;
     roomText.text = $"{room.id}/{generator.dungeonSize}";
+    StartCoroutine(RotateGear());
     if (currentRoom.bossRoom) {
       WaveManager.instance.StartBossWave(currentRoom.enemySpawnLocations, currentRoom);
     }
     else {
       WaveManager.instance.StartNewWave(currentRoom.enemySpawnLocations, currentRoom);
+    }
+  }
+
+  private IEnumerator RotateGear() {
+    for (int i = 0; i < 360; i++) {
+      gear.transform.Rotate(new Vector3(0, 0, 1));
+      yield return null;
     }
   }
 

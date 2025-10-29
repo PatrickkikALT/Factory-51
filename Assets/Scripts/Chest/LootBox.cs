@@ -23,8 +23,7 @@ public class LootBox : MonoBehaviour {
     yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
     var target = g.transform.position;
     target.y += 1;
-    while (Vector3.Distance(g.transform.position, target) > 0.1f) {
-      if (!g) yield break;
+    while (g && Vector3.Distance(g.transform.position, target) > 0.1f) {
       var vec3 = new Vector3(0, 0.1f, 0);
       g.transform.position += vec3 * (speed * Time.deltaTime);
       yield return null;

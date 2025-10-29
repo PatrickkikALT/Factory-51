@@ -36,6 +36,8 @@ public class WaveEnemy : Enemy {
       _animator.SetTrigger("Prepare");
       _animator.SetBool("Shooting", true);
       yield return new WaitForSeconds(0.2f);
+      agent.updateRotation = false;
+      transform.LookAt(player.transform);
       while (rotated < 360f * spins) {
         float step = spinSpeed * Time.deltaTime;
         transform.Rotate(0f, step, 0f);
@@ -44,6 +46,7 @@ public class WaveEnemy : Enemy {
         yield return new WaitForSeconds(shootSpeed);
       }
       _animator.SetBool("Shooting", false);
+      agent.updateRotation = true;
       rotated = 0f;
     }
     yield return new WaitUntil(() => !agent.isStopped);

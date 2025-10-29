@@ -2,6 +2,7 @@ using System;
 using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.VFX;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -44,6 +45,7 @@ public class Movement : MonoBehaviour {
   [Header("Cached Materials")]
   public Material trackMaterial;
   public float trackDashSpeed;
+  public VisualEffect smoke;
 
   [HideInInspector] public bool dead;
 
@@ -59,28 +61,32 @@ public class Movement : MonoBehaviour {
   }
 
   private void FixedUpdate() {
-    if (dead) return;
+    if (!canMove) return;
     if (_isDashing) {
+      smoke.SetInt("Speed", (int)dashSpeed * 4);
       _rb.linearVelocity = moveInput * dashSpeed;
       _dashTime -= Time.fixedDeltaTime;
-      if (_dashTime <= 0)
+      if (_dashTime <= 0) {
         _isDashing = false;
+      }
     }
     else {
       _rb.linearVelocity = moveInput * moveSpeed;
     }
-    
   }
-  
+
   private void Update() {
+    if (!canMove) return;
     var input = inputAction.ReadValue<Vector2>();
     if (input == Vector2.zero) {
+      smoke.SetInt("Speed", 0);
       trackMaterial.SetFloat("_ScrollSpeed", 0);
       _targetInput = Vector3.zero;
       animator.SetBool(Moving, false);
       moveInput = Vector3.zero;
       return;
     }
+    
     trackMaterial.SetFloat("_ScrollSpeed", _isDashing ? trackDashSpeed : 0.5f);
     animator.SetBool(Moving, true);
     Vector3 camForward = cameraTransform.forward;
@@ -93,10 +99,12 @@ public class Movement : MonoBehaviour {
     moveInput = Vector3.Lerp(moveInput, _targetInput, Time.deltaTime * rotateSpeed);
     
     if (moveInput != Vector3.zero && _targetInput != Vector3.zero && !_isDashing) {
+      smoke.SetInt("Speed", (int)moveSpeed * 4);
       RotateGears();
       var targetRotation = Quaternion.LookRotation(moveInput);
       trackBone.rotation = targetRotation;
     }
+    
   }
 
   public void RotateGears() {
