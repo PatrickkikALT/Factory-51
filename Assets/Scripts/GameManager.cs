@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
   
   public TMP_Text roomText;
   public DungeonGenerator generator;
+  
   private void Awake() {
     Instance = this;
   }
@@ -35,6 +36,14 @@ public class GameManager : MonoBehaviour {
     _movement = player.GetComponent<Movement>();
     _movement.canMove = true;
     roomText.text = $"{0}/{generator.dungeonSize}";
+    Invoke("LateStart", 0.1f);
+  }
+
+  private void LateStart() {
+    foreach (GameObject r in generator.roomsInstance) {
+      r.SetActive(false);
+    }
+    SetRoom(generator.roomsInstance[0].GetComponent<Room>());
   }
 
   public void EndGame(bool win) {
@@ -53,6 +62,10 @@ public class GameManager : MonoBehaviour {
     if (currentRoom == room) return;
     currentRoom = room;
     roomText.text = $"{room.id}/{generator.dungeonSize}";
+    generator.roomsInstance[room.id].SetActive(true); 
+    generator.roomsInstance[room.id + 1].SetActive(true);
+    if (room.id != 0) generator.roomsInstance[room.id - 1].SetActive(true);
+    else if (room.id == 0) return;
     StartCoroutine(RotateGear());
     if (currentRoom.bossRoom) {
       ClearEnemies();

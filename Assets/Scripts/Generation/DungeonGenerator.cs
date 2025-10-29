@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DungeonGenerator : MonoBehaviour {
   [SerializeField] private Transform parent;
@@ -23,11 +25,16 @@ public class DungeonGenerator : MonoBehaviour {
   public int roomSize;
 
   private List<Vector3> _positions = new();
-  private List<GameObject> _roomsInstance = new();
+  public List<GameObject> roomsInstance = new();
   private List<Vector3> _worms = new();
 
   [Header("Chests")] public GameObject chestPrefab;
   public int roomsUntilChest = 5;
+  
+  [Header("Dungeon Culling")]
+  [SerializeField] private Transform player;
+  [SerializeField] private float activeRadius = 60f;
+
 
 
   private void Start() {
@@ -136,7 +143,7 @@ public class DungeonGenerator : MonoBehaviour {
       newRoom.GetComponent<Room>().id = i;
       newRoom.transform.parent = parent;
 
-      _roomsInstance.Add(newRoom);
+      roomsInstance.Add(newRoom);
 
       if (i == 0) {
         var room = newRoom.GetComponent<Room>();
@@ -144,8 +151,8 @@ public class DungeonGenerator : MonoBehaviour {
       }
 
       if (i > 0) {
-        Room newRoomScript = _roomsInstance[i].GetComponent<Room>();
-        Room lastRoomScript = _roomsInstance[i - 1].GetComponent<Room>();
+        Room newRoomScript = roomsInstance[i].GetComponent<Room>();
+        Room lastRoomScript = roomsInstance[i - 1].GetComponent<Room>();
         Vector3 prevPos = _positions[i - 1];
         Vector3 currPos = _positions[i];
         Vector3 direction = currPos - prevPos;
@@ -159,12 +166,12 @@ public class DungeonGenerator : MonoBehaviour {
           OpenDoors(newRoomScript, lastRoomScript, direction);
         }
         catch {
-          Debug.Log($"Failed at index {i}, tried new room {_roomsInstance[i]} and old room {_roomsInstance[i - 1]}");
+          Debug.Log($"Failed at index {i}, tried new room {roomsInstance[i]} and old room {roomsInstance[i - 1]}");
         }
       }
 
       if (!isBossRoom && i % roomsUntilChest == 0 && i != 0) {
-        Transform pos = _roomsInstance[i].GetComponent<Room>().chestLocations.Random();
+        Transform pos = roomsInstance[i].GetComponent<Room>().chestLocations.Random();
         Instantiate(chestPrefab, pos.position, pos.rotation);
       }
     }
@@ -216,8 +223,7 @@ public class DungeonGenerator : MonoBehaviour {
     _positions.Clear();
     _worms.Clear();
 
-    foreach (var t in _roomsInstance) Destroy(t);
-    _roomsInstance.Clear();
+    foreach (var t in roomsInstance) Destroy(t);
   }
 
   private void InstantiateHallwayBetween(Vector3 a, Vector3 b, GameObject hallwayPrefab, bool bossConnection = false) {
@@ -251,4 +257,7 @@ public class DungeonGenerator : MonoBehaviour {
     pos.y = 0;
     hallway.transform.position = pos;
   }
+  
+
+  
 }
