@@ -1,6 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BasicEnemy : Enemy {
+
+  protected new void Start() {
+    base.Start();
+  }
   
   protected override void UpdateGoal() {
     var position = player.position;

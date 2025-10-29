@@ -34,12 +34,12 @@ public class TopDownCamera : MonoBehaviour {
     offset.y += height;
 
     Vector3 position = player.position + offset;
-    
-    if (Physics.Linecast(player.position, position, out RaycastHit hit, masks, QueryTriggerInteraction.Ignore)) {
-      transform.position = hit.point + hit.normal * 0.2f;
-    } else {
-      transform.position = position;
-    }
+    //
+    // if (Physics.Linecast(player.position, position, out RaycastHit hit, masks, QueryTriggerInteraction.Ignore)) {
+    //   transform.position = hit.point + hit.normal * 0.2f;
+    // } else {
+    transform.position = position;
+    // }
 
     transform.LookAt(player.position);
   }

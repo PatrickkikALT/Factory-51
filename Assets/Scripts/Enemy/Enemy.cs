@@ -1,5 +1,8 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
+using UnityEngine.VFX;
 using static Extensions;
 [RequireComponent(typeof(NavMeshAgent))]
 public abstract class Enemy : MonoBehaviour {
@@ -21,13 +24,33 @@ public abstract class Enemy : MonoBehaviour {
 
   protected int ticks;
   
+  private VisualEffect _visualEffect; 
+  public SkinnedMeshRenderer meshRenderer;
+
   protected void Start() {
+    _visualEffect = GetComponent<VisualEffect>();
+    meshRenderer.enabled = false;
+    agent.isStopped = true;
     agent.speed = walkSpeed;
     player = GameManager.Instance.player;
     Ticker.Instance.OnTickEvent += UpdateGoal;
+    StartCoroutine(PoofEffect());
   }
 
+  private IEnumerator PoofEffect() {
+    _visualEffect.SetInt("Speed", 5);
+    _visualEffect.Play();
+    yield return new WaitForSeconds(1);
+    _visualEffect.SetInt("Speed", 0);
+    meshRenderer.enabled = true;
+    agent.isStopped = false;
+    yield return new WaitForSeconds(1);
+    Destroy(_visualEffect);
+    _visualEffect = null;
+  }
+  
   protected virtual void Update() {
+    if (!player) player = GameManager.Instance.player;
     Quaternion directionToPlayer = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), rotationSpeed * Time.deltaTime);
     transform.rotation = directionToPlayer;
   }

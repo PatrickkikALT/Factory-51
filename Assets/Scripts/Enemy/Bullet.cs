@@ -7,7 +7,8 @@ public enum BulletType {
   CIRCLE,
   WAVE,
   PLAYER,
-  BASIC
+  BASIC,
+  CIRCLEEM
 }
 
 public class Bullet : MonoBehaviour {

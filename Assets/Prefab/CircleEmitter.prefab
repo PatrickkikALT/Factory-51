@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -60.46933, y: 9.76, z: -305.87}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,7 +129,8 @@ MonoBehaviour:
   amount: 12
   damage: 3
   bullet: {fileID: 7121479710745853557, guid: 550745e622c2ae6569e0f43f27eb9eeb, type: 3}
-  timeToExplode: 1
+  timeToExplode: 0
+  type: 5
 --- !u!54 &8297657410017239865
 Rigidbody:
   m_ObjectHideFlags: 0

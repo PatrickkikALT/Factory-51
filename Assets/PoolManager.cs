@@ -10,6 +10,7 @@ public static class PoolManager {
   private static Queue<GameObject> _circleBulletPool = new();
   private static Queue<GameObject> _waveBulletPool = new();
   private static Queue<GameObject> _bossBulletPool = new();
+  private static Queue<GameObject> _circleEmitterPool = new();
 
   private const int PoolSize = 100;
 
@@ -20,6 +21,7 @@ public static class PoolManager {
       BulletType.CIRCLE => _circleBulletPool,
       BulletType.WAVE => _waveBulletPool,
       BulletType.BOSS => _bossBulletPool,
+      BulletType.CIRCLEEM => _circleEmitterPool,
       _ => null
     };
 
@@ -44,6 +46,7 @@ public static class PoolManager {
       BulletType.CIRCLE => _circleBulletPool,
       BulletType.WAVE => _waveBulletPool,
       BulletType.BOSS => _bossBulletPool,
+      BulletType.CIRCLEEM => _circleEmitterPool,
       _ => null
     };
 

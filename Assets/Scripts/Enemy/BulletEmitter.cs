@@ -7,6 +7,7 @@ public abstract class BulletEmitter : MonoBehaviour {
   public int damage;
   public GameObject bullet;
   public float timeToExplode;
+  public BulletType type;
 
   private void OnEnable() {
     StartCoroutine(TimeUntilExplode());
@@ -17,6 +18,6 @@ public abstract class BulletEmitter : MonoBehaviour {
   private IEnumerator TimeUntilExplode() {
     yield return new WaitForSeconds(timeToExplode);
     EmitBullets(0);
-    PoolManager.Enqueue(this.gameObject, BulletType.CIRCLE);
+    PoolManager.Enqueue(this.gameObject, type);
   }
 }

@@ -18,6 +18,7 @@ public class BossHealth : BaseHealth {
             _animator.SetTrigger("Death");
             GetComponent<NavMeshAgent>().isStopped = true;
             GameManager.Instance.EndGame(true);
+            return;
         }
         var color = Color.Lerp(eyeMaterial.GetColor("_EmissionColor"), Color.black, 10 / health);
         eyeMaterial.SetColor("_EmissionColor", color);

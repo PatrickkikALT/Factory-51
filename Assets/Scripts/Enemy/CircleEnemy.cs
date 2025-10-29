@@ -49,7 +49,7 @@ public class CircleEnemy : Enemy {
     var pos = shootPos.position;
 
     GameObject obj;
-    if (PoolManager.TryDequeue(BulletType.CIRCLE, out obj)) {
+    if (PoolManager.TryDequeue(BulletType.CIRCLEEM, out obj)) {
       obj.SetActive(true);
       obj.transform.position = pos;
     }

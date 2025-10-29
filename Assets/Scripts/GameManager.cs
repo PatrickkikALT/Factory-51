@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour {
     roomText.text = $"{room.id}/{generator.dungeonSize}";
     StartCoroutine(RotateGear());
     if (currentRoom.bossRoom) {
+      ClearEnemies();
       WaveManager.instance.StartBossWave(currentRoom.enemySpawnLocations, currentRoom);
     }
     else {
@@ -69,6 +70,10 @@ public class GameManager : MonoBehaviour {
     }
   }
 
+  private void ClearEnemies() {
+    enemies.ForEach(Destroy);
+  }
+
   public void TogglePauseMenu() {
     Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
     _movement.canMove = !_movement.canMove;
@@ -78,4 +83,6 @@ public class GameManager : MonoBehaviour {
   // private void Start() {
   //   Application.targetFrameRate = 60;
   // }
+  
+  
 }

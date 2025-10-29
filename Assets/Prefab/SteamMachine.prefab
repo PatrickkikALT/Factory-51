@@ -50,11 +50,26 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 5.77
+        m_Name: MaxDuration
+        m_Overridden: 1
+      - m_Value: 0.5
+        m_Name: MinDuration
+        m_Overridden: 1
+      - m_Value: 0.29
+        m_Name: MaxSize
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: MinSize
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0, y: 4, z: 0}
+        m_Name: Gravity
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -67,9 +82,94 @@ VisualEffect:
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: -0.020832062
+            value: 0.18569946
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.31083843
+            value: 0.44189015
+            inSlope: 0.070598505
+            outSlope: 0.070598505
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.64618164
+            value: 0.42660332
+            inSlope: 0.49543357
+            outSlope: 0.49543357
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.9204375
+            value: 0.54511803
+            inSlope: 1.9859716
+            outSlope: 1.9859716
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Name: Curve
+        m_Overridden: 1
     m_Gradient:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          key0: {r: 1, g: 1, b: 1, a: 1}
+          key1: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+          key2: {r: 0.066037714, g: 0.057004254, b: 0.057004254, a: 1}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 23323
+          ctime2: 65535
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 193
+          atime1: 65535
+          atime2: 65535
+          atime3: 65535
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_ColorSpace: 1
+          m_NumColorKeys: 3
+          m_NumAlphaKeys: 2
+        m_Name: Gradient
+        m_Overridden: 1
     m_NamedObject:
       m_Array: []
     m_Bool:
@@ -170,11 +270,26 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 1.5
+        m_Name: MaxDuration
+        m_Overridden: 1
+      - m_Value: 0.5
+        m_Name: MinDuration
+        m_Overridden: 1
+      - m_Value: 0.29
+        m_Name: MaxSize
+        m_Overridden: 1
+      - m_Value: 0.1
+        m_Name: MinSize
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0, y: 4, z: 0}
+        m_Name: Gravity
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -187,9 +302,76 @@ VisualEffect:
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: -0.020832062
+            value: 0.18569946
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.68324214
+            value: 0.4763529
+            inSlope: 0.90675545
+            outSlope: 0.90675545
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.992666
+            value: 0.86660856
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Name: Curve
+        m_Overridden: 1
     m_Gradient:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          key0: {r: 1, g: 1, b: 1, a: 1}
+          key1: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+          key2: {r: 0.066037714, g: 0.057004254, b: 0.057004254, a: 1}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 23323
+          ctime2: 65535
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 193
+          atime1: 65535
+          atime2: 65535
+          atime3: 65535
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_ColorSpace: 1
+          m_NumColorKeys: 3
+          m_NumAlphaKeys: 2
+        m_Name: Gradient
+        m_Overridden: 1
     m_NamedObject:
       m_Array: []
     m_Bool:
