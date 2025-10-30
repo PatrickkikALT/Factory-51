@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour {
   public void TogglePauseMenu() {
     Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
     _movement.canMove = !_movement.canMove;
+    playerWeapon.canShoot = !playerWeapon.canShoot;
     pauseMenu.SetActive(!pauseMenu.activeSelf);
   }
 

@@ -21,6 +21,8 @@ public class Weapon : MonoBehaviour {
   public Animator animator;
   private bool _isFiring;
   public AnimationClip shootClip;
+
+  public bool canShoot;
   
   private void Start() {
     animator = GetComponent<Animator>();
@@ -35,6 +37,7 @@ public class Weapon : MonoBehaviour {
 
 
   public void Shoot(InputAction.CallbackContext context) {
+    if (canShoot) return;
     if (context.performed || context.started) {
       _isFiring = true;
       StartCoroutine(AutoFire());
