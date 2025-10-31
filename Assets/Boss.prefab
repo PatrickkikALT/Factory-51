@@ -537,11 +537,18 @@ MonoBehaviour:
   maxDistance: 50
   bullet: {fileID: 5783333389393913368, guid: b76fe80b789bdf148979f4469d19324f, type: 3}
   shootSpeed: 4
+  rotationSpeed: 0
   walkSpeed: 1.56936
-  preferredDistance: 23
-  panicDistance: 0
-  panicWalkSpeed: 4
+  meshRenderer: {fileID: 4472241073199486744}
+  bossSummon: 0
   animator: {fileID: 7375632922400301355}
+  state: 0
+  dead: 0
+  blockingStateHealth: 200
+  shootInterval: 1.5
+  runningRange: 2
+  shootingRange: 10
+  ticksTillSummon: 8
 --- !u!114 &1324535821504296310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   health: 500
   eyeMaterial: {fileID: 2100000, guid: 450cebf5b77a97443b773a7d2e642bb8, type: 2}
+  isBlocking: 0
 --- !u!65 &7045876703567776441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -580,5 +588,10 @@ BoxCollider:
 --- !u!4 &2352253299298781196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2463750784473348010, guid: d3b9b81964e9e5a47abf9b7582d52f56, type: 3}
+  m_PrefabInstance: {fileID: 186303042384986022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &4472241073199486744 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4862350278976214850, guid: d3b9b81964e9e5a47abf9b7582d52f56, type: 3}
   m_PrefabInstance: {fileID: 186303042384986022}
   m_PrefabAsset: {fileID: 0}

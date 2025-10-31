@@ -56,6 +56,9 @@ public class Bullet : MonoBehaviour {
 
   private void OnDisable() {
     rb.linearVelocity = Vector3.zero;
+    rb.angularVelocity = Vector3.zero;
+    rb.Sleep();
+    transform.position = Vector3.zero;
     CancelInvoke(nameof(Enqueue));
   }
 

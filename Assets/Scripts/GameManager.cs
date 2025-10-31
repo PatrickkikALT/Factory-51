@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour {
   
   public TMP_Text roomText;
   public DungeonGenerator generator;
+
+  public BossHealth bossHealth;
+  public BossEnemy boss;
   
   private void Awake() {
     Instance = this;
@@ -62,17 +65,19 @@ public class GameManager : MonoBehaviour {
     if (currentRoom == room) return;
     currentRoom = room;
     roomText.text = $"{room.id}/{generator.dungeonSize}";
-    generator.roomsInstance[room.id].SetActive(true); 
-    generator.roomsInstance[room.id + 1].SetActive(true);
+    generator.roomsInstance[room.id].SetActive(true);
+    if (room.id != generator.roomsInstance.Count - 1) {
+      generator.roomsInstance[room.id + 1].SetActive(true);
+    }
     if (room.id != 0) generator.roomsInstance[room.id - 1].SetActive(true);
     else if (room.id == 0) return;
     StartCoroutine(RotateGear());
-    if (currentRoom.bossRoom) {
+    if (room.bossRoom) {
       ClearEnemies();
-      WaveManager.instance.StartBossWave(currentRoom.enemySpawnLocations, currentRoom);
+      WaveManager.instance.StartBossWave(currentRoom.enemySpawnLocations, room);
     }
     else {
-      WaveManager.instance.StartNewWave(currentRoom.enemySpawnLocations, currentRoom);
+      WaveManager.instance.StartNewWave(currentRoom.enemySpawnLocations, room, false);
     }
   }
 

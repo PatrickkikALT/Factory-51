@@ -34,9 +34,8 @@ public class WaveManager : MonoBehaviour {
   public void Awake() {
     instance = this;
   }
-
-  [ContextMenu("StartNewWave")]
-  public void StartNewWave(SpawnBox spawnPos, Room room) {
+  
+  public void StartNewWave(SpawnBox spawnPos, Room room, bool bossSummon = false) {
     enemySpawnPos = spawnPos;
     currentRoom = room;
     wave++;
@@ -44,7 +43,7 @@ public class WaveManager : MonoBehaviour {
     var middleMan = startingWavePoints * wavePointsModifier;
     _wavePoints = (int)middleMan;
     wavePointsModifier = 1.2f;
-    StartCoroutine(GenerateNewWave());
+    StartCoroutine(GenerateNewWave(bossSummon));
   }
 
   public void StartBossWave(SpawnBox spawnPos, Room room) {
@@ -52,10 +51,12 @@ public class WaveManager : MonoBehaviour {
     currentRoom = room;
     wave++;
     _wavePoints = 0;
-    Instantiate(bossGroups.Random().EnemyGo[0], enemySpawnPos.GetRandomPosition(room.transform.position), Quaternion.identity);
+    var boss = Instantiate(bossGroups.Random().EnemyGo[0], enemySpawnPos.GetRandomPosition(room.transform.position), Quaternion.identity);
+    GameManager.Instance.boss = boss.GetComponent<BossEnemy>();
+    GameManager.Instance.bossHealth = boss.GetComponent<BossHealth>();
   }
-
-  public IEnumerator GenerateNewWave() {
+  
+  public IEnumerator GenerateNewWave(bool bossSummon = false) {
     SelectAvailableGroups();
 
     var maxTries = 10 * wave;
@@ -68,7 +69,7 @@ public class WaveManager : MonoBehaviour {
       SelectAvailableGroups();
     }
 
-    StartCoroutine(SpawnEnemyGroups());
+    StartCoroutine(SpawnEnemyGroups(bossSummon));
     yield return null;
   }
 
@@ -88,12 +89,13 @@ public class WaveManager : MonoBehaviour {
   }
 
 
-  public IEnumerator SpawnEnemyGroups() {
+  public IEnumerator SpawnEnemyGroups(bool bossSummon = false) {
     foreach (var groups in currentWaveGroups) {
       foreach (var enemy in groups.EnemyGo) {
         Vector3 pos = enemySpawnPos.GetRandomPosition(currentRoom.transform.position);
-        GameManager.Instance.enemies.Add(Instantiate(enemy, pos, Quaternion.identity)
-          .GetComponent<Enemy>());
+        var e = Instantiate(enemy, pos, Quaternion.identity).GetComponent<Enemy>();
+        GameManager.Instance.enemies.Add(e);
+        e.bossSummon = bossSummon;
         yield return new WaitForSeconds(groups.TimeBetweenEnemy);
       }
 

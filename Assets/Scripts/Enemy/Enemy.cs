@@ -27,6 +27,8 @@ public abstract class Enemy : MonoBehaviour {
   private VisualEffect _visualEffect; 
   public SkinnedMeshRenderer meshRenderer;
 
+  public bool bossSummon;
+
   protected void Start() {
     _visualEffect = GetComponent<VisualEffect>();
     meshRenderer.enabled = false;
@@ -34,6 +36,7 @@ public abstract class Enemy : MonoBehaviour {
     agent.speed = walkSpeed;
     player = GameManager.Instance.player;
     Ticker.Instance.OnTickEvent += UpdateGoal;
+    GetComponent<EnemyHealth>().bossSummon = bossSummon;
     StartCoroutine(PoofEffect());
   }
 

@@ -1,18 +1,23 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 public class BossEnemy : Enemy {
   public Animator animator;
-  private bool _forward;
-  private bool _left;
-  private bool _right;
-  private bool _backwards;
   public BossState state;
   private BossHealth _health;
   public bool dead;
 
-  [SerializeField] private int blockingStateHealth;
+  [SerializeField] private int blockingStateHealth = 200;
+  [SerializeField] private float shootInterval = 1.5f;
+  [SerializeField] private float runningRange = 2f;
+  [SerializeField] private float shootingRange = 10f;
+  [SerializeField] private int ticksTillSummon;
+
+  private bool _hasBlockedOnce;
+  private bool _isShooting;
+  private Coroutine _shootRoutine;
 
   private new void Start() {
     base.Start();
@@ -24,84 +29,112 @@ public class BossEnemy : Enemy {
     if (dead) return;
 
     switch (state) {
-      case BossState.WALKING:
-        agent.destination = player.position;
-        break;
       case BossState.BLOCKING:
-        _health.isBlocking = true;
+        HandleBlockingPhase();
+        break;
+      case BossState.WALKING:
+        agent.destination = player.position + transform.forward * shootingRange;
         break;
       case BossState.SHOOTING:
+        HandleShootingPhase();
+        break;
       case BossState.RUNNING:
+        HandleRunningPhase();
         break;
       default:
         throw new ArgumentOutOfRangeException();
     }
-    
+
     UpdateAnimation();
   }
 
   private void CheckState() {
+    if (dead) return;
+
     float distance = Vector3.Distance(agent.nextPosition, player.position);
-
-    state = _health.health >= blockingStateHealth ? BossState.BLOCKING :
-      distance < 2f ? BossState.RUNNING :
-      distance < 10f ? BossState.SHOOTING :
-      BossState.WALKING;
-  }
-
-
-  #region Animation
-  private void UpdateAnimation() {
-    if (!animator || !agent) return;
-
-    var localVelocity = transform.InverseTransformDirection(agent.velocity);
-    var speed = localVelocity.magnitude;
     
-    if (speed < 0.1f) {
-      animator.SetBool("Forward", false);
-      animator.SetBool("Backward", false);
-      animator.SetBool("TurnLeft", false);
-      animator.SetBool("TurnRight", false);
+    if (_health.health >= blockingStateHealth) {
+      state = BossState.BLOCKING;
       return;
     }
-    
-    if (Mathf.Abs(localVelocity.z) > Mathf.Abs(localVelocity.x)) {
-      if (animator.GetBool("Forward") != localVelocity.z > 0f) {
-        animator.SetBool("Forward", localVelocity.z > 0f);
-      }
-      if (animator.GetBool("Backward") != localVelocity.z < 0f) {
-        animator.SetBool("Backward", localVelocity.z < 0f);
-      }
-      animator.SetBool("TurnLeft", false);
-      animator.SetBool("TurnRight", false);
-    }
-    else {
-      if (animator.GetBool("TurnLeft") != localVelocity.x < 0f) {
-        animator.SetBool("TurnLeft", localVelocity.x < 0f);
-      }
 
-      if (animator.GetBool("TurnRight") != localVelocity.x > 0f) {
-        animator.SetBool("TurnRight", localVelocity.x > 0f);
-      }
-      animator.SetBool("Forward", false);
-      animator.SetBool("Backward", false);
+    if (distance < runningRange) state = BossState.RUNNING;
+    else if (distance < shootingRange) state = BossState.SHOOTING;
+    else state = BossState.WALKING;
+  }
+
+  #region Phase Logic
+  private void HandleBlockingPhase() {
+    if (dead) return;
+
+    _health.isBlocking = true;
+    agent.isStopped = true;
+    ticks++;
+    if (ticks == ticksTillSummon) {
+      WaveManager.instance.StartNewWave(GameManager.Instance.currentRoom.enemySpawnLocations, GameManager.Instance.currentRoom, true);
+    }
+    
+    if (!_health.isBlocking) {
+      agent.isStopped = false;
+      state = BossState.WALKING;
     }
   }
-  #endregion
-  protected override void Shoot() {
-    var pos = shootPos.position;
 
+  private void HandleShootingPhase() {
+    agent.isStopped = true;
+    StartCoroutine(ShootingRoutine());
+  }
+
+  private void HandleRunningPhase() {
+    agent.isStopped = false;
+    agent.destination = -player.position;
+  }
+  #endregion
+
+  #region Shooting
+  private IEnumerator ShootingRoutine() {
+    while (_isShooting && !dead) {
+      Shoot();
+      yield return new WaitForSeconds(shootInterval);
+    }
+    _isShooting = false;
+  }
+  
+
+  protected override void Shoot() {
+    if (dead) return;
+
+    var pos = shootPos.position;
     GameObject obj;
+
     if (PoolManager.TryDequeue(BulletType.BOSS, out obj)) {
       obj.SetActive(true);
       obj.transform.position = pos;
-    }
-    else {
+    } else {
       obj = Instantiate(bullet, pos, transform.rotation);
     }
+
     var b = obj.GetComponent<Bullet>();
-    b.direction = Vector3.RotateTowards(transform.forward, player.position, 0.0f, 0.0f);
+    b.direction = (player.position - transform.position).normalized;
     b.gameObject.layer = gameObject.layer;
     b.type = BulletType.BOSS;
+  }
+  #endregion
+
+  #region Animation
+  private void UpdateAnimation() {
+    var localVelocity = transform.InverseTransformDirection(agent.velocity);
+    var speed = localVelocity.magnitude;
+
+    animator.SetBool("Forward", speed > 0.1f && localVelocity.z > 0f);
+    animator.SetBool("Backward", speed > 0.1f && localVelocity.z < 0f);
+    animator.SetBool("TurnLeft", speed > 0.1f && localVelocity.x < 0f);
+    animator.SetBool("TurnRight", speed > 0.1f && localVelocity.x > 0f);
+  }
+  #endregion
+
+  private new void OnDestroy() {
+    Ticker.Instance.OnTickEvent -= CheckState;
+    Ticker.Instance.OnTickEvent -= UpdateGoal;
   }
 }

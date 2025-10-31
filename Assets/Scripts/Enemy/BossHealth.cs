@@ -11,7 +11,7 @@ public class BossHealth : BaseHealth {
         _animator = GetComponent<Animator>();
     }
 
-    public override void TakeDamage(int damage) {
+    public void TakeDamage(int damage, bool bossSummon = false) {
         if (isBlocking) return;
         base.TakeDamage(damage);
         if (health <= 0) {
