@@ -467,7 +467,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &573485186
 Transform:
   m_ObjectHideFlags: 0
@@ -816,6 +816,10 @@ PrefabInstance:
     - target: {fileID: 1927143704789026786, guid: 13711320ba66040438fc58e8d409b379, type: 3}
       propertyPath: m_Name
       value: MSB R4T
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927143704789026786, guid: 13711320ba66040438fc58e8d409b379, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6482514971638533189, guid: 13711320ba66040438fc58e8d409b379, type: 3}
       propertyPath: inputAction.m_Name
@@ -1573,7 +1577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 846150480734787320, guid: a52c87a430106b842a2d80a33cbd43ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -78.8
       objectReference: {fileID: 0}
     - target: {fileID: 846150480734787320, guid: a52c87a430106b842a2d80a33cbd43ff, type: 3}
       propertyPath: m_LocalPosition.y
