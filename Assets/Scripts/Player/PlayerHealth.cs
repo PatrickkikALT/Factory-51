@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : BaseHealth {
-#if UNITY_EDITOR
-  [Header("Dev")] public bool immortal;
-#endif
+  [Header("Dev")] 
+  public bool immortal;
   
   [Header("UI")]
   public HealthSliderHelper healthSlider;
@@ -17,9 +16,7 @@ public class PlayerHealth : BaseHealth {
   }
 
   public override void TakeDamage(int amount) {
-    #if UNITY_EDITOR
     if (immortal) return;
-    #endif
     health -= amount;
     healthSlider.SetValue(health);
     if (health <= 0) {
@@ -33,5 +30,9 @@ public class PlayerHealth : BaseHealth {
     base.Heal(amount);
     healthSlider.SetValue(health);
     health = Mathf.Clamp(health, 0, MaxHealth);
+  }
+
+  public void OnDevTool() {
+    immortal = !immortal;
   }
 }

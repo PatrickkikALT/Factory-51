@@ -24,8 +24,13 @@ public class CircleEnemy : Enemy {
     if (Vector3.Distance(transform.position, _currentDestination) <= preferredDistance) {
       ticks++;
       if (ticks >= shootSpeed) {
-        Shoot();
-        ticks = 0;
+        if (!firstShootTick) {
+          firstShootTick = true;
+        }
+        else {
+          Shoot();
+          ticks = 0;
+        }
       }
 
       _currentDestination = CalculateDestination();

@@ -2183,6 +2183,8 @@ MonoBehaviour:
   gear: {fileID: 7757420845594200510}
   roomText: {fileID: 8426518296561363193}
   generator: {fileID: 3395171780119569493}
+  bossHealth: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!1 &5079106072685231227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,6 +3226,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 27d750b0-111a-49d7-8614-726d3b789f6a
     m_ActionName: 'Player/Pause[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1935085448336206961}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
+        m_MethodName: OnDevTool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cd761150-6a11-410b-a095-d4fdc75a5aee
+    m_ActionName: 'Player/DevTool[/Keyboard/f8]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

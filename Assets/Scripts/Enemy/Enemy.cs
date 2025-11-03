@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
@@ -11,33 +12,34 @@ public abstract class Enemy : MonoBehaviour {
 
   public Transform player;
   public Transform shootPos;
-  [Header("Attack variables")] [SerializeField]
-  protected float maxDistance;
-
+  [Header("Attack variables")] 
+  [SerializeField] protected float maxDistance;
   [SerializeField] protected GameObject bullet;
-
-  [Tooltip("Amount of ticks until shot")] [SerializeField]
-  protected float shootSpeed;
-
+  [Tooltip("Amount of ticks until shot")] 
+  [SerializeField] protected float shootSpeed;
   [SerializeField] protected int rotationSpeed;
   [SerializeField] protected float walkSpeed;
 
   protected int ticks;
+  protected bool firstShootTick;
   
   private VisualEffect _visualEffect; 
   public SkinnedMeshRenderer meshRenderer;
 
   public bool bossSummon;
 
+  
   protected void Start() {
-    _visualEffect = GetComponent<VisualEffect>();
-    meshRenderer.enabled = false;
-    agent.isStopped = true;
     agent.speed = walkSpeed;
     player = GameManager.Instance.player;
     Ticker.Instance.OnTickEvent += UpdateGoal;
-    GetComponent<EnemyHealth>().bossSummon = bossSummon;
-    StartCoroutine(PoofEffect());
+    if (TryGetComponent(out EnemyHealth eHealth)) {
+      _visualEffect = GetComponent<VisualEffect>();
+      meshRenderer.enabled = false;
+      agent.isStopped = true;
+      eHealth.bossSummon = bossSummon;
+      StartCoroutine(PoofEffect());
+    }
   }
 
   private IEnumerator PoofEffect() {

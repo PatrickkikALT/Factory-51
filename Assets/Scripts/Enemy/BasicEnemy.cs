@@ -14,8 +14,13 @@ public class BasicEnemy : Enemy {
 
     ticks++;
     if (ticks == shootSpeed) {
-      Shoot();
-      ticks = 0;
+      if (!firstShootTick) {
+        firstShootTick = true;
+      }
+      else {
+        Shoot();
+        ticks = 0;
+      }
     }
   }
 }

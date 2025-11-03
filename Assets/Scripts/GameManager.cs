@@ -89,7 +89,9 @@ public class GameManager : MonoBehaviour {
   }
 
   private void ClearEnemies() {
-    enemies.ForEach(Destroy);
+    enemies.ForEach(enemy => {
+      Destroy(enemy.gameObject);
+    });
   }
 
   public void TogglePauseMenu() {
