@@ -21,6 +21,8 @@ public class Weapon : MonoBehaviour {
   public Animator animator;
   private bool _isFiring;
   public AnimationClip shootClip;
+  public AudioSource audioSource;
+  public AudioClip[] clips;
 
   public bool canShoot;
   
@@ -52,6 +54,8 @@ public class Weapon : MonoBehaviour {
       if (_canShoot) {
         animator.speed = (shootClip.length / delay);
         animator.Play("Shooting", 0, 0f);
+        audioSource.clip = clips[0];
+        audioSource.Play();
         ShootEvent?.Invoke();
         _canShoot = false;
         yield return new WaitForSeconds(delay);
@@ -61,6 +65,9 @@ public class Weapon : MonoBehaviour {
         yield return null;
       }
     }
+
+    audioSource.clip = clips[1];
+    audioSource.Play();
   }
   
   public void AddUpgrade(Upgrade upgrade) {

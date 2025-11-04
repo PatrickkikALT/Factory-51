@@ -11,10 +11,12 @@ public class BossHealth : BaseHealth {
         _animator = GetComponent<Animator>();
     }
 
-    public void TakeDamage(int damage, bool bossSummon = false) {
+    public new void TakeDamage(int damage, bool bossSummon = false) {
         if (isBlocking) return;
+        print("not blocking");
         base.TakeDamage(damage);
         if (health <= 0) {
+            GetComponent<BossEnemy>().state = BossState.DEAD;
             _animator.SetTrigger("Death");
             GetComponent<NavMeshAgent>().isStopped = true;
             GameManager.Instance.EndGame(true);

@@ -79,6 +79,8 @@ public class GameManager : MonoBehaviour {
     else {
       WaveManager.instance.StartNewWave(currentRoom.enemySpawnLocations, room, false);
     }
+
+    room.disabled = true;
   }
 
   private IEnumerator RotateGear() {

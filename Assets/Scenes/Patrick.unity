@@ -129,6 +129,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6974885829763401940, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
   m_PrefabInstance: {fileID: 343017447017743126}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1052218247 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1844084743085183574, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+  m_PrefabInstance: {fileID: 343017447017743126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1105158981
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +377,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 1935085448336206961, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: fpsText
+      value: 
+      objectReference: {fileID: 1105158984}
     - target: {fileID: 1957803606498005143, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
       propertyPath: m_Name
       value: game
@@ -520,6 +529,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5242428814349577149, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: shootAudio
+      value: 
+      objectReference: {fileID: 1052218247}
+    - target: {fileID: 5242428814349577149, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1052218247}
+    - target: {fileID: 5242428814349577149, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: clips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242428814349577149, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: 'clips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 405753bca06118b4fa809c824af8b2d7, type: 3}
+    - target: {fileID: 5242428814349577149, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: 'clips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4fc806b435511d34899fa4d66fbfda66, type: 3}
     - target: {fileID: 5910167680796411623, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -691,6 +720,30 @@ PrefabInstance:
     - target: {fileID: 8540710554593829949, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567041536004441943, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567041536004441943, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567041536004441943, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567041536004441943, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567041536004441943, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567041536004441943, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8688613578590690429, guid: 0456f192c02e7444e81e0cf9e1cc02fc, type: 3}
       propertyPath: m_AnchorMax.x

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class PlayerHealth : BaseHealth {
   
   [Header("UI")]
   public HealthSliderHelper healthSlider;
+
+  public TMP_Text fpsText;
 
   private void Start() {
     MaxHealth = health;
@@ -34,5 +37,6 @@ public class PlayerHealth : BaseHealth {
 
   public void OnDevTool() {
     immortal = !immortal;
+    fpsText.enabled = immortal;
   }
 }

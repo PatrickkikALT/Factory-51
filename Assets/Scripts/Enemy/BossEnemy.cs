@@ -29,10 +29,13 @@ public class BossEnemy : Enemy {
     if (dead) return;
 
     switch (state) {
+      case BossState.DEAD:
+        break;
       case BossState.BLOCKING:
         HandleBlockingPhase();
         break;
       case BossState.WALKING:
+        agent.isStopped = false;
         agent.destination = player.position + transform.forward * shootingRange;
         break;
       case BossState.SHOOTING:
