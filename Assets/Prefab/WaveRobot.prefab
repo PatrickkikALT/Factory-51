@@ -211,6 +211,7 @@ MonoBehaviour:
   rotationSpeed: 1
   walkSpeed: 3
   meshRenderer: {fileID: 2344683446102894808}
+  bossSummon: 0
   spins: 3
   spinSpeed: 1400
 --- !u!195 &5792037845737719411
@@ -271,6 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 60
   healAmountOnDeath: 2
+  summonDamage: 30
+  bossSummon: 0
 --- !u!136 &2305186156440188149
 CapsuleCollider:
   m_ObjectHideFlags: 0

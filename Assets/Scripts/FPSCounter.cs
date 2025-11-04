@@ -12,13 +12,11 @@ public class FPSCounter : MonoBehaviour
   private float _timeLeft;
   private float _fps = 0f;
 
-  void Start()
-  {
+  void Start() {
     _timeLeft = updateInterval;
   }
 
-  void Update()
-  {
+  void Update() {
     _timeLeft -= Time.unscaledDeltaTime;
     _accum += 1f / Mathf.Max(0.00001f, Time.unscaledDeltaTime);
     _frames++;

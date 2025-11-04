@@ -19,8 +19,9 @@ public class BasicEnemy : Enemy {
       }
       else {
         Shoot();
-        ticks = 0;
       }
+
+      ticks = 0;
     }
   }
 }

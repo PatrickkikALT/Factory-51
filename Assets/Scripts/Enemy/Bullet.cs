@@ -35,6 +35,7 @@ public class Bullet : MonoBehaviour {
     }
 
     if (other.TryGetComponent(out BaseHealth bHealth)) {
+      print(bHealth.GetType());
       bHealth.TakeDamage(Mathf.RoundToInt(damage));
     }
 

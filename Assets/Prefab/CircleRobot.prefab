@@ -217,6 +217,7 @@ MonoBehaviour:
   rotationSpeed: 0
   walkSpeed: 2
   meshRenderer: {fileID: 726470849518964748}
+  bossSummon: 0
   preferredDistance: 10
   panicDistance: -1
   panicWalkSpeed: 4
@@ -234,6 +235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 30
   healAmountOnDeath: 2
+  summonDamage: 25
+  bossSummon: 0
 --- !u!73398921 &4619053814002852529
 VFXRenderer:
   serializedVersion: 1

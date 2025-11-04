@@ -75,8 +75,6 @@ public class WaveManager : MonoBehaviour {
 
   public WaveGroups SelectGroup() {
     var selectedGroup = availableGroups.Random();
-    print(_wavePoints);
-    print(selectedGroup.WavePointCost);
     _wavePoints -= selectedGroup.WavePointCost;
     return selectedGroup;
   }

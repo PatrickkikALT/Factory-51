@@ -200,6 +200,7 @@ MonoBehaviour:
   rotationSpeed: 45
   walkSpeed: 2
   meshRenderer: {fileID: 5821225496882785287}
+  bossSummon: 0
 --- !u!54 &3233049601944275478
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -241,6 +242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 50
   healAmountOnDeath: 2
+  summonDamage: 20
+  bossSummon: 0
 --- !u!2083052967 &7655861454235564562
 VisualEffect:
   m_ObjectHideFlags: 0
