@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour {
   public BossEnemy boss;
   
   private void Awake() {
+    
+    
     Instance = this;
   }
 
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour {
 
   public void EndGame(bool win) {
     _movement.canMove = false;
+    playerWeapon.canShoot = false;
     Cursor.lockState = CursorLockMode.None;
     if (win) {
       winScreen.SetActive(true);

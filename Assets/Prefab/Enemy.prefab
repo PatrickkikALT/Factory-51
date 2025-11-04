@@ -132,6 +132,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7396004997961585678}
   m_SourcePrefab: {fileID: 100100000, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+--- !u!137 &4306609399560003170 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1298109654190688346, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+  m_PrefabInstance: {fileID: 6212740200982161860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5886960312206872111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0de84cff95aa08342b79010258512de4, type: 3}
@@ -207,7 +212,7 @@ MonoBehaviour:
   shootSpeed: 2
   rotationSpeed: 45
   walkSpeed: 2
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 4306609399560003170}
   bossSummon: 0
 --- !u!54 &3233049601944275478
 Rigidbody:

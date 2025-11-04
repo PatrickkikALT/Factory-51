@@ -11,10 +11,16 @@ public class BossHealth : BaseHealth {
         _animator = GetComponent<Animator>();
     }
 
-    public new void TakeDamage(int damage, bool bossSummon = false) {
+    //ugly but I want the takedamage to have a bool if the damage is done indirectly by a summon dying, but if I dont override it
+    //fires the base health's takedamage too still causing damage being done to the boss while blocking
+    public override void TakeDamage(int damage) {
+        return;
+    }
+    public void TakeDamage(int damage, bool bossSummon = false) {
         if (isBlocking) return;
+        if (!bossSummon) return;
         print("not blocking");
-        base.TakeDamage(damage);
+        health -= damage;
         if (health <= 0) {
             GetComponent<BossEnemy>().state = BossState.DEAD;
             _animator.SetTrigger("Death");
