@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8189062293639008598}
+  m_Father: {fileID: 5886960312206872111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6212740200982161860
 PrefabInstance:
@@ -79,6 +79,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1298109654190688346, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4bb5d8f0e81e246428e3214f592eaaaf, type: 2}
+    - target: {fileID: -1298109654190688346, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b6e9a542763aa744db843aa859c165e8, type: 2}
     - target: {fileID: 500238159136785859, guid: 0de84cff95aa08342b79010258512de4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -98,7 +106,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2854563699051640978, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0de84cff95aa08342b79010258512de4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 821542397088140736}
     m_AddedComponents:
@@ -124,9 +132,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7396004997961585678}
   m_SourcePrefab: {fileID: 100100000, guid: 0de84cff95aa08342b79010258512de4, type: 3}
---- !u!137 &5821225496882785287 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 500238159136785859, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+--- !u!4 &5886960312206872111 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0de84cff95aa08342b79010258512de4, type: 3}
   m_PrefabInstance: {fileID: 6212740200982161860}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6555411033045439637 stripped
@@ -199,7 +207,7 @@ MonoBehaviour:
   shootSpeed: 2
   rotationSpeed: 45
   walkSpeed: 2
-  meshRenderer: {fileID: 5821225496882785287}
+  meshRenderer: {fileID: 0}
   bossSummon: 0
 --- !u!54 &3233049601944275478
 Rigidbody:
@@ -375,8 +383,3 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!4 &8189062293639008598 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2854563699051640978, guid: 0de84cff95aa08342b79010258512de4, type: 3}
-  m_PrefabInstance: {fileID: 6212740200982161860}
-  m_PrefabAsset: {fileID: 0}

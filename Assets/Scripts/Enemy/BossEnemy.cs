@@ -75,6 +75,7 @@ public class BossEnemy : Enemy {
     ticks++;
     if (ticks == ticksTillSummon) {
       WaveManager.instance.StartNewWave(GameManager.Instance.currentRoom.enemySpawnLocations, GameManager.Instance.currentRoom, true);
+      ticks = 0;
     }
     
     if (!_health.isBlocking) {

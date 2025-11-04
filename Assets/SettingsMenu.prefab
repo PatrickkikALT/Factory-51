@@ -2638,7 +2638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Enter FPS Limit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22aa44de0b803bf498d39819b65d249d, type: 2}
   m_sharedMaterial: {fileID: -458215223608746544, guid: 22aa44de0b803bf498d39819b65d249d, type: 2}
