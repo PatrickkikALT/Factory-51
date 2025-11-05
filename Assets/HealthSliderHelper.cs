@@ -8,13 +8,20 @@ public class HealthSliderHelper : MonoBehaviour {
   private Slider _slider;
   private int _target;
   public int speed = 1;
+
+  private Image _fillImage;
   private void Start() {
     _slider = GetComponent<Slider>();
+    _fillImage = _slider.fillRect.GetComponent<Image>();
     StartCoroutine(LerpValue());
   }
 
   public void SetValue(int newValue) {
     _target = newValue;
+  }
+
+  public void SetColor(Color color) {
+    _fillImage.color = color;
   }
 
   private IEnumerator LerpValue() {

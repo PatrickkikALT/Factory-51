@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 8862868832203559385}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.21212003, y: -0.25976804, z: 0.53455997}
+  m_LocalPosition: {x: 0.21212003, y: 0.530232, z: 0.27456006}
   m_LocalScale: {x: 1.1999999, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -265,6 +265,7 @@ MonoBehaviour:
   healAmountOnDeath: 2
   summonDamage: 25
   bossSummon: 0
+  clip: {fileID: 8118903978482376805, guid: e2e848ae6c91a174fa016e0719413b4e, type: 3}
 --- !u!73398921 &4619053814002852529
 VFXRenderer:
   serializedVersion: 1
@@ -406,7 +407,7 @@ Animator:
   m_GameObject: {fileID: 4454100740295065466}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 20ddbaae57213ab44bd568bd2d872db1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

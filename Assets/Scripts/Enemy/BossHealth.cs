@@ -2,17 +2,20 @@ using System;
 using System.Net;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
+
 [RequireComponent(typeof(Animator))]
 public class BossHealth : BaseHealth {
     public Material eyeMaterial;
     private Animator _animator;
     public bool isBlocking;
-    private HealthSliderHelper _healthSlider;
+    public HealthSliderHelper healthSlider;
 
     private void Start() {
         _animator = GetComponent<Animator>();
-        _healthSlider = GameManager.Instance.bossHealthSlider;
-        _healthSlider.SetValue(health);
+        healthSlider = GameManager.Instance.bossHealthSlider;
+        healthSlider.SetValue(health);
     }
 
     //ugly but I want the takedamage to have a bool if the damage is done indirectly by a summon dying, but if I dont override it
@@ -36,7 +39,7 @@ public class BossHealth : BaseHealth {
             GameManager.Instance.EndGame(true);
             return;
         }
-        _healthSlider.SetValue(health);
+        healthSlider.SetValue(health);
         var color = Color.Lerp(eyeMaterial.GetColor("_EmissionColor"), Color.black, 10 / health);
         eyeMaterial.SetColor("_EmissionColor", color);
     }

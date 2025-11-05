@@ -143,6 +143,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0de84cff95aa08342b79010258512de4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7396004997961585678}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8544431255202570878}
   m_SourcePrefab: {fileID: 100100000, guid: 0de84cff95aa08342b79010258512de4, type: 3}
 --- !u!137 &4306609399560003170 stripped
 SkinnedMeshRenderer:
@@ -269,6 +272,7 @@ MonoBehaviour:
   healAmountOnDeath: 2
   summonDamage: 20
   bossSummon: 0
+  clip: {fileID: -2956151834387529021, guid: 0de84cff95aa08342b79010258512de4, type: 3}
 --- !u!2083052967 &7655861454235564562
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -400,3 +404,25 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &8544431255202570878
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555411033045439637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a82626341038c674096b5b71f8560ed6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

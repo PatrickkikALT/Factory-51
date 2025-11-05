@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
   public HealthSliderHelper bossHealthSlider;
   public BossHealth bossHealth;
   public BossEnemy boss;
-  
+  public Image shield;
   private void Awake() {
     Instance = this;
   }
@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour {
   }
 
   private IEnumerator RotateGear() {
-    for (int i = 0; i < 360; i++) {
+    for (int i = 0; i < 45; i++) {
       gear.transform.Rotate(new Vector3(0, 0, 1));
       yield return null;
     }

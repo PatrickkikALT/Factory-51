@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 public class BossEnemy : Enemy {
@@ -15,15 +16,15 @@ public class BossEnemy : Enemy {
   [SerializeField] private float shootingRange = 10f;
   [SerializeField] private int ticksTillSummon;
 
+  private int _summonTicks;
   private bool _hasBlockedOnce;
   private bool _isShooting;
   private Coroutine _shootRoutine;
-
   private new void Start() {
     base.Start();
     _health = GetComponent<BossHealth>();
     Ticker.Instance.OnTickEvent += CheckState;
-    ticks = 20;
+    _summonTicks = 20;
   }
 
   protected override void UpdateGoal() {
@@ -59,8 +60,14 @@ public class BossEnemy : Enemy {
     
     if (_health.health >= blockingStateHealth) {
       state = BossState.BLOCKING;
+      _health.healthSlider.SetColor(new Color(0, 185, 255));
       return;
     }
+    
+    if (GameManager.Instance.shield.IsActive()) {
+      GameManager.Instance.shield.enabled = false;
+    }
+    _health.healthSlider.SetColor(Color.red);
     if (_health.isBlocking) {
       _health.isBlocking = false;
     }
@@ -77,10 +84,10 @@ public class BossEnemy : Enemy {
     _health.isBlocking = true;
     agent.isStopped = false;
     agent.destination = player.position + transform.forward * maxDistance / 2;
-    ticks++;
-    if (ticks == ticksTillSummon) {
+    _summonTicks++;
+    if (_summonTicks == ticksTillSummon) {
       WaveManager.instance.StartNewWave(GameManager.Instance.currentRoom.enemySpawnLocations, GameManager.Instance.currentRoom, true);
-      ticks = 0;
+      _summonTicks = 0;
     }
     
     if (!_health.isBlocking) {
@@ -93,7 +100,11 @@ public class BossEnemy : Enemy {
     agent.isStopped = false;
     agent.destination = player.position + transform.forward * shootingRange / 2;
     _isShooting = true;
-    StartCoroutine(ShootingRoutine());
+    ticks++;
+    if (Mathf.Approximately(ticks, shootInterval)) {
+      Shoot();
+      ticks = 0;
+    }
   }
 
   private void HandleRunningPhase() {
@@ -103,13 +114,6 @@ public class BossEnemy : Enemy {
   #endregion
 
   #region Shooting
-  private IEnumerator ShootingRoutine() {
-    while (_isShooting && !dead) {
-      Shoot();
-      yield return new WaitForSeconds(shootInterval);
-    }
-    _isShooting = false;
-  }
   
 
   protected override void Shoot() {

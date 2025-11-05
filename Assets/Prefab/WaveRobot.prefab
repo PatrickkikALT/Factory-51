@@ -286,6 +286,7 @@ MonoBehaviour:
   healAmountOnDeath: 2
   summonDamage: 30
   bossSummon: 0
+  clip: {fileID: 6970970492914160576, guid: 9431f498b1f08824ab5db4fa89ecaa39, type: 3}
 --- !u!136 &2305186156440188149
 CapsuleCollider:
   m_ObjectHideFlags: 0
