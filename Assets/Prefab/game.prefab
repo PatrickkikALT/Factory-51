@@ -825,15 +825,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586661037627224158}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.228, z: -0.107}
+  m_LocalRotation: {x: 0.00000019817719, y: -0.7071069, z: -0.7071067, w: -0.00000036676462}
+  m_LocalPosition: {x: 0, y: 0.016673012, z: -0.00659067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6956189983247545157}
   - {fileID: 5579594119049108907}
   - {fileID: 5055235421494262164}
-  m_Father: {fileID: 2158130029410657646}
+  m_Father: {fileID: 3431065140958951112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5242428814349577149
 MonoBehaviour:
@@ -1352,6 +1352,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1913759013908483840}
+  - {fileID: 4943148470126763851}
   m_Father: {fileID: 2158130029410657646}
   m_LocalEulerAnglesHint: {x: -77.3394, y: 90.000084, z: 89.999916}
 --- !u!1 &2328188324848768819
@@ -2286,6 +2287,7 @@ MonoBehaviour:
   bossHealthSlider: {fileID: 6164971086710305722}
   bossHealth: {fileID: 0}
   boss: {fileID: 0}
+  shield: {fileID: 0}
 --- !u!1 &5079106072685231227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,7 +2876,6 @@ Transform:
   - {fileID: 6354332345573740340}
   - {fileID: 8132768790380357120}
   - {fileID: 3431065140958951112}
-  - {fileID: 4943148470126763851}
   m_Father: {fileID: 4418331797500221706}
   m_LocalEulerAnglesHint: {x: 89.98021, y: -0.000013315123, z: 0}
 --- !u!1 &5500760460172336391

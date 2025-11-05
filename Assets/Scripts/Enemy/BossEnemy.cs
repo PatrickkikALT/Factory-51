@@ -29,27 +29,27 @@ public class BossEnemy : Enemy {
 
   protected override void UpdateGoal() {
     if (dead) return;
-
+    
     switch (state) {
       case BossState.DEAD:
-        break;
+        return;
       case BossState.BLOCKING:
         HandleBlockingPhase();
+        HandleShootingPhase();
         break;
       case BossState.WALKING:
+        HandleShootingPhase();
         agent.isStopped = false;
         agent.destination = player.position + transform.forward * shootingRange / 2;
         break;
-      case BossState.SHOOTING:
-        HandleShootingPhase();
-        break;
       case BossState.RUNNING:
+        HandleShootingPhase();
         HandleRunningPhase();
         break;
       default:
         throw new ArgumentOutOfRangeException();
     }
-
+    
     UpdateAnimation();
   }
 
@@ -73,7 +73,6 @@ public class BossEnemy : Enemy {
     }
 
     if (distance < runningRange) state = BossState.RUNNING;
-    else if (distance < shootingRange) state = BossState.SHOOTING;
     else state = BossState.WALKING;
   }
 
@@ -99,7 +98,6 @@ public class BossEnemy : Enemy {
   private void HandleShootingPhase() {
     agent.isStopped = false;
     agent.destination = player.position + transform.forward * shootingRange / 2;
-    _isShooting = true;
     ticks++;
     if (Mathf.Approximately(ticks, shootInterval)) {
       Shoot();

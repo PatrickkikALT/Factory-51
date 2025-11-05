@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff8e79933904f60aa90d9a8ec76ce42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CircleBulletEmitter
-  amount: 24
-  damage: 3
+  amount: 16
+  damage: 2
   bullet: {fileID: 7121479710745853557, guid: 550745e622c2ae6569e0f43f27eb9eeb, type: 3}
   timeToExplode: 1
   type: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   rb: {fileID: 2557951017315298162}
-  speed: 5
+  speed: 10
   direction: {x: 0, y: 0, z: 1}
   damage: 0
   type: 0
