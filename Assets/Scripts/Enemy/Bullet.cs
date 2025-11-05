@@ -35,8 +35,12 @@ public class Bullet : MonoBehaviour {
     }
 
     if (other.TryGetComponent(out BaseHealth bHealth)) {
-      print(bHealth.GetType());
       bHealth.TakeDamage(Mathf.RoundToInt(damage));
+    }
+
+    //ugly lol but deadline is today so dont care just want it to work
+    if (other.TryGetComponent(out BossHealth bossHealth)) {
+      bossHealth.TakeDamage(Mathf.RoundToInt(damage), false);
     }
 
     if (TryGetComponent(out BulletEmitter em)) em.EmitBullets(0);

@@ -102,25 +102,27 @@ public class DungeonGenerator : MonoBehaviour {
     Vector3 secondLastPos = _positions[^2];
     Vector3 dir = (lastRoomPos - secondLastPos).normalized;
 
-    Vector3 bossRoomPos = Vector3.zero;
     float distanceMultiplier = 2f;
     bool foundSpot = false;
-    
+
     for (int attempt = 0; attempt < 15; attempt++) {
-      bossRoomPos = lastRoomPos + dir * (roomSize * distanceMultiplier - 4);
-      if (!_positions.Contains(bossRoomPos)) {
-        foundSpot = true;
-        break;
+      Vector3 bossRoomPos = lastRoomPos + dir * (roomSize * distanceMultiplier - 4);
+      if (_positions.Contains(bossRoomPos)) {
+        _positions.Add(bossRoomPos);
+        
+        distanceMultiplier += 0.5f;
+        continue;
       }
-
-      distanceMultiplier += 0.5f;
+      
+      _positions.Add(bossRoomPos);
+      foundSpot = true;
+      break;
     }
-
+    
     if (!foundSpot) {
-      bossRoomPos = lastRoomPos + dir * (roomSize * 2);
+      Vector3 fallback = lastRoomPos + dir * (roomSize * 3f);
+      _positions.Add(fallback);
     }
-
-    _positions.Add(bossRoomPos);
   }
 
   private void GenerateRooms() {
@@ -179,7 +181,7 @@ public class DungeonGenerator : MonoBehaviour {
 
     parent.GetComponent<NavMeshSurface>().BuildNavMesh();
   }
-
+  
   private GameObject GetHallwayForTransition(int lastIndex, int currentIndex, int baseEnd, int windowEnd) {
     bool lastWasBase = lastIndex < baseEnd;
     bool lastWasWindow = lastIndex >= baseEnd && lastIndex < windowEnd;

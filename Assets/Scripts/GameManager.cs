@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
   public TMP_Text roomText;
   public DungeonGenerator generator;
 
+  public HealthSliderHelper bossHealthSlider;
   public BossHealth bossHealth;
   public BossEnemy boss;
   
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour {
   }
 
   private void Start() {
+    
     var rr = Screen.currentResolution.refreshRateRatio;
     int targetFPS = Mathf.RoundToInt((float)rr.numerator / rr.denominator);
     Application.targetFrameRate = targetFPS;
@@ -80,6 +82,7 @@ public class GameManager : MonoBehaviour {
     StartCoroutine(RotateGear());
     if (room.bossRoom) {
       ClearEnemies();
+      bossHealthSlider.gameObject.SetActive(true);
       WaveManager.instance.StartBossWave(currentRoom.enemySpawnLocations, room);
     }
     else {

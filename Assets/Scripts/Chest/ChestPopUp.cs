@@ -19,7 +19,7 @@ public class ChestPopUp : MonoBehaviour {
   }
 
   private void OnTriggerStay(Collider other) {
-    if (_hasOpened) return;
+    if (_hasOpened || chest.playedAnimation) return;
     if (other.gameObject.layer == LayerMask.NameToLayer("Player") && other.TryGetComponent(out PlayerReference _)) {
       if (GameManager.Instance.playerPressedE) {
         _hasOpened = true;

@@ -23,6 +23,7 @@ public class BossEnemy : Enemy {
     base.Start();
     _health = GetComponent<BossHealth>();
     Ticker.Instance.OnTickEvent += CheckState;
+    ticks = 20;
   }
 
   protected override void UpdateGoal() {
@@ -36,7 +37,7 @@ public class BossEnemy : Enemy {
         break;
       case BossState.WALKING:
         agent.isStopped = false;
-        agent.destination = player.position + transform.forward * shootingRange;
+        agent.destination = player.position + transform.forward * shootingRange / 2;
         break;
       case BossState.SHOOTING:
         HandleShootingPhase();
@@ -59,6 +60,9 @@ public class BossEnemy : Enemy {
     if (_health.health >= blockingStateHealth) {
       state = BossState.BLOCKING;
       return;
+    }
+    if (_health.isBlocking) {
+      _health.isBlocking = false;
     }
 
     if (distance < runningRange) state = BossState.RUNNING;
@@ -86,7 +90,9 @@ public class BossEnemy : Enemy {
   }
 
   private void HandleShootingPhase() {
-    agent.isStopped = true;
+    agent.isStopped = false;
+    agent.destination = player.position + transform.forward * shootingRange / 2;
+    _isShooting = true;
     StartCoroutine(ShootingRoutine());
   }
 
@@ -121,6 +127,7 @@ public class BossEnemy : Enemy {
 
     var b = obj.GetComponent<Bullet>();
     b.direction = (player.position - transform.position).normalized;
+    b.transform.LookAt(player.position);
     b.gameObject.layer = gameObject.layer;
     b.type = BulletType.BOSS;
   }

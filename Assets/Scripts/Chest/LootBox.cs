@@ -11,6 +11,7 @@ public class LootBox : MonoBehaviour {
   private Animator _animator;
 
   public float speed;
+  public bool playedAnimation;
 
   public void Start() {
     _animator = GetComponent<Animator>();
@@ -21,6 +22,7 @@ public class LootBox : MonoBehaviour {
     var loot = LootManager.Instance.GetLoot(lootTable);
     var g = Instantiate(loot.prefab, lootPosition);
     yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
+    playedAnimation = true;
     var target = g.transform.position;
     target.y += 1;
     while (g && Vector3.Distance(g.transform.position, target) > 0.1f) {
@@ -28,6 +30,7 @@ public class LootBox : MonoBehaviour {
       g.transform.position += vec3 * (speed * Time.deltaTime);
       yield return null;
     }
+    
   }
   public void OpenChest() {
     StartCoroutine(Open());

@@ -68,7 +68,7 @@ MonoBehaviour:
   - {fileID: 0}
   enemySpawnLocations:
     BoxPos: {x: 0.08, y: 1.67, z: 0}
-    BoxSize: {x: 6.98, y: 1, z: 7.42}
+    BoxSize: {x: 21.62, y: 1, z: 20.69}
     GizmoColor: {r: 1, g: 0, b: 0, a: 1}
   disabled: 0
   id: 0
@@ -92,7 +92,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 40, y: 4, z: 40}
+  m_Size: {x: 50, y: 4, z: 50}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &241014434895292927
 GameObject:

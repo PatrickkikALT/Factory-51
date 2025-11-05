@@ -22,6 +22,7 @@ public class BurstUpgrade : Upgrade {
 
       var bullet = obj.GetComponent<Bullet>();
       bullet.direction = GameManager.Instance.bodyBone.transform.forward;
+      bullet.transform.rotation = GameManager.Instance.bodyBone.transform.rotation;
       bullet.gameObject.layer = Player.gameObject.layer;
       bullet.type = BulletType.PLAYER;
       yield return new WaitForSeconds(burstDelay);
