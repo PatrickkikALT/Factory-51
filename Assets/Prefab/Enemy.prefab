@@ -80,6 +80,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1298109654190688346, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1298109654190688346, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1298109654190688346, guid: 0de84cff95aa08342b79010258512de4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4bb5d8f0e81e246428e3214f592eaaaf, type: 2}
@@ -102,6 +110,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0de84cff95aa08342b79010258512de4, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934436846475852511, guid: 0de84cff95aa08342b79010258512de4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

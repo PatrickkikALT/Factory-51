@@ -60,8 +60,8 @@ public class WaveManager : MonoBehaviour {
     SelectAvailableGroups();
 
     var maxTries = 10 * wave;
-    while ((_wavePoints > 0) & (maxTries >= 0)) {
-      maxTries++;
+    while ((_wavePoints > 0) && (maxTries >= 0)) {
+      maxTries--;
       if (availableGroups.Count == 0) {
         break;
       }

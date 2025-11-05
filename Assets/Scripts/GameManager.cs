@@ -32,24 +32,27 @@ public class GameManager : MonoBehaviour {
   public BossEnemy boss;
   
   private void Awake() {
-    
-    
     Instance = this;
   }
 
   private void Start() {
+    var rr = Screen.currentResolution.refreshRateRatio;
+    int targetFPS = Mathf.RoundToInt((float)rr.numerator / rr.denominator);
+    Application.targetFrameRate = targetFPS;
+    QualitySettings.vSyncCount = 0;
+    
     _movement = player.GetComponent<Movement>();
     _movement.canMove = true;
     roomText.text = $"{0}/{generator.dungeonSize}";
-    Invoke("LateStart", 0.1f);
+    // Invoke("LateStart", 0.1f);
   }
 
-  private void LateStart() {
-    foreach (GameObject r in generator.roomsInstance) {
-      r.SetActive(false);
-    }
-    SetRoom(generator.roomsInstance[0].GetComponent<Room>());
-  }
+  // private void LateStart() {
+  //   foreach (GameObject r in generator.roomsInstance) {
+  //     r.SetActive(false);
+  //   }
+  //   SetRoom(generator.roomsInstance[0].GetComponent<Room>());
+  // }
 
   public void EndGame(bool win) {
     _movement.canMove = false;
@@ -68,12 +71,12 @@ public class GameManager : MonoBehaviour {
     if (currentRoom == room) return;
     currentRoom = room;
     roomText.text = $"{room.id}/{generator.dungeonSize}";
-    generator.roomsInstance[room.id].SetActive(true);
-    if (room.id != generator.roomsInstance.Count - 1) {
-      generator.roomsInstance[room.id + 1].SetActive(true);
-    }
-    if (room.id != 0) generator.roomsInstance[room.id - 1].SetActive(true);
-    else if (room.id == 0) return;
+    // generator.roomsInstance[room.id].SetActive(true);
+    // if (room.id != generator.roomsInstance.Count - 1) {
+    //   generator.roomsInstance[room.id + 1].SetActive(true);
+    // }
+    // if (room.id != 0) generator.roomsInstance[room.id - 1].SetActive(true);
+    // else if (room.id == 0) return;
     StartCoroutine(RotateGear());
     if (room.bossRoom) {
       ClearEnemies();
@@ -94,9 +97,9 @@ public class GameManager : MonoBehaviour {
   }
 
   private void ClearEnemies() {
-    enemies.ForEach(enemy => {
-      Destroy(enemy.gameObject);
-    });
+    foreach (Enemy e in enemies) {
+      Destroy(e.gameObject);
+    }
   }
 
   public void TogglePauseMenu() {

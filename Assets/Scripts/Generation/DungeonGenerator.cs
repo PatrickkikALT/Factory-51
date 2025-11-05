@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.AI.Navigation;
@@ -166,7 +167,7 @@ public class DungeonGenerator : MonoBehaviour {
           OpenDoors(newRoomScript, lastRoomScript, direction);
         }
         catch {
-          Debug.Log($"Failed at index {i}, tried new room {roomsInstance[i]} and old room {roomsInstance[i - 1]}");
+          throw new IndexOutOfRangeException();
         }
       }
 

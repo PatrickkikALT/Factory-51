@@ -149,17 +149,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d9a52f39b29ff6aabde41d132c0df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
+  cameraTransform: {fileID: 0}
   moveSpeed: 5
   dashSpeed: 15
   dashDuration: 0.2
   dashCooldown: 1
+  rotateSpeed: 100
+  canMove: 1
   mouseSensitivity: 10
   moveInput: {x: 0, y: 0, z: 0}
   bodyBone: {fileID: 0}
   trackBone: {fileID: 0}
+  mesh: {fileID: 0}
+  trackGears: []
   animator: {fileID: 0}
   trackMaterial: {fileID: 0}
   trackDashSpeed: 0
+  smoke: {fileID: 0}
+  dead: 0
+  inputAction:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1f31c720-933f-4cc7-a364-247dcdb5a33b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &8744578048372275683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +293,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 3e524a69-ed49-4d76-8a3a-e01e8c508e6c
     m_ActionName: 'Player/Rotate[/Keyboard/q,/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 27d750b0-111a-49d7-8614-726d3b789f6a
+    m_ActionName: 'Player/Pause[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cd761150-6a11-410b-a095-d4fdc75a5aee
+    m_ActionName: 'Player/DevTool[/Keyboard/f8]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

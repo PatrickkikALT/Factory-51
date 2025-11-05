@@ -53,7 +53,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2849386270414482898}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -157,6 +157,7 @@ MonoBehaviour:
   damage: 5
   bullet: {fileID: 7121479710745853557, guid: 550745e622c2ae6569e0f43f27eb9eeb, type: 3}
   timeToExplode: 1
+  type: 0
   squareSize: 4
 --- !u!114 &749296046645848444
 MonoBehaviour:

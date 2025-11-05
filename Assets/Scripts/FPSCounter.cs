@@ -26,7 +26,7 @@ public class FPSCounter : MonoBehaviour
       _timeLeft = updateInterval;
       _accum = 0f;
       _frames = 0;
-      fpsText.text = $"FPS: {_fps:F0}";
+      fpsText.text = "FPS: " + _fps.ToString("F0");
     }
   }
 }
