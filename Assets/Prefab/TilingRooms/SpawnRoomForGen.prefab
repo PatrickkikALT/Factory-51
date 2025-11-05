@@ -2168,6 +2168,7 @@ GameObject:
   - component: {fileID: 6722455167450891552}
   - component: {fileID: 4406742396672593121}
   - component: {fileID: 2934119196303755951}
+  - component: {fileID: 7296608875576707059}
   m_Layer: 0
   m_Name: Xroom
   m_TagString: Untagged
@@ -2246,6 +2247,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7296608875576707059
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756543741614368092}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2845366833623066636
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,6 +6615,7 @@ GameObject:
   - component: {fileID: 3713259922345420889}
   - component: {fileID: 8545725301929056298}
   - component: {fileID: 8883313759954384093}
+  - component: {fileID: 8115000499733501681}
   m_Layer: 0
   m_Name: SpawnRoom
   m_TagString: Untagged
@@ -6671,6 +6694,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8115000499733501681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177159687829767797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7270961923435889855
 GameObject:
   m_ObjectHideFlags: 0

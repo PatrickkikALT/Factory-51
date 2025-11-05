@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 8891802175412373384}
   - component: {fileID: 2108797736949779424}
   - component: {fileID: 2670891214518228485}
+  - component: {fileID: 5617020872442984185}
   m_Layer: 0
   m_Name: Xroom (2)
   m_TagString: Untagged
@@ -475,6 +476,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5617020872442984185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559735540053460688}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &593742397067343355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1472,7 @@ GameObject:
   - component: {fileID: 388237392807122765}
   - component: {fileID: 1741818426699756961}
   - component: {fileID: 8469475075238748150}
+  - component: {fileID: 6257961091369473603}
   m_Layer: 0
   m_Name: Xroom (3)
   m_TagString: Untagged
@@ -1528,6 +1551,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6257961091369473603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869521875745025512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2075313667763418686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3169,6 +3213,7 @@ GameObject:
   - component: {fileID: 6841340278398838907}
   - component: {fileID: 2628489760992071576}
   - component: {fileID: 3972110975278659659}
+  - component: {fileID: 954139910260746897}
   m_Layer: 0
   m_Name: Xroom (4)
   m_TagString: Untagged
@@ -3247,6 +3292,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &954139910260746897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089189700960261321}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6433306873022200076
 GameObject:
   m_ObjectHideFlags: 0
@@ -3957,6 +4023,7 @@ GameObject:
   - component: {fileID: 5924644109387055690}
   - component: {fileID: 2816545838396812342}
   - component: {fileID: 8724143474846915902}
+  - component: {fileID: 5343288947420826198}
   m_Layer: 0
   m_Name: Xroom (1)
   m_TagString: Untagged
@@ -4035,6 +4102,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5343288947420826198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7387380642874849512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7790044890606974052
 GameObject:
   m_ObjectHideFlags: 0

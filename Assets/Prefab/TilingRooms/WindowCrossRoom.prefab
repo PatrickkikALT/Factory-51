@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 2036202757160854190}
   - component: {fileID: 7204422786113623583}
   - component: {fileID: 9086783259312753476}
+  - component: {fileID: 8347973612631573017}
   m_Layer: 0
   m_Name: CrossRoom
   m_TagString: Untagged
@@ -238,6 +239,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8347973612631573017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161516650034690130}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &191099369320951636
 GameObject:
   m_ObjectHideFlags: 0
