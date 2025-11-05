@@ -381,8 +381,8 @@ MonoBehaviour:
   - {fileID: 9108584029339772948}
   - {fileID: 1829619713167036703}
   enemySpawnLocations:
-    BoxPos: {x: 0, y: 1, z: 0}
-    BoxSize: {x: 20, y: 2, z: 20}
+    BoxPos: {x: -1.08, y: 1, z: 0}
+    BoxSize: {x: 15, y: 2, z: 16.8}
     GizmoColor: {r: 1, g: 0, b: 0, a: 1}
   disabled: 0
   id: 0

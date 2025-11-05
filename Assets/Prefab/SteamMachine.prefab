@@ -471,6 +471,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -163793553506758620, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
+      propertyPath: m_RootBone
+      value: 
+      objectReference: {fileID: 2268098883465720674}
+    - target: {fileID: -163793553506758620, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -163793553506758620, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -163793553506758620, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -163793553506758620, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 2.26
+      objectReference: {fileID: 0}
+    - target: {fileID: -163793553506758620, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: -163793553506758620, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 37292f35f62648143a595d92ee5b8548, type: 2}
@@ -498,6 +522,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8704087875017488630}
   m_SourcePrefab: {fileID: 100100000, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
+--- !u!4 &2268098883465720674 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3761016592034555671, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
+  m_PrefabInstance: {fileID: 6104568533948115851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5998075354680151136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f65b2ba8cc7885c40b6ee916d12272de, type: 3}
