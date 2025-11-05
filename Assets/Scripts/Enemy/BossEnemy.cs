@@ -71,7 +71,8 @@ public class BossEnemy : Enemy {
     if (dead) return;
 
     _health.isBlocking = true;
-    agent.isStopped = true;
+    agent.isStopped = false;
+    agent.destination = player.position + transform.forward * maxDistance / 2;
     ticks++;
     if (ticks == ticksTillSummon) {
       WaveManager.instance.StartNewWave(GameManager.Instance.currentRoom.enemySpawnLocations, GameManager.Instance.currentRoom, true);

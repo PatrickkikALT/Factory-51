@@ -31,7 +31,9 @@ public class UpgradeManager : MonoBehaviour {
       case UpgradeType.ADDITIVE:
         break;
       default:
+        #if UNITY_EDITOR
         Debug.LogError($"No upgrade type found for upgrade {upgrade.name}");
+        #endif
         return false;
     }
     

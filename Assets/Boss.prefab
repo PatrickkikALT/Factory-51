@@ -548,7 +548,7 @@ MonoBehaviour:
   shootInterval: 1.5
   runningRange: 2
   shootingRange: 10
-  ticksTillSummon: 8
+  ticksTillSummon: 30
 --- !u!114 &1324535821504296310
 MonoBehaviour:
   m_ObjectHideFlags: 0
