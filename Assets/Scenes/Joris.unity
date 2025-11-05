@@ -1718,6 +1718,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7426307114749398599, guid: 5e825dc43e7c80041b9cca792e32594d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7584287487215775697, guid: 5e825dc43e7c80041b9cca792e32594d, type: 3}
       propertyPath: m_Name
       value: 2PartRoom
